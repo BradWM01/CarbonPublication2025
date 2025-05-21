@@ -5,13 +5,13 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{JONES2020256HgHe} K.~L. Jones, G.~P. Matthews, G.~M. Laudone,
-\href{https://www.sciencedirect.com/science/article/pii/S0008622319312175}{The
-effect of irradiation and radiolytic oxidation on the porous space of
-gilsocarbon nuclear graphite measured with mercury porosimetry and helium
-pycnometry}, Carbon 158 (2020) 256--266. \newblock \href
-{https://doi.org/https://doi.org/10.1016/j.carbon.2019.11.084}
-{\path{doi:https://doi.org/10.1016/j.carbon.2019.11.084}}.
+\bibitem{IEA2025NewEraNuclear}
+{International Energy Agency}, \href{https://www.iea.org/reports/the-path-to-a-new-era-for-nuclear-energy/executive-summary}{{The Path to a New Era for Nuclear Energy}}, accessed 24 April 2025; CC BY 4.0 (Jan. 2025).
+\newline\urlprefix\url{https://www.iea.org/reports/the-path-to-a-new-era-for-nuclear-energy/executive-summary}
+
+\bibitem{JONES2020256HgHe}
+K.~L. Jones, G.~P. Matthews, G.~M. Laudone, \href{https://www.sciencedirect.com/science/article/pii/S0008622319312175}{The effect of irradiation and radiolytic oxidation on the porous space of gilsocarbon nuclear graphite measured with mercury porosimetry and helium pycnometry}, Carbon 158 (2020) 256--266.
+\newblock \href {https://doi.org/https://doi.org/10.1016/j.carbon.2019.11.084} {\path{doi:https://doi.org/10.1016/j.carbon.2019.11.084}}.
 \newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0008622319312175}
 
 \end{thebibliography}
