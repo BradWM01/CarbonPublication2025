@@ -1,87 +1,17 @@
-\begin{thebibliography}{xx}
+\begin{thebibliography}{1}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\harvarditem[Arregui-Mena et~al.]{Arregui-Mena, Worth, Bodel, März, Li,
-  Campbell, Cakmak, Gallego, Contescu \harvardand\
-  Edmondson}{2022}{ARREGUIMENA2022112047}
-Arregui-Mena, J.~D., Worth, R.~N., Bodel, W., März, B., Li, W., Campbell,
-  A.~A., Cakmak, E., Gallego, N., Contescu, C. \harvardand\ Edmondson, P.~D.
-  \harvardyearleft 2022\harvardyearright , `Multiscale characterization and
-  comparison of historical and modern nuclear graphite grades', {\em Materials
-  Characterization} {\bf 190},~112047.
-\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S1044580322003291}
-
-\harvarditem[Contescu et~al.]{Contescu, Arregui-Mena, Campbell, Edmondson,
-  Gallego, Takizawa \harvardand\ Katoh}{2019}{CONTESCU2019663}
-Contescu, C.~I., Arregui-Mena, J.~D., Campbell, A.~A., Edmondson, P.~D.,
-  Gallego, N.~C., Takizawa, K. \harvardand\ Katoh, Y.  \harvardyearleft
-  2019\harvardyearright , `Development of mesopores in superfine grain graphite
-  neutron-irradiated at high fluence', {\em Carbon} {\bf 141},~663--675.
-\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S0008622318307723}
-
-\harvarditem{{International Energy Agency}}{2025}{IEA2025_NewEraNuclear}
-{International Energy Agency}  \harvardyearleft 2025\harvardyearright , {The
-  Path to a New Era for Nuclear Energy}, Technical report, International Energy
-  Agency.
-\newblock Accessed 24 April 2025; CC BY 4.0.
-\newline\harvardurl{https://www.iea.org/reports/the-path-to-a-new-era-for-nuclear-energy/executive-summary}
-
-\harvarditem[Jones et~al.]{Jones, Matthews \harvardand\
-  Laudone}{2020}{JONES2020256HgHe}
-Jones, K.~L., Matthews, G.~P. \harvardand\ Laudone, G.~M.  \harvardyearleft
-  2020\harvardyearright , `The effect of irradiation and radiolytic oxidation
-  on the porous space of gilsocarbon nuclear graphite measured with mercury
-  porosimetry and helium pycnometry', {\em Carbon} {\bf 158},~256--266.
-\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S0008622319312175}
-
-\harvarditem[Kane et~al.]{Kane, Matthews, Orme, Contescu, Swank \harvardand\
-  Windes}{2018}{KANE2018369}
-Kane, J.~J., Matthews, A.~C., Orme, C.~J., Contescu, C.~I., Swank, W.~D.
-  \harvardand\ Windes, W.~E.  \harvardyearleft 2018\harvardyearright ,
-  `Effective gaseous diffusion coefficients of select ultra-fine, super-fine
-  and medium grain nuclear graphite', {\em Carbon} {\bf 136},~369--379.
-\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S0008622318304548}
-
-\harvarditem[Marsden et~al.]{Marsden, Haverty, Bodel, Hall, Jones, Mummery
-  \harvardand\ Treifi}{2016}{Marsden2016}
-Marsden, B.~J., Haverty, M., Bodel, W., Hall, G.~N., Jones, A.~N., Mummery,
-  P.~M. \harvardand\ Treifi, M.  \harvardyearleft 2016\harvardyearright ,
-  `Dimensional change, irradiation creep and thermal/mechanical property
-  changes in nuclear graphite', {\em International Materials Reviews} {\bf
-  61}(3),~155--182.
-\newline\harvardurl{https://doi.org/10.1080/09506608.2015.1136460}
-
-\harvarditem[Marsden et~al.]{Marsden, Jones, Hall, Treifi \harvardand\
-  Mummery}{2017}{MARSDENgeniv}
-Marsden, B., Jones, A., Hall, G., Treifi, M. \harvardand\ Mummery, P.
-  \harvardyearleft 2017\harvardyearright , 14 - graphite as a core material for
-  generation iv nuclear reactors, {\em in} P.~Yvon, ed., `Structural Materials
-  for Generation IV Nuclear Reactors', Woodhead Publishing, pp.~495--532.
-\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/B9780081009062000148}
-
-\harvarditem[Matthews et~al.]{Matthews, Kane, Swank \harvardand\
-  Windes}{2021}{MATTHEWS2021111245}
-Matthews, A.~C., Kane, J.~J., Swank, W.~D. \harvardand\ Windes, W.~E.
-  \harvardyearleft 2021\harvardyearright , `Nuclear graphite strength
-  degradation under varying oxidizing conditions', {\em Nuclear Engineering and
-  Design} {\bf 379},~111245.
-\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S0029549321001977}
-
-\harvarditem{Matthews}{2025}{MatthewsPoreXpert2025}
-Matthews, G.~P.  \harvardyearleft 2025\harvardyearright , {\em PoreXpert User
-  Manual: A comprehensive guide to version 3}, 3 edn, PoreXpert Ltd, Plymouth,
-  UK.
-\newblock Director and CEO, PoreXpert Ltd; Emeritus Professor of Applied
-  Physical Chemistry, University of Plymouth, UK. Includes introductory
-  tutorials, fundamental science sections, guidance on avoiding common
-  experimental errors, and software validation.
-\newline\harvardurl{https://www.porexpert.com/}
-
-\harvarditem[Paul et~al.]{Paul, Arregui-Mena, Contescu \harvardand\
-  Gallego}{2022}{PAUL2022132}
-Paul, R.~M., Arregui-Mena, J.~D., Contescu, C.~I. \harvardand\ Gallego, N.~C.
-  \harvardyearleft 2022\harvardyearright , `Effect of microstructure and
-  temperature on nuclear graphite oxidation using the 3d random pore model',
-  {\em Carbon} {\bf 191},~132--145.
-\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S0008622322000501}
+\bibitem{JONES2020256HgHe} K.~L. Jones, G.~P. Matthews, G.~M. Laudone,
+\href{https://www.sciencedirect.com/science/article/pii/S0008622319312175}{The
+effect of irradiation and radiolytic oxidation on the porous space of
+gilsocarbon nuclear graphite measured with mercury porosimetry and helium
+pycnometry}, Carbon 158 (2020) 256--266. \newblock \href
+{https://doi.org/https://doi.org/10.1016/j.carbon.2019.11.084}
+{\path{doi:https://doi.org/10.1016/j.carbon.2019.11.084}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0008622319312175}
 
 \end{thebibliography}

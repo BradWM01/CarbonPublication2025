@@ -1,71 +1,34 @@
-\documentclass[12pt,a4paper]{report}
-\usepackage{geometry}
-\usepackage{bm}
-\usepackage{parskip}
-\usepackage{siunitx}
-\usepackage{graphicx}
-\usepackage{booktabs}
-\usepackage{amsmath}
-\usepackage[font=small,labelfont=bf]{caption}
-\usepackage[version=4]{mhchem}
-\usepackage{amssymb}
-\usepackage{hyperref}
-\usepackage[authoryear]{natbib}
+\documentclass[3p,twocolumn]{elsarticle}
 \usepackage[utf8]{inputenc}
-\usepackage{comment}
-\usepackage{float} % Required to control table placement
-\usepackage[section]{placeins}
-\usepackage{dirtytalk}
-\setcounter{topnumber}{5}
-\setcounter{bottomnumber}{4}
-\setcounter{totalnumber}{8}
-\renewcommand\textfraction{.1}
-\renewcommand\floatpagefraction{.8}
-
+\usepackage[LGR,T1]{fontenc}
+\usepackage{graphicx,amsmath}
+\usepackage[british]{babel}
+%%\usepackage[latin9]{inputenc}%SOME KIND OF CLASH WITH THIS ONE
+\usepackage{array}
+\usepackage{rotfloat}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{amsmath} % to align equations \usepackage{mathrsfs} % curly font in math, called using mathscr
+\usepackage{graphicx}
+\usepackage{subcaption} % to have two images under one caption
+\usepackage{subscript}
+\usepackage{gensymb} %for degree symbol
+\setlength{\marginparwidth}{2cm} % to set the width of the marginpar
+\usepackage{todonotes}
+\usepackage{xargs}                      % Use more than one optional parameter in a new commands
+\renewcommand{\baselinestretch}{1.5}
+\bibliographystyle{elsarticle-num}
 \begin{document}
+\begin{frontmatter}
+\title{My Title}
+\author[inst1]{Alice Author}
+\address[inst1]{University}
+\begin{abstract}Abstract here.\end{abstract}
+\begin{keyword}latex\sep elsarticle\sep example\end{keyword}
+\end{frontmatter}
 
-\begin{titlepage}
-    \centering
-    \vspace*{2cm}
-    {\LARGE\bfseries
-    A powerful new approach for the characterisation of the void structure and ageing of graphite for next generation net-zero nuclear reactors\par}
-    \vspace{2cm}
-    {\Large Bradley Moresby-White\par}
-    \vspace{1cm}
-    {\large \today\par}
-    \vfill
-\end{titlepage}
+\section{Introduction}
+This is a citation.\cite{JONES2020256HgHe} 
 
-\tableofcontents
-\clearpage
-
-\chapter{Abstract}
-
-Nuclear energy accounted for 17\% of total electricity supply in advanced economies in 2023, avoiding the release of 72 gigatons of CO$_2$ since 1971 by replacing fossil fuel generation \citep{IEA2025_NewEraNuclear}. Maximising the operational lifespan of current and proposed nuclear reactors therefore reduces present and future CO$_2$ emissions.
-
-Nuclear grade graphite is a critical component of the UK fleet of Advanced Gas Reactors (AGRs) and those Generation IV reactors, which are graphite-moderated. Reliable characterisation of its microporous network is therefore indispensable for safe and optimal performance. This microstructure, in particular porosity, dictates material properties and the evolution of those properties under operational conditions (i.e. oxidation rates, gas diffusion, and thermal degradation). This project develops and initially validates a methodology for characterising the surface porosity of IG-110 and IG-430 nuclear graphites via computational analysis of composite Scanning Electron Microscopy (SEM) micrographs, covering an FOV (Field of View) comparable with previous Optical Microscopy (OM) -based works (mm\(^2\) scale). A semi-automated workflow involving composite assembly, intensity thresholding, and pore diameter thresholding within ImageJ/Fiji was developed to quantify surface porosity and generate void size distributions. Preliminary findings indicate that this SEM-based approach yields statistically robust surface porosity data, capturing features down to the micron scale. This represents a significant advancement upon previous OM analyses of surface porosity, operating at a comparable field of view (FOV) but now with sufficient resolution to enable reliable classification of pores as small as 1.12 µm in diameter. The new approach allowed for the construction of surface porosity void size distribution that encompasses nearly the entire range of physically relevant pore sizes. The construction of surface porosity pore size distributions over a measured size interval down to a diameter which aligns with the steepest section of the Hg intrusion porosimetry datasets enables validation of SEM-derived surface porosity against experimental data. New insights are gained into the representativeness and credibility of both this and previous OM-based works. Initial integration of this more representative surface porosity data into a new version of the PoreXpert void network and pore fluid simulation framework, integrated with Hg porosimetry and N$_2$ adsorption, produced physically plausible preliminary models of the pore network and simulated pore-fluid flow properties such as tortuosity, diffusivity and permeability.  This enhanced characterisation method forms a further useful methodology in refining models of graphite behaviour, ultimately contributing to the safe and optimal operation of current and proposed graphite-moderated nuclear reactors.
-
-	
-\chapter{Introduction}
-
-Graphite, a carbon allotrope, is employed as a moderator, neutron reflector and structural component in the UK fleet of Advanced Gas Reactors (AGRs) and several next generation (Generation IV) reactors \citep{MARSDENgeniv}.
-
-Nuclear grade graphite is engineered for this specific use case, characterised by exceptionally low boron content, high structural strength, thermal stability, and a high scattering and low absorbent neutron cross-section \citep{Marsden2016}.
-
-Sufficiently high-volume and fidelity image analysis may enable the constraint of the range of outputs from inverse modelling by adding an extra layer of structural information about a given sample. The dataset resulting from this work will therefore form the validation of PoreXpert\texttrademark{} v.3, where the constraint of the range of possible outputs by channel porosity is a flagship feature.  This work,  the validation of this innovation in a best-in-class software package, solidifies the position of the University of Plymouth as a leading centre in the world for the characterisation of porous and radioactive materials.
-
-Within the wider context of the significance of graphite, the internal microstructure plays a key role in its mechanical and thermo-physical properties, as well as how these properties evolve under irradiation throughout the reactor's lifespan \citep{MARSDENgeniv}. Porosity, the proportion of total volume represented by void space,  is the defining feature of the microstructure of nuclear-grade graphite.  Porosity differs between grades of nuclear grade graphite, as a consequence of varying manufacturing processes and input \citep{ARREGUIMENA2022112047}. Key performance and safety-related phenomena, such as oxidation, gas release and thermal degradation, are all modulated by porosity. Specifically, oxidation rates are typically higher where open porosity is distributed uniformly, as the ease with which closed pore surface area can be incrementally accessed increases \citep{PAUL2022132}. Furthermore, porosity modulates gas diffusion, with a sufficiently strong correlation coefficient to enable the estimation of the effective diffusion coefficient from total porosity alone \citep{KANE2018369}. Diffusion rate then influences the rate of degradation, determining whether the behaviour under oxidative conditions will be diffusion-controlled or kinetic-controlled \citep{MATTHEWS2021111245}. 
-
-In view of the role of porosity in modulating physical properties relevant to safety and performance, accurate characterisation of the network of pores within nuclear-grade graphites is imperative for the safe and optimal operation of the AGR fleet and graphite moderated reactors generally.
-
-Several experimental techniques exist for the characterisation of porosity, including X-ray Computed Tomography (CT), Mercury (Hg) intrusion porosimetry/Helium (He) pycnometry, and Nitrogen (N$_2$) adsorption \citep{ARREGUIMENA2022112047, JONES2020256HgHe, CONTESCU2019663}. The fundamental physical limitations of the instruments associated with these techniques mean no individual experimental procedure is capable of characterising the full channel or open pore size distribution.
-
-PoreXpert is a void network simulation package developed at the University of Plymouth, and now marketed worldwide by the University's spin-out company, PoreXpert Ltd. A primary input for its modelling is the percolation characteristic of the sample, usually measured by Hg porosimetry.  In the case of nuclear graphite, mercury porosimeters cannot reach sufficient applied pressure to probe the smallest voids of interest, and therefore, the percolation characteristic is extended to smaller void sizes by Grand-Canonical Monte-Carlo interpretation of N$_2$ adsorption.  PoreXpert is a quasi-Bayesian model which proceeds inversely from effect (the pecolation) to cause (the void network).  PoreXpert constructs an 8 dimensional parameter space,  composed of 5 numerical parameters which represent the physical characteristics of the pore network, such as the skew of the void size distribution, and 3 constraining Boolean parameters, for example, to avoid structures where features overlap each other. A Boltzmann-annealed amoeboid simplex searches over this parameter space to find the set of parameters that produces a percolation curve minimally different from the intrusion curve derived from Hg porosimetry and N$_2$/Kr adsorption. The final result is a simulated pore network with the correct porosity and percolation properties, on which many simulations, such as pore-fluid permeability and tortuousity, and sample ageing under radiation, can be performed \citep{MatthewsPoreXpert2025}.
-
-The primary objective of this work is to develop and validate a method of quantifying the channel porosity of nuclear-grade graphites via computational image analysis of Scanning Electron Microscopy (SEM) micrographs. The apparent porosity of the surface, which usually includes channels and voids very near the surface, provides an entirely new experimental input to PoreXpert.  Since the porosity is derived not only from surface pores but also from pores adjacent to them just below the surface, we refer to the apparent surface porosity as channel porosity rather than surface porosity. The channel porosity estimate replaces or complements porosity estimates from Hg porosimetry and/or pycnometry, which are often difficult to measure or are inaccurate.  carbon allotrope, is employed as a moderator, neutron reflector and structural component in the UK fleet of Advanced Gas Reactors (AGRs) and s
-
-\bibliographystyle{agsm}
-\bibliography{bibliography}
-
-
+\bibliography{bibliography1}
 \end{document}
