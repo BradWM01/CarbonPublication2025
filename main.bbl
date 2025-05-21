@@ -5,13 +5,31 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{IEA2025NewEraNuclear}
-{International Energy Agency}, \href{https://www.iea.org/reports/the-path-to-a-new-era-for-nuclear-energy/executive-summary}{{The Path to a New Era for Nuclear Energy}}, accessed 24 April 2025; CC BY 4.0 (Jan. 2025).
-\newline\urlprefix\url{https://www.iea.org/reports/the-path-to-a-new-era-for-nuclear-energy/executive-summary}
-
 \bibitem{JONES2020256HgHe}
 K.~L. Jones, G.~P. Matthews, G.~M. Laudone, \href{https://www.sciencedirect.com/science/article/pii/S0008622319312175}{The effect of irradiation and radiolytic oxidation on the porous space of gilsocarbon nuclear graphite measured with mercury porosimetry and helium pycnometry}, Carbon 158 (2020) 256--266.
 \newblock \href {https://doi.org/https://doi.org/10.1016/j.carbon.2019.11.084} {\path{doi:https://doi.org/10.1016/j.carbon.2019.11.084}}.
 \newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0008622319312175}
+
+\bibitem{Jones2018}
+K.~Jones, G.~Laudone, G.~Matthews, A multi-technique experimental and modelling study of the porous structure of ig-110 and ig-430 nuclear graphite, Carbon 128 (2018) 1--11.
+\newblock \href {https://doi.org/10.1016/j.carbon.2017.11.076} {\path{doi:10.1016/j.carbon.2017.11.076}}.
+
+\bibitem{toyotanso_atomic_nuclear}
+{Toyo Tanso Co., Ltd.}, \href{https://www.toyotanso.com/us/en/Products/application/atomic-nuclear.html}{Atomic power and nuclear fusion}, accessed April 21, 2025 (2025).
+\newline\urlprefix\url{https://www.toyotanso.com/us/en/Products/application/atomic-nuclear.html}
+
+\bibitem{ASTMD7219-19}
+{ASTM International}, {D7219-19 Standard Specification for Isotropic and Near‑isotropic Nuclear Graphites}, published August 2019; supersedes D7219‑08R14 (2019).
+
+\bibitem{Fang2022}
+N.~Fang, R.~Birch, T.~Britton, Optimizing broad ion beam polishing of zircaloy-4 for electron backscatter diffraction analysis, Micron 159 (2022) 103268.
+\newblock \href {https://doi.org/10.1016/j.micron.2022.103268} {\path{doi:10.1016/j.micron.2022.103268}}.
+
+\bibitem{Kuglin1975}
+C.~D. Kuglin, D.~C. Hines, The phase correlation image alignment method, in: Proceedings of the International Conference on Cybernetics and Society, 1975, pp. 163--165.
+
+\bibitem{Preibisch2009}
+S.~Preibisch, S.~Saalfeld, P.~Tomancak, Globally optimal stitching of tiled 3d microscopic image acquisitions, Bioinformatics 25~(11) (2009) 1463--1465.
+\newblock \href {http://arxiv.org/abs/2009 Apr 3} {\path{arXiv:2009 Apr 3}}, \href {https://doi.org/10.1093/bioinformatics/btp184} {\path{doi:10.1093/bioinformatics/btp184}}.
 
 \end{thebibliography}
