@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
@@ -10,10 +10,6 @@ K.~L. Jones, G.~P. Matthews, G.~M. Laudone, \href{https://www.sciencedirect.com/
 \newblock \href {https://doi.org/https://doi.org/10.1016/j.carbon.2019.11.084} {\path{doi:https://doi.org/10.1016/j.carbon.2019.11.084}}.
 \newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S0008622319312175}
 
-\bibitem{Jones2018}
-K.~Jones, G.~Laudone, G.~Matthews, A multi-technique experimental and modelling study of the porous structure of ig-110 and ig-430 nuclear graphite, Carbon 128 (2018) 1--11.
-\newblock \href {https://doi.org/10.1016/j.carbon.2017.11.076} {\path{doi:10.1016/j.carbon.2017.11.076}}.
-
 \bibitem{toyotanso_atomic_nuclear}
 {Toyo Tanso Co., Ltd.}, \href{https://www.toyotanso.com/us/en/Products/application/atomic-nuclear.html}{Atomic power and nuclear fusion}, accessed April 21, 2025 (2025).
 \newline\urlprefix\url{https://www.toyotanso.com/us/en/Products/application/atomic-nuclear.html}
@@ -21,15 +17,36 @@ K.~Jones, G.~Laudone, G.~Matthews, A multi-technique experimental and modelling 
 \bibitem{ASTMD7219-19}
 {ASTM International}, {D7219-19 Standard Specification for Isotropic and Near‑isotropic Nuclear Graphites}, published August 2019; supersedes D7219‑08R14 (2019).
 
+\bibitem{Jones2018}
+K.~Jones, G.~Laudone, G.~Matthews, A multi-technique experimental and modelling study of the porous structure of ig-110 and ig-430 nuclear graphite, Carbon 128 (2018) 1--11.
+\newblock \href {https://doi.org/10.1016/j.carbon.2017.11.076} {\path{doi:10.1016/j.carbon.2017.11.076}}.
+
 \bibitem{Fang2022}
 N.~Fang, R.~Birch, T.~Britton, Optimizing broad ion beam polishing of zircaloy-4 for electron backscatter diffraction analysis, Micron 159 (2022) 103268.
 \newblock \href {https://doi.org/10.1016/j.micron.2022.103268} {\path{doi:10.1016/j.micron.2022.103268}}.
 
 \bibitem{Kuglin1975}
-C.~D. Kuglin, D.~C. Hines, The phase correlation image alignment method, in: Proceedings of the International Conference on Cybernetics and Society, 1975, pp. 163--165.
+C.~Kuglin, D.~Hines, The phase correlation image alignment method, in: Proceedings of the International Conference on Cybernetics and Society, 1975, pp. 163--165.
 
 \bibitem{Preibisch2009}
 S.~Preibisch, S.~Saalfeld, P.~Tomancak, Globally optimal stitching of tiled 3d microscopic image acquisitions, Bioinformatics 25~(11) (2009) 1463--1465.
 \newblock \href {http://arxiv.org/abs/2009 Apr 3} {\path{arXiv:2009 Apr 3}}, \href {https://doi.org/10.1093/bioinformatics/btp184} {\path{doi:10.1093/bioinformatics/btp184}}.
+
+\bibitem{Huang2019}
+Q.~Huang, H.~Tang, Porosity analysis of superfine-grain graphite ig-110 and ultrafine-grain graphite t220, Materials Science and Technology 35~(8) (2019) 962--968.
+\newblock \href {https://doi.org/10.1080/02670836.2019.1599557} {\path{doi:10.1080/02670836.2019.1599557}}.
+
+\bibitem{Taylor2016}
+J.~Taylor, G.~Hall, P.~Mummery, Investigating the effects of stress on the pore structures of nuclear grade graphites, Journal of Nuclear Materials 470 (2016) 216--228.
+\newblock \href {https://doi.org/10.1016/j.jnucmat.2015.12.031} {\path{doi:10.1016/j.jnucmat.2015.12.031}}.
+
+\bibitem{Kane2011a}
+J.~Kane, et~al., Microstructural characterization and pore structure analysis of nuclear graphite, Journal of Nuclear Materials 415~(2) (2011) 189--197.
+\newblock \href {https://doi.org/10.1016/j.jnucmat.2011.05.053} {\path{doi:10.1016/j.jnucmat.2011.05.053}}.
+
+\bibitem{VANBRAKEL19811}
+J.~{Van Brakel}, S.~Modrý, M.~Svatá, \href{https://www.sciencedirect.com/science/article/pii/0032591081850012}{Mercury porosimetry: state of the art}, Powder Technology 29~(1) (1981) 1--12.
+\newblock \href {https://doi.org/https://doi.org/10.1016/0032-5910(81)85001-2} {\path{doi:https://doi.org/10.1016/0032-5910(81)85001-2}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/0032591081850012}
 
 \end{thebibliography}
