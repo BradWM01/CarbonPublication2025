@@ -8,7 +8,8 @@
 %%\usepackage{rotfloat}
 %%\usepackage{textcomp}
 %%\usepackage{amssymb}
-\usepackage{amsmath} % to align equations \usepackage{mathrsfs} % curly font in math, called using mathscr
+\usepackage{amsmath} 
+%% to align equations \usepackage{mathrsfs} % curly font in math, called using mathscr
 %%\usepackage{graphicx}
 %%\usepackage{subcaption} % to have two images under one caption
 %%\usepackage{subscript}
@@ -33,24 +34,22 @@ Nuclear grade graphite
 \end{abstract}
 \begin{keyword}keyword\sep keyword\sep keyword\end{keyword}
 \end{frontmatter}
-
 \section{Introduction}
-This is a citation.\cite{JONES2020256HgHe}
-
 \section{Methodology}
 
 \subsection{Materials}
 
-Virgin graphite samples of two grades, IG‑110 and IG‑430, were supplied by Toyo
-Tanso Ltd\texttrademark, Osaka, Japan. The properties of both grades are
+Virgin graphite samples of two grades, IG110 and IG430, were supplied by Toyo
+Tanso Ltd\texttrademark{}, Osaka, Japan. The properties of both grades are
 tabulated (Table ~\ref{tab:materialstable}).IG‑110 is currently employed in the
 three existing HTGRs worldwide, while IG‑430 is designed to deliver increased
 density, strength, and thermal conductivity for future
 applications.\citep{toyotanso_atomic_nuclear} (Table ~\ref{tab:materialstable}).
 Both grades comply with \textit{ASTMD7219-19}, including the requirement for a
 minimum bulk density exceeding 1.7 g/cm$^3$ \citep{ASTMD7219-19}
-(Table~\ref{tab:materialstable}).
-
+(Table~\ref{tab:materialstable}). \todo{Is this necessary? I do like it, talking about the
+  standards, but it is a bit of a tangent.}
+\todo{for the following table, better to directly cite the manuf?}
 \begin{table*}
   \centering
   \caption{Manufacturer dataset for IG-110 and IG-430 \citep{Jones2018}}
@@ -60,7 +59,7 @@ minimum bulk density exceeding 1.7 g/cm$^3$ \citep{ASTMD7219-19}
       \hline
       Grade   & Coke source & Bulk density/g cm$^3$ & Filler particle size/$\mu$m) & Tensile strength/MPa & Young's modulus/GPa & Thermal conductivity/W m$^{-1}$K$^{-1}$\\
       \hline
-      IG‑110  & Petrol            & 1.77                  & 10                           & 25                     & 9.8                   & 120 \\
+      IG‑110  & Petrol    1        & 1.77                  & 10                           & 25                     & 9.8                   & 120 \\
       IG‑430  & Pitch             & 1.82                  & 10                           & 37                     & 10.8                  & 140 \\
       \hline
     \end{tabular}%
@@ -73,24 +72,26 @@ approximately 10mm x 10mm x 100mm. The sub-samples were further subsampled into
 cuobids of side lengths ~7mm, providing 3 cuboids per grade. Samples were
 polished via SiC polishing pads up to a grit size of P5000, to minimise
 topographical variations induced by sample preparation that may cause artefacts
-during SEM imaging or low pressure gas adsorption \citep{Fang2022,Jones2018}.Samples were
-sonicated in 2-propanol for 24h to remove any contaminants, particularly the
-lubricant used in the machining process. Samples were then dried under
-vacuum for 12 h at $305 \pm 5\,^\circ\mathrm{C}$ using the BELPREP-vac
-(MicrotracBEL, Japan) in order to remove any residual moisture introduced during
-the sonication process.
-
+during SEM imaging or low pressure gas adsorption \citep{Fang2022,Jones2018}. 
+Samples were sonicated in 2-propanol for 24h to remove any contaminants,
+particularly the lubricant used in the machining process. Samples were then
+dried under vacuum for 12 h at $305 \pm 5\,^\circ\mathrm{C}$ using the
+BELPREP-vac (MicrotracBEL, Japan) in order to remove any residual moisture
+introduced during the sonication process.
+\todo{Could talk here about how we wanted to do resin impeg like Kane et al, but
+  did not have the chance, and explain this might introduce issues}
 \subsection{Micrograph generation}
 The JEOL\texttrademark  IT510 Scanning Electron Microscope was used in the
 generation of the contiguous set of individual micrographs from which the full
-composite is assembled. The \textit{Image Montage} capability, within the
-JEOLInScope\texttrademark  package, performed this function. The system captures
-a number of micrographs, with the motorised stage moving the electron beam over
-the specified area with a set overlap, with the software adjusting stigmation,
-contrast, and brightness. Shifts in contrast and brightness were on the order of
-< 1\% \todo{Make sure to double check that figure for ACB} and thus negligible
-in affecting intensity threshold for the full composite. The full set of
-parameters selected are tabulated (Table ~\ref{tab:microscopy_parameters}).
+composite micrograph is assembled. The \textit{Image Montage} capability, within
+the JEOLInScope\texttrademark package, performed this function. The system
+captures a number of micrographs, with the motorised stage moving the electron
+beam over the specified area with a set overlap to capture each new micrograph,
+with the software adjusting stigmation, contrast, and brightness. Shifts in
+contrast and brightness were on the order of < 1\% \todo{Make sure to double
+check that figure for ACB} and thus negligible in affecting intensity threshold
+for the full composite. The full set of parameters selected are tabulated (Table
+~\ref{tab:microscopy_parameters}).
 
 \begin{table}
   \centering
@@ -112,22 +113,23 @@ parameters selected are tabulated (Table ~\ref{tab:microscopy_parameters}).
 \subsection{Composite assembly}
 
 The composite assembly (i.e., "stitching") stage, where the overlapping
-micrographs are assembled into a single image per sample, has a significant
-impact on the porosity values as incorrect fusion will misrepresent pore
-structures. A stitching method based on the phase correlation approach
+micrographs are assembled into a single image per sample, may have a significant
+impact on the porosity values generated as incorrect fusion will misrepresent
+pore structures. A stitching method based on the phase correlation approach
 originally developed by Kuglin and Hines, amongst the most popular approaches to
 image registration, was selected and operated as a plug-in within ImageJ
 \citep{Kuglin1975, Preibisch2009}. This method represents a development of the
 original phase correlation method\citep{Preibisch2009}.
 	
-	 A key advantage of this method is the avoidance of error propogation by
-	consecutive registration steps, which is key at this scale
-	\citep{Preibisch2009}. A further advantage is the sub-pixel accuracy of the
-	fusion, as incorrect alignments would generate false pore diameters. The
-	resulting composite micrographs showed excellent alignment with no visible
-	delineation between individual micrographs, a relatively high FOV, high
-	resolution, and clear distinction between porosity and bulk when examined
-	closely (Figure \ref{fig:IG430C split scaled}).
+A key advantage of this method is the avoidance of error propogation by
+consecutive registration steps, which is key at this scale
+\citep{Preibisch2009}. A further advantage is the sub-pixel accuracy of the
+fusion, as incorrect alignments would generate false pore diameters. The
+resulting composite micrographs showed excellent alignment with no visible
+delineation between individual micrographs, a total area comparable with
+previous works, high resolution, and clear distinction
+between porosity and bulk when examined closely (Figure \ref{fig:IG430C split
+scaled} \cite{Huang2019,Kane2011a}). 
 
 	\begin{figure}
 		\centering
@@ -140,13 +142,11 @@ original phase correlation method\citep{Preibisch2009}.
 	\subsection{Computation of Channel Porosity}
 \subsubsection{Intensity/Greyscale Thresholding}
 	
-	Intensity thresholding, where intensity refers to the value of a given pixel
-	in an 8-bit micrograph, is the core of global intensity thresholding.
-	Intensity thresholding determines an intensity value at which porosity and
-	bulk (i.e., foregound and brackground) are distinguished. Intensity-based
-	thresholding requiures the conversion of the intensity values of the pixels in
-	the micrograph into a histogram of intensity, enabling the selection of an image-wide
-	threshold at which different classes can be separated.
+	Intensity thresholding determines a greyscale value at which porosity and bulk
+	(i.e., foregound and background) are distinguished. Thisg requiures the
+	representation of the frequency of greyscale values for each of the pixels in
+	the micrograph into a histogram of intensity, enabling the selection of an
+	image-wide threshold at which different classes can be separated.
 
 For each 8-bit micrograph \(E\) (pixel values \(0 \le E(x,y) \le 255\)), we
 first compute its intensity histogram \(H(i)\) for \(i=0,1,\dots,255\).
@@ -163,30 +163,35 @@ where \(M\) and \(N\) are the image width and height (in pixels), and
 \end{cases}
 \]
 
-For each pixel, the equation checks the intensity and increments
-the count in the correspoinding bin, yielding a 256‐bin histogram whose entries
-\(H(i)\) count the number of pixels at each intensity level. 
+  In essence, for each pixel the equation checks the greyscale value and increments
+  the count in the correspoinding bin, yielding a 256-bin histogram \(H(i)\) whose entries
+  count the number of pixels at each greyscale level. 
 
-	Global automatic intensity thresholding algorithms optimising by different
-	criteria to determine thresholds. For manual selection of a given threshold,
-	or validation of an automatically selected threshold, there exists no certain
-	criteria to allow a fully objective evaluation \citep{Huang2019}. In this
-	work, thresholding aims to select an intensity value that reliably binarizes
-	porosity and bulk in a way that minimizes both Type I and II errors as
-	evaluated by the operator (i.e., false positives, classifying a pore where one
-	is not present, and false negatives, not classifying a pore where one is
+	Global automatic thresholding algorithms optimise by different
+	criteria (i.e. maximisation of inter-class variance, minimisation of
+	intra-class variance) to determine thresholds. For manual selection of a given
+	threshold, or validation of an automatically selected threshold, there exists
+	no certain criteria to allow a fully objective evaluation
+	\citep{Huang2019}.Thresholding aims to select an intensity value that reliably
+	binarizes porosity and bulk in a way that minimizes both Type I and II errors,
+	as evaluated by the operator (i.e., false positives, classifying a pore where
+	one is not present, and false negatives, not classifying a pore where one is
 	present).
 
   A test of all 17 of the available automatic thresholding methods available in
-   Fiji/ImageJ demonstrated that no automatic global intensity thresholding
-   algorithm effectively distinguished between porosity and bulk with the
-   sensitivity required to allow the classification of pores for the given
-   histogram (Figure ~\ref{fig:Try All Thresholding Methods}).
-
-   The key cause is likely the lack of a bimodal distribution in the histogram
-  \todo{need to make a figure for the histogram in ImageJ}, meaning that there
-  are statistically no classes to be separated, necessitating the use of a
-  human-in-the-loop (HITL) approach.
+  ImageJ demonstrated that none of the avilable automatic global intensity
+  thresholding algorithm effectively distinguished between porosity and bulk
+  with the sensitivity required to allow the classification of pores for the
+  given histogram (Figure ~\ref{fig:Try All Thresholding Methods}). The key
+  cause is likely the lack of a bimodal distribution in the histograms generated
+  by any of the micrographs , meaning that there are statistically no classes to
+  be separated (Figure ~\ref{fig:histogramnobimodal}). 
+    \begin{figure}
+		\centering
+    \includegraphics[width=0.45\textwidth]{./Media/IG430F Greyscale Histogram.png}
+		\caption{PLACEHOLDER DRAFT: Histogram of greyscale values for IG-430 Sample F, 1000×, Showing skewness and unimodality}
+		\label{fig:histogramnobimodal}
+	\end{figure} 
 
 	\begin{figure}[!htbp]
 		\centering
@@ -211,13 +216,13 @@ the count in the correspoinding bin, yielding a 256‐bin histogram whose entrie
 		\label{fig:Try All Thresholding Methods}
 	\end{figure}  
 
-	A HITL (human-in-the-loop) approach was therefore undertaken, as illustrated
-	in the  process diagram through the example of IG-110 Sample B (Figure
-	~\ref{fig:Final Workflow}). Here, the operator subsamples the overall fused
-	compsite, then examines this subsample to determine the threshold at which
-	the porosity and bulk are best separated. The operator then applies this
-	threshold to the full composite, and the results are classified as either
-	porosity or bulk to derive channel porosity.
+	A HITL (human in the loop) approach was therefore undertaken, as illustrated
+	in the  process diagram (Figure ~\ref{fig:Final Workflow}). Here, the operator
+	subsamples the overall fused compsite, then examines this subsample to
+	determine the threshold at which porosity and bulk are best separated. The
+	operator then applies this threshold, along with a pore diameter threshold, to
+	the full composite. The results are classified as either porosity or bulk to
+	derive channel porosity.
 	
 \begin{figure}[!htbp]
     \centering
@@ -229,43 +234,51 @@ the count in the correspoinding bin, yielding a 256‐bin histogram whose entrie
 
 	\subsubsection{Pore Diameter Thresholding}
     
-   Pore diameter thresholds are imposed in this work, as in previous works, to
-   constrain the automated recognition of pores to that interval within which
-   classification is deemed reliable \citep{Taylor2016, Huang2019, Kane2011a}.
-   The constraint on objectivity is the infeasibility of defining absolutely
-   whether a given classification of a pore is correct. Even where this is done,
-   at this scale it would require the comparison of classified porosity to the
-   original micrograph, for thousands of pores per micrograph. 
-
-    (Step 6, Figure ~\ref{fig:Final Workflow})  is the imposition of a pore size
-      threshold via a HITL method once more, with the operator's comparison of
-      the results of a range of pore diameter thresholds to the raw subsample to
-      determine a specific area to be applied across the samples. The variations
-      per threshold are shown in Table ~\ref{tab:thresholdsandvariations} and
-      Figure \ref{fig:improvedporediademo}.
+  Pore size thresholds were imposed in this work, following previous studies
+  \citep{Taylor2016, Huang2019, Kane2011a}, to restrict the automated
+  recognition of pores to a range (i.e., only counting pores > 12.5µm\(^2\))
+  where classification is deemed reliable. However, this approach is inherently
+  limited by the practical difficulty of objectively determining whether any
+  given pore classification is correct.
       
-      Significant variation is exhibited in the number of pores characterised as
-      a function of pore size threshold (Table
-      \ref{tab:thresholdsandvariations}). The corresponding variation in total
-      porosity is lower, 3 pores of an area greater than 8 µm\(^2\)
-      in the subsample represent 46.71\% of total porosity as classified, where
-      no area threshold is applied. In this work, an area threshold of 1
-      µm\(^2\) (dia = 1.12 µm) has been selected as the optimal compromise between the Type I
-      and Type II errors.
+  As shown in (Table ~\ref{tab:thresholdsandvariationsIG430F}), extreme changes
+  in the total pore count result from minor alterations in the threshold, with a
+  0.5 µm\(^2\) threshold yielding a total pore count of 11,375, while a 1
+  µm\(^2\) threshold yields a pore count of 6,485. Crucially however the total
+  area of pores above the threshold remains relatively stable, with a porosity
+  of 3.8\% for the 0.5 µm\(^2\) threshold, and 3.6\% for the 1 µm\(^2\)
+  threshold. When combined with individual analyses of the resulting PSDs and
+  precise examination of exactly which features are excluded at each
+  threshold as per (Figure ~\ref{fig:improvedporediademo}), it is clear that a
+  pore area threshold of 1 µm\(^2\) (dia = 1.12 µm) was the optimal compromise
+  between type I and II errors.
 
-\begin{table}
+   Crucially, setting such a threshold does not imply that no pores exist below
+   this limit. Rather, it acknowledges that the confidence in classifying pores
+   below the threshold is too low for reliable use. In this work, the
+   limitations of any single technique are compensated by the strengths of
+   others. Furing modelling, we select an interval over which the channel
+   porosity determined from SEM imaging can reliably constrain the outputs of
+   the inverse modelling process. Thus, no type II errors are introduced in the
+   final model due to pore size thresholding, thanks to the combined use of
+   alternative techniques and the ability to specify an interval within
+   PoreXpert v.3.
+
+   \begin{table}
   \centering
-  \caption{Effect of different pore area thresholds on IG-110 Sample B, showing the resulting pore count, average size, total area, and estimated channel porosity.}
-  \label{tab:thresholdsandvariations}
+  \caption{Effect of different pore area thresholds on IG-430F, showing the resulting pore count, total area, average pore size, and percentage area.}
+  \label{tab:thresholdsandvariationsIG430F}
   \resizebox{\columnwidth}{!}{%
     \begin{tabular}{l c c c c c c}
       \hline
-      {Area Threshold} ($\mu$m$^2$) & 0 & 0.5 & 1 & 2 & 4 & 8 \\
-      Pore Count (n) & 109 & 39 & 30 & 18 & 10 & 3 \\
-      Average Size ($\mu$m$^2$) & 1.709 & 4.437 & 5.554 & 8.263 & 12.611 & 29.003 \\
-      Channel Porosity (\%) & 3.55 & 3.30 & 3.18 & 2.84 & 2.41 & 1.66 \\
+      \textbf{Area Threshold} ($\mu$m$^2$) & 0 & 0.5 & 1 & 2 & 4 & 8 \\
       \hline
-    \end{tabular}
+      Count & 254261 & 11375 & 6485 & 4085 & 2812 & 1881 \\
+      TotalArea ($\mu$m$^2$) & 71219 & 56722 & 53361 & 50063.63 & 46518 & 41161\\
+      Avg. Size ($\mu$m$^2$) & 0.28 & 4.987 & 8.229 & 12.255 & 16.543 & 21.883 \\
+      \% Area & 4.786 & 3.812 & 3.586 & 3.364 & 3.126 & 2.766 \\
+      \hline
+    \end{tabular}%
   }
 \end{table}
 
@@ -276,6 +289,30 @@ the count in the correspoinding bin, yielding a 256‐bin histogram whose entrie
     \label{fig:improvedporediademo}
 \end{figure}
 
+\subsubsection{Channel Porosity Analysis and Calculation}
+Following the determination of the above thresholds, the channel porosity was
+calculated using the “Analyse Particles” function in ImageJ. This function scans
+the micrograph pixel by pixel, identifies all pixels that surpass the intensity
+threshold, and groups them into connected regions via a flood-fill algorithm.
+Connectivity is defined based on the 8-connected (Moore neighborhood) criterion,
+whereby a pixel at $(x,y)$ is considered connected to its eight immediate
+neighbors:
+
+\begin{multline*}
+\footnotesize
+(x-1,y-1),\; (x-1,y),\; (x-1,y+1),\; (x,y-1),\\[4pt]
+(x,y+1),\; (x+1,y-1),\; (x+1,y),\; (x+1,y+1)
+\end{multline*}
+
+
+Thus, any two pixels that exceed the intensity threshold and are either directly
+adjacent or diagonally connected are classified as belonging to the same region
+(pore). The function then computes the area of each pore by converting the pixel
+count into physical area (i.e., 10 pixels per micrometre). Regions that do not
+meet the area threshold are omitted. The final results are a pore size
+distribution (PSD) and the channel porosity (\%).
+
+
 \subsection{Helium (He) Pycnometry}
 	
 Skeletal density was obtained using a Pycnomatic ATC pycnometer (Thermo Fisher
@@ -283,9 +320,9 @@ Scientific, Italy) at a temperature of 20.00 ± 0.01\textdegree{}C. Measurements
 were taken in ten replicates per sample, calculating the arithmetic mean.
 
 Solid phase volume $V_{\mathrm{SOLID}}$ was calculated assuming a theoretical
-density of \todo{insert theoretical density here} g cm$^{-3}$ for an ideal graphite crystal. Closed Pore Volume
-(CPV) and Open Pore Volume (OPV) for each of the samples was calculated via
-equations \ref{eq:CPV} and \ref{eq:OPV}.
+density of \todo{insert theoretical density here} g cm$^{-3}$ for an ideal
+graphite crystal. Closed Pore Volume (CPV) and Open Pore Volume (OPV) for each
+of the samples was calculated via equations \ref{eq:CPV} and \ref{eq:OPV}.
 
 \begin{equation}
 \mathrm{CPV} = \frac{m - V_{\mathrm{SOLID}} \times \rho{_\mathrm{s}}}{\rho{_\mathrm{s}}} 	\label{eq:CPV} 
@@ -307,7 +344,7 @@ Mercury intrusion porosimetry operates on the fundamental principle that the
 pressure at which a non-wetting fluid intrudes a given pore is inversely
 proportional to the diameter of that pore (i.e., the larger the pore, the easier
 it is for the non-wetting fluid to enter it). The exact physical relationship
-between diameter and applied pressure is governed by the following equation (Eq.
+between diameter and applied pressure is governed by the Laplace Equation (Eq.
 ~\ref{eq:washburn})
 	
 	\begin{equation} \label{eq:washburn}
@@ -326,21 +363,28 @@ Values of 140$^{\circ}$ and 130$^{\circ}$ were used for advancing and receding
 contact angles respectively, while a value of 0.480 N m$^{-1}$ was assumed for the
 surface tension of mercury \citep{VANBRAKEL19811}. 
 
-Hg intrusion porosimetry cannot capture the full range of pore sizes as pores >
-89µm diameter cannot be distinguished as mercury intrudes these
-pores without the application of a measurable amount of pressure, and thus the
-relation fails to yield a result (Eq. \ref{eq:washburn}). For pores
->2 µm diameter, structural damage due to the triaxial compression of the
-crystalline structure by intruded mercury precludes an accurate determination of
-porosity at this scale by Hg intrusion porosimetry \citep{Jones2018}. Hence, the
-use of GCMC to "stitch" together the pore diameter ranges covered by both Hg and
-He adsorption. The pore size distribution (PSD) is generated by combining the
-methods into a single set of values, which PoreXpert inversely models to
-capture. 
+In this work, the dataset generated by Jones et al. \citep{Jones2018} was used,
+representing measurements performed not only on the same grades of graphite, but
+the same batch of graphites (i.e. sampled from the same larger "brick") as those samples
+which underwent SEM imaging and He pycnometry in this work.
 
 \subsection{Nitrogen (N$_2$) Adsorption}
 Low-pressure gas adsorption isotherms were obtained using a BELSORP-max
 volumetric gas adsorption instrument (MicrotracBEL, Japan). 
+
+
+As with mercury intrusion porosimetry, the dataset generated by Jones et al.
+\citep{Jones2018} was used in this work. Once more, this represents
+measurements performed on the same grades but the same
+batch of graphites (i.e. sampled from the same larger "brick") as those samples which
+underwent SEM imaging and He pycnometry in this work.
+
+\section{{Modelling}}
+Hg intrusion porosimetry cannot capture the full range of pore sizes
+ Hence, the use of GCMC to "stitch" together the pore diameter
+ranges covered by both Hg and He adsorption \citep{Jones2018}. The pore size distribution (PSD) is
+generated by combining the methods into a single set of values, which PoreXpert
+inversely models to capture. 
 
 \clearpage
 
