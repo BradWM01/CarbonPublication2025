@@ -69,46 +69,102 @@ minimum bulk density exceeding 1.7 g/cm$^3$ \citep{ASTMD7219-19}
 \subsection{Sample preparation}
 Cuboids were sub-sampled from the virgin graphite blocks, with dimensions of
 approximately 10mm x 10mm x 100mm. The sub-samples were further subsampled into
-cuobids of side lengths ~7mm, providing 3 cuboids per grade. Samples were
+cuboids of side lengths ~7mm, providing 3 cuboids per grade. Samples were
 polished via SiC polishing pads up to a grit size of P5000, to minimise
 topographical variations induced by sample preparation that may cause artefacts
-during SEM imaging or low pressure gas adsorption \citep{Fang2022,Jones2018}. 
+during SEM imaging or low pressure gas adsorption \citep{Fang2022,Jones2018}.
 Samples were sonicated in 2-propanol for 24h to remove any contaminants,
-particularly the lubricant used in the machining process. Samples were then
-dried under vacuum for 12 h at $305 \pm 5\,^\circ\mathrm{C}$ using the
-BELPREP-vac (MicrotracBEL, Japan) in order to remove any residual moisture
-introduced during the sonication process.
+including the lubricant used in the machining process or silica particles
+introduced during polishing. Samples were then dried under vacuum for 12 h at
+$305 \pm 5\,^\circ\mathrm{C}$ using the BELPREP-vac (MicrotracBEL, Japan) in
+order to remove any residual moisture introduced during the sonication process.
+
 \todo{Could talk here about how we wanted to do resin impeg like Kane et al, but
-  did not have the chance, and explain this might introduce issues}
-\subsection{Micrograph generation}
-The JEOL\texttrademark  IT510 Scanning Electron Microscope was used in the
-generation of the contiguous set of individual micrographs from which the full
-composite micrograph is assembled. The \textit{Image Montage} capability, within
-the JEOLInScope\texttrademark package, performed this function. The system
-captures a number of micrographs, with the motorised stage moving the electron
-beam over the specified area with a set overlap to capture each new micrograph,
-with the software adjusting stigmation, contrast, and brightness. Shifts in
-contrast and brightness were on the order of < 1\% \todo{Make sure to double
-check that figure for ACB} and thus negligible in affecting intensity threshold
-for the full composite. The full set of parameters selected are tabulated (Table
-~\ref{tab:microscopy_parameters}).
+  did not have the chance, and explain this might introduce issues, also 
+  we could talk about how this is quite rough, and that this kind of sample
+  preparation (i.e. no vibratory polishing, no resin impregnation) is 
+  not ideal and may have introduced both artefacts and noise.
+  Additionally, sonication may have damaged the pore structure}
+
+
+\subsection{Scanning Electron Microscopy (SEM)}
+
+SEM microscopy fundamentally consists of an electron source, confined to a thin
+beam, accelerated towards the sample. The resulting electrons strike the
+photomultiplier, generating electrical signals that are subsequently amplified
+\cite{Achaw12, Goldstein2003}. For SEM analysis of the surface features of
+nuclear-grade graphite, the signal of interest is the secondary electrons, which
+are produced when the incident electrons from the beam excite electrons within
+the atoms of the graphite surface. These excited electrons migrate toward the
+surface and only escape if they possess sufficient energy to overcome the
+material's work function \cite{Achaw12, Goldstein2003}. Given the low
+accelerating voltage applied in this work (5 kV), only the secondary electrons
+representing the first few nanometers of the sample surface can exit and be
+detected \cite{Achaw12, Goldstein2003}.
+
+The construction of the micrographs is the result of signal amplification from
+the secondary electrons via the photomultiplier tube, which generates a
+two-dimensional intensity distribution represented as micrographs. This process
+yields a high-quality representation of the sample surface topography. The
+JEOL\texttrademark IT510 Scanning Electron Microscope was employed to generate
+the contiguous set of individual micrographs from which the full composite
+micrograph was assembled. The Image Montage capability within the JEOLInScope™
+package performed this function. The system captures multiple micrographs by
+using a motorized stage to move the electron beam over the specified area with a
+set overlap for each new micrograph. The software automatically adjusts
+stigmation, contrast, and brightness. Analysis of the metadata for all 1,350
+micrographs demonstrated that shifts in contrast and brightness were minor,
+having a negligible impact therefore on the later selection of the intensity
+threshold for the full composite (Table ~\ref{tab:contrast-brightness-summary})
+The complete set of selected parameters is tabulated in Table
+~\ref{tab:microscopy_parameters}.
+
+\begin{table}[ht]
+  \centering
+  \caption{Contrast (C) and Brightness (C) Summary by Sammple}
+  \label{tab:contrast-brightness-summary}
+  \resizebox{\columnwidth}{!}{%
+  \begin{tabular}{lrrrr}
+    \hline
+    Variant & Avg C (\%) & Std C (\%) & Avg B (\%) & Std B (\%) \\
+    \hline
+    IG430B & 98.01 & 1.02 & 99.69 & 0.08 \\
+    IG430C & 98.16 & 0.82 & 99.83 & 0.08 \\
+    IG110B & 95.86 & 0.72 & 99.26 & 0.13 \\
+    IG110C & 94.03 & 0.93 & 99.38 & 0.13 \\
+    IG110F & 98.20 & 0.70 & 99.69 & 0.13 \\
+    \hline
+  \end{tabular}
+  }
+\end{table}
 
 \begin{table}
   \centering
   \caption{Parameters for composite assembly captured with the JEOL IT510 SEM using Image Montage Mode}
   \label{tab:microscopy_parameters}
-    \begin{tabular}{l l}
-      \hline
-      Parameters & Values \\
-      \hline
-      Magnification ($\times$)                    & 1000 \\
-      Resolution ($\mu$m/px)               & 0.1 \\
-      Surface area per micrograph ($\mu$m$^2$) & 12\,288 \\
-      Overlap (\%)                          & 10 \\
-      Micrographs per sample (n)            & 196 \\
-      \hline
-    \end{tabular}%
+  \begin{tabular}{l l}
+    \hline
+    Parameters & Values \\
+    \hline
+    Magnification ($\times$)                    & 1000 \\
+    Resolution ($\mu$m/px)               & 0.1 \\
+    Surface area per micrograph ($\mu$m$^2$) & 12\,288 \\
+    Overlap (\%)                          & 10 \\
+    Micrographs per sample (n)            & 196 \\
+    \hline
+  \end{tabular}%
 \end{table}
+
+In this work, a magnification of 1000 was selected as an optimal compromise
+between the resolution necessary for capturing the pore structure at the
+required scale and the total area covered by each micrograph. The scale of this
+study is significant, with each micrograph covering 12,288 µm² and each sample
+consisting of 225 micrographs, yielding a total imaging area of 2.765 mm² per
+sample. With 3 samples analysed per grade, the total scanned area per graphite grade is
+8.294 mm². Given this scale, each composite micrograph represents a substantial
+section of the sample and captures a thousands of pores.
+\todo{Huang 2021 used 5000× magnification with 48 micrographs per sample, covering 0.13 mm × 0.13 mm for their composite.}
+\todo{I actually did 0-14 so that is 15 x 15 which is 225 micrographs per sample, not 196.}
 
 \subsection{Composite assembly}
 
@@ -141,12 +197,6 @@ scaled} \cite{Huang2019,Kane2011a}).
 
 	\subsection{Computation of Channel Porosity}
 \subsubsection{Intensity/Greyscale Thresholding}
-	
-	Intensity thresholding determines a greyscale value at which porosity and bulk
-	(i.e., foregound and background) are distinguished. Thisg requiures the
-	representation of the frequency of greyscale values for each of the pixels in
-	the micrograph into a histogram of intensity, enabling the selection of an
-	image-wide threshold at which different classes can be separated.
 
 For each 8-bit micrograph \(E\) (pixel values \(0 \le E(x,y) \le 255\)), we
 first compute its intensity histogram \(H(i)\) for \(i=0,1,\dots,255\).
@@ -163,29 +213,35 @@ where \(M\) and \(N\) are the image width and height (in pixels), and
 \end{cases}
 \]
 
-  In essence, for each pixel the equation checks the greyscale value and increments
-  the count in the correspoinding bin, yielding a 256-bin histogram \(H(i)\) whose entries
-  count the number of pixels at each greyscale level. 
+The indicator function \(\mathbf{1}\{E(x,y)=i\}\) “tests” each pixel, yielding 1
+if the pixel greyscale value equals \(i\) (e.g. greyscale value of 250), and 0
+otherwise. The double sum \(\sum_{x=1}^M\sum_{y=1}^N\) runs that test over every
+pixel in the micrograph resulting in a histogram \(H(i)\) of 256 bins, each bin
+representing number of pixels in the micrograph at each greyscale value \(i\). 
 
-	Global automatic thresholding algorithms optimise by different
-	criteria (i.e. maximisation of inter-class variance, minimisation of
-	intra-class variance) to determine thresholds. For manual selection of a given
-	threshold, or validation of an automatically selected threshold, there exists
-	no certain criteria to allow a fully objective evaluation
-	\citep{Huang2019}.Thresholding aims to select an intensity value that reliably
-	binarizes porosity and bulk in a way that minimizes both Type I and II errors,
-	as evaluated by the operator (i.e., false positives, classifying a pore where
-	one is not present, and false negatives, not classifying a pore where one is
-	present).
+Intensity thresholding then \(H(i)\) determines a greyscale value
+at which porosity and bulk (i.e., foregound and background) are distinguished.
 
-  A test of all 17 of the available automatic thresholding methods available in
-  ImageJ demonstrated that none of the avilable automatic global intensity
-  thresholding algorithm effectively distinguished between porosity and bulk
-  with the sensitivity required to allow the classification of pores for the
-  given histogram (Figure ~\ref{fig:Try All Thresholding Methods}). The key
-  cause is likely the lack of a bimodal distribution in the histograms generated
-  by any of the micrographs , meaning that there are statistically no classes to
-  be separated (Figure ~\ref{fig:histogramnobimodal}). 
+Global automatic thresholding algorithms optimise by different
+criteria (i.e. maximisation of inter-class variance, minimisation of
+intra-class variance) to determine thresholds. For manual selection of a given
+threshold, or validation of an automatically selected threshold, there exists
+no certain criteria to allow a fully objective evaluation
+\citep{Huang2019}.Thresholding aims to select an intensity value that reliably
+binarizes porosity and bulk in a way that minimizes both Type I and II errors,
+as evaluated by the operator (i.e., false positives, classifying a pore where
+one is not present, and false negatives, not classifying a pore where one is
+present).
+
+A test of all 17 of the available automatic thresholding methods available in
+ImageJ demonstrated that none of the avilable automatic global intensity
+thresholding algorithm effectively distinguished between porosity and bulk
+with the sensitivity required to allow the classification of pores for the
+given histogram (Figure ~\ref{fig:Try All Thresholding Methods}). The key
+cause is likely the lack of a bimodal distribution in the histograms generated
+by any of the micrographs , meaning that there are statistically no classes to
+be separated (Figure ~\ref{fig:histogramnobimodal}). 
+
     \begin{figure}
 		\centering
     \includegraphics[width=0.45\textwidth]{./Media/IG430F Greyscale Histogram.png}
@@ -218,12 +274,13 @@ where \(M\) and \(N\) are the image width and height (in pixels), and
 
 	A HITL (human in the loop) approach was therefore undertaken, as illustrated
 	in the  process diagram (Figure ~\ref{fig:Final Workflow}). Here, the operator
-	subsamples the overall fused compsite, then examines this subsample to
+	subsamples the composite micrograph, then examines this subsample to
 	determine the threshold at which porosity and bulk are best separated. The
 	operator then applies this threshold, along with a pore diameter threshold, to
-	the full composite. The results are classified as either porosity or bulk to
-	derive channel porosity.
-	
+	the full composite. The composite micrograph has therefore been binarized and 
+  porosity can be quantified via various connected component analysis
+  algorithms, such as the "Analyse Particles" function in ImageJ.
+
 \begin{figure}[!htbp]
     \centering
     \includegraphics[width=0.45\textwidth]{./Media/Newprocessmodel.png}
@@ -248,10 +305,10 @@ where \(M\) and \(N\) are the image width and height (in pixels), and
   area of pores above the threshold remains relatively stable, with a porosity
   of 3.8\% for the 0.5 µm\(^2\) threshold, and 3.6\% for the 1 µm\(^2\)
   threshold. When combined with individual analyses of the resulting PSDs and
-  precise examination of exactly which features are excluded at each
-  threshold as per (Figure ~\ref{fig:improvedporediademo}), it is clear that a
-  pore area threshold of 1 µm\(^2\) (dia = 1.12 µm) was the optimal compromise
-  between type I and II errors.
+  precise examination of exactly which features are excluded at each threshold
+  as per (Figure ~\ref{fig:improvedporediademo}), a pore area threshold of 1
+  µm\(^2\) (dia = 1.12 µm) was selected an optimal compromise between type I and
+  II errors.
 
    Crucially, setting such a threshold does not imply that no pores exist below
    this limit. Rather, it acknowledges that the confidence in classifying pores
@@ -263,6 +320,8 @@ where \(M\) and \(N\) are the image width and height (in pixels), and
    final model due to pore size thresholding, thanks to the combined use of
    alternative techniques and the ability to specify an interval within
    PoreXpert v.3.
+
+   \todo{This part really requires Peter's insight as to the actual functioning of the program}
 
    \begin{table}
   \centering
@@ -311,6 +370,15 @@ adjacent or diagonally connected are classified as belonging to the same region
 count into physical area (i.e., 10 pixels per micrometre). Regions that do not
 meet the area threshold are omitted. The final results are a pore size
 distribution (PSD) and the channel porosity (\%).
+
+This algorithm is likely to yield at least a  slight overestimation of the
+channel porosity. This is because such an inclusive definition measn that two or
+more pores, connected by a narrow neck, may be classified as a single pore.
+Notably, this would not change the final channel porosity (\%) but would result
+in a rightward shift in the PSD. Skeleton segmentation is for fine-grade nuclear
+graphite likely to be a more accurate approach than a simple connectivity
+algorithm as used here would be a key improvement if implemented
+\cite{ARREGUIMENA2022112047}
 
 
 \subsection{Helium (He) Pycnometry}
@@ -372,14 +440,14 @@ which underwent SEM imaging and He pycnometry in this work.
 Low-pressure gas adsorption isotherms were obtained using a BELSORP-max
 volumetric gas adsorption instrument (MicrotracBEL, Japan). 
 
-
 As with mercury intrusion porosimetry, the dataset generated by Jones et al.
 \citep{Jones2018} was used in this work. Once more, this represents
 measurements performed on the same grades but the same
 batch of graphites (i.e. sampled from the same larger "brick") as those samples which
 underwent SEM imaging and He pycnometry in this work.
 
-\section{{Modelling}}
+\section{Modelling}
+\todo{not yet begun with this part}
 Hg intrusion porosimetry cannot capture the full range of pore sizes
  Hence, the use of GCMC to "stitch" together the pore diameter
 ranges covered by both Hg and He adsorption \citep{Jones2018}. The pore size distribution (PSD) is
