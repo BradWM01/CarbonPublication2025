@@ -1,19 +1,26 @@
 # Fdb version 4
-["bibtex main"] 1748264384.0712 "main.aux" "main.bbl" "main" 1748264451.72218 0
-  "./bibliography.bib" 1748088686 23627 c1838bd120896d9f05c0b641fb45d8b5 ""
+["bibtex main"] 1748361031.08131 "main.aux" "main.bbl" "main" 1748361040.67631 0
+  "./bibliography.bib" 1748359091 25011 fa1679673747d2c833b0e89c55d95880 ""
   "./elsarticle-num.bst" 1736444234 29462 3b2a1af2ce1e224a3b46ee048ffd4b98 ""
-  "main.aux" 1748264450 8426 090066c1a1765ac72f011fe907c8501d "pdflatex"
+  "main.aux" 1748361039 12485 2d3c3b006a465730602105d67b4f646c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748264442.66442 "c:/Users/bradm/Newfolder/CarbonPublication2025/CarbonPublication2025/main.tex" "main.pdf" "main" 1748264451.72293 0
+["pdflatex"] 1748361031.53046 "c:/Users/bradm/Newfolder/CarbonPublication2025/CarbonPublication2025/main.tex" "main.pdf" "main" 1748361040.67715 0
   "Media/C1-IG430c fusion cropped split scaled.jpg" 1747837457 41980639 55d3e3574844526026d006e648c09c37 ""
+  "Media/Fit to percolation curve.png" 1747837457 20893 457d385b33fe4728a5feda6e217e085d ""
+  "Media/IG110 ds LogD .png" 1747837457 46040 1813ea3682a1e3b3d6042704cc1dda35 ""
+  "Media/IG430 ds LogD .png" 1747837457 40397 e55264c56a880786b5246c72cc1c5118 ""
   "Media/IG430F Greyscale Histogram.png" 1748019587 21653 906764be3994f82c9febb8bcc64a2875 ""
   "Media/ImprovedPoreDiaDemo.png" 1747837457 4584561 3b181b144b5eec525517edd6388b8b44 ""
   "Media/MontageIG430C Methods.jpg" 1747837457 9602739 33f781229c46925a8073181356aea4f7 ""
   "Media/Newprocessmodel.png" 1747837457 12115203 298a9ced86c1e28aabb27aa3031a4758 ""
-  "c:/Users/bradm/Newfolder/CarbonPublication2025/CarbonPublication2025/main.tex" 1748264441 22915 d9ae5ddeab1ba696e45a4432b97b1ed2 ""
+  "Media/PX Approximation Types.png" 1747837457 30843 0dfaba0f1e9de97da58a23e8df98623b ""
+  "Media/ValidationGraph.png" 1747837457 55226 1365e214320c60e374f44d5291d6c54e ""
+  "Media/modelling pipeline.jpg.jpg" 1747837457 172983 ad7179319137b55b92033193a9fbc312 ""
+  "Media/unit cell no bg.png" 1747837457 1517132 cbdf2adec7630db90ac7fe8a27b165a9 ""
+  "c:/Users/bradm/Newfolder/CarbonPublication2025/CarbonPublication2025/main.tex" 1748361009 34882 af068461e01f581f0cd75e869a8e2b3e ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1747742735 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1747742735 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1747743949 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -169,10 +176,10 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1747749774 5569470 f263a82cf6bb394f5bc87b63f38b78df ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1747750106 3568612 1d95f43178712d3ab42fd684e31035d8 ""
   "c:/texlive/2025/texmf.cnf" 1747749736 713 614551405fc44b98efbf516466e3c909 ""
-  "main.aux" 1748264450 8426 090066c1a1765ac72f011fe907c8501d "pdflatex"
-  "main.bbl" 1748264384 4628 524727306ea8497ea02fa5539ff98967 "bibtex main"
-  "main.spl" 1748264443 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1748264441 22915 d9ae5ddeab1ba696e45a4432b97b1ed2 ""
+  "main.aux" 1748361039 12485 2d3c3b006a465730602105d67b4f646c "pdflatex"
+  "main.bbl" 1748361031 5377 2093492bb812620b613fb9d6d518f826 "bibtex main"
+  "main.spl" 1748361032 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1748361009 34882 af068461e01f581f0cd75e869a8e2b3e ""
   (generated)
   "main.aux"
   "main.log"

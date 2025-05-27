@@ -3,46 +3,47 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: elsarticle-num.bst
 Database file #1: bibliography.bib
+Warning--I didn't find a database entry for "Preibisch2009)"
 Warning--empty pages in Achaw12
-You've used 13 entries,
+You've used 15 entries,
             2952 wiz_defined-function locations,
-            788 strings with 8167 characters,
-and the built_in function-call counts, 4388 in all, are:
-= -- 421
-> -- 144
-< -- 3
-+ -- 56
-- -- 43
-* -- 363
-:= -- 607
-add.period$ -- 23
-call.type$ -- 13
-change.case$ -- 16
-chr.to.int$ -- 3
-cite$ -- 14
-duplicate$ -- 131
-empty$ -- 489
-format.name$ -- 53
-if$ -- 1130
+            805 strings with 8869 characters,
+and the built_in function-call counts, 4939 in all, are:
+= -- 488
+> -- 156
+< -- 4
++ -- 61
+- -- 46
+* -- 388
+:= -- 685
+add.period$ -- 25
+call.type$ -- 15
+change.case$ -- 21
+chr.to.int$ -- 6
+cite$ -- 16
+duplicate$ -- 153
+empty$ -- 550
+format.name$ -- 57
+if$ -- 1285
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 12
-newline$ -- 62
-num.names$ -- 15
-pop$ -- 87
+int.to.str$ -- 15
+missing$ -- 13
+newline$ -- 69
+num.names$ -- 17
+pop$ -- 99
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 264
+skip$ -- 307
 stack$ -- 0
-substring$ -- 192
-swap$ -- 49
+substring$ -- 198
+swap$ -- 54
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 27
-width$ -- 15
-write$ -- 139
-(There was 1 warning)
+while$ -- 30
+width$ -- 17
+write$ -- 160
+(There were 2 warnings)
