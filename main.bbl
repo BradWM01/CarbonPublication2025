@@ -59,4 +59,11 @@ J.~{Van Brakel}, S.~Modrý, M.~Svatá, \href{https://www.sciencedirect.com/scien
 \newblock \href {https://doi.org/https://doi.org/10.1016/0032-5910(81)85001-2} {\path{doi:https://doi.org/10.1016/0032-5910(81)85001-2}}.
 \newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/0032591081850012}
 
+\bibitem{MatthewsPoreXpert2025}
+G.~P. Matthews, \href{https://www.porexpert.com/}{PoreXpert User Manual: A comprehensive guide to version 3}, PoreXpert Ltd, Plymouth, UK, 3rd Edition, director and CEO, PoreXpert Ltd; Emeritus Professor of Applied Physical Chemistry, University of Plymouth, UK. Includes introductory tutorials, fundamental science sections, guidance on avoiding common experimental errors, and software validation. (2025).
+\newline\urlprefix\url{https://www.porexpert.com/}
+
+\bibitem{huang2021statistical}
+Q.~Huang, H.~Tang, A statistical analysis of pores and microcracks in nuclear graphite, Shanghai Institute of Applied Physics, Chinese Academy of SciencesCorrespondence to Qing Huang, Email: huangqing2012@sinap.ac.cn (2021).
+
 \end{thebibliography}

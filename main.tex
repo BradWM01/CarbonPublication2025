@@ -168,24 +168,64 @@ section of the sample and captures a thousands of pores.
 
 \subsection{Composite assembly}
 
-The composite assembly (i.e., "stitching") stage, where the overlapping
-micrographs are assembled into a single image per sample, may have a significant
-impact on the porosity values generated as incorrect fusion will misrepresent
-pore structures. A stitching method based on the phase correlation approach
-originally developed by Kuglin and Hines, amongst the most popular approaches to
-image registration, was selected and operated as a plug-in within ImageJ
-\citep{Kuglin1975, Preibisch2009}. This method represents a development of the
-original phase correlation method\citep{Preibisch2009}.
+The composite assembly stage ("stitching") , where the overlapping micrographs
+are combined into a single image per sample, may have a significant impact on
+the porosity values generated as incorrect fusion will misrepresent pore
+structures. To address this, a stitching method based on the phase correlation
+approach developed by Kuglin and Hines (1975) and further refined by Preibisch
+et al. (2009) was employed as an ImageJ plugin \citep{Kuglin1975,
+Preibisch2009}.
 	
-A key advantage of this method is the avoidance of error propogation by
-consecutive registration steps, which is key at this scale
-\citep{Preibisch2009}. A further advantage is the sub-pixel accuracy of the
-fusion, as incorrect alignments would generate false pore diameters. The
-resulting composite micrographs showed excellent alignment with no visible
+One advantage of this method is the avoidance of error propogation by
+consecutive registration steps, as simply placing micrograph A relative to
+micrograph B, and then micrograph B relative to micrograph C, would result in
+accumulation of errors. This method builds a graph whose nodes are the
+micrographs, and edges are the measured pairwise shifts between the micrographs.
+It then finds the set of micrograph positions that minimize the total squared
+registration error across the entire graph, a form of globally optimized
+registration \citep{Preibisch2009}.
+
+This stitching method also allows sub-pixel accuracy, which is crucial for
+accurate pore measurement. If each micrograph is a discrete 2D signal, then for
+any two micrographs \(A\) and \(B\), which are shifted relative to each other
+(i.e., micrograph \(B\) is shifted two pixels up and 10 pixels left of
+micrograph \(A\) ) then their Fourier transforms would have the same magnitude
+but different phases. A normalized cross-power spectrum isolates the phase
+difference, and from there the Inverse Fourier transform yields a correlation
+map with peaks indicating possible translations between the micrographs.
+Unfortunately, complexity of real images and the periodicity of the Fourier
+transform means that the correlation map is not a single peak, but rather a set
+of peaks, each representing a possible translation. This method therefore
+selects the \(n\) highest local maxima and finds the peak with the best
+correlation, which it defines as the true translation between the two
+micrographs \citep{Preibisch2009}. Finally, sub-pixel accuracy in that shift is
+achieved by applying a parabolic interpolation around the selected peak to
+refine the translation estimate.
+
+Additionally, a non-linear intensity blending function eliminates the visible
+seams between micrographs, which can occur even when the micrographs are
+perfectly aligned due to shading variations. This blending assigns a weight to
+each pixel in a tile, working as a function of the distance from the tile edge,
+with the a tunable parameter controlling this weighting function. In
+non-overlapping regions, the centre of the micrograph, the weight is essentially
+1, so the original pixel value is preserved exactly. In overlapping regions,
+intensities are a convex combination of the original values. Crucially, because
+the weights sum to 1 everywhere, blended intensity is simply a weighted average
+of the original intensities. Thus, the final composite micrograph is still a
+valid representation of the original micrographs, but the seams have been
+removed, and the transition between micrographs is smooth \citep{Preibisch2009)}.
+Testing indicated that different values in the blending parameter, which is
+tunable, had no discernable impact on the final composite micrograph, and
+therefore no impact on the final porosity values. By contrast, the removal of the
+visible seams between micrographs did increase confidence that in the following
+steps, the subsample used to determine the intensity threshold was
+representative of the full composite micrograph.
+
+The resulting composite micrographs showed excellent alignment with no visible
 delineation between individual micrographs, a total area comparable with
-previous works, high resolution, and clear distinction
-between porosity and bulk when examined closely (Figure \ref{fig:IG430C split
-scaled} \cite{Huang2019,Kane2011a}). 
+previous works, high resolution, and clear distinction between porosity and bulk
+when examined closely (Figure \ref{fig:IG430C split scaled}
+\cite{Huang2019,Kane2011a}). 
 
 	\begin{figure}
 		\centering
@@ -314,25 +354,31 @@ be separated (Figure ~\ref{fig:histogramnobimodal}).
    this limit. Rather, it acknowledges that the confidence in classifying pores
    below the threshold is too low for reliable use. In this work, the
    limitations of any single technique are compensated by the strengths of
-   others. Furing modelling, we select an interval over which the channel
+   others. during modelling, an interval is selected over which the channel
    porosity determined from SEM imaging can reliably constrain the outputs of
    the inverse modelling process. Thus, no type II errors are introduced in the
    final model due to pore size thresholding, thanks to the combined use of
    alternative techniques and the ability to specify an interval within
    PoreXpert v.3.
-
    \todo{This part really requires Peter's insight as to the actual functioning of the program}
+   \todo{This is not the key issue. The real thing is the accuracy of the pore
+   size distribution generated by SEM. For example, the modelling would I think
+   be distorted completely by saying that 3\% of the sample surface is made up
+   of pores of 1.12-25 µm diameter, when that number may actually represent all
+   pores above 1.12 µm, and it is just fragmenting the pores. Being unsure about
+   the exact diameter range of pores covered by SEM must surely be making the 
+   modelling less accurate, and the pore size distribution more skewed.}
 
    \begin{table}
   \centering
-  \caption{Effect of different pore area thresholds on IG-430F, showing the resulting pore count, total area, average pore size, and percentage area.}
+  \caption{Effect of different pore area thresholds on a subsection of IG-430F, showing the resulting pore count, total area, average pore size, and percentage area.}
   \label{tab:thresholdsandvariationsIG430F}
   \resizebox{\columnwidth}{!}{%
     \begin{tabular}{l c c c c c c}
       \hline
       \textbf{Area Threshold} ($\mu$m$^2$) & 0 & 0.5 & 1 & 2 & 4 & 8 \\
       \hline
-      Count & 254261 & 11375 & 6485 & 4085 & 2812 & 1881 \\
+      Count & 254261 & 11375 & 6 & 4085 & 2812 & 1881 \\
       TotalArea ($\mu$m$^2$) & 71219 & 56722 & 53361 & 50063.63 & 46518 & 41161\\
       Avg. Size ($\mu$m$^2$) & 0.28 & 4.987 & 8.229 & 12.255 & 16.543 & 21.883 \\
       \% Area & 4.786 & 3.812 & 3.586 & 3.364 & 3.126 & 2.766 \\
@@ -358,7 +404,6 @@ whereby a pixel at $(x,y)$ is considered connected to its eight immediate
 neighbors:
 
 \begin{multline*}
-\footnotesize
 (x-1,y-1),\; (x-1,y),\; (x-1,y+1),\; (x,y-1),\\[4pt]
 (x,y+1),\; (x+1,y-1),\; (x+1,y),\; (x+1,y+1)
 \end{multline*}
@@ -441,19 +486,176 @@ Low-pressure gas adsorption isotherms were obtained using a BELSORP-max
 volumetric gas adsorption instrument (MicrotracBEL, Japan). 
 
 As with mercury intrusion porosimetry, the dataset generated by Jones et al.
-\citep{Jones2018} was used in this work. Once more, this represents
-measurements performed on the same grades but the same
-batch of graphites (i.e. sampled from the same larger "brick") as those samples which
-underwent SEM imaging and He pycnometry in this work.
+\citep{Jones2018} was used in this work. Once more, this represents measurements
+performed on the same grades but the same batch of graphites (i.e. sampled from
+the same larger "brick") as those samples which underwent SEM imaging and He
+pycnometry in this work.
 
 \section{Modelling}
-\todo{not yet begun with this part}
-Hg intrusion porosimetry cannot capture the full range of pore sizes
- Hence, the use of GCMC to "stitch" together the pore diameter
-ranges covered by both Hg and He adsorption \citep{Jones2018}. The pore size distribution (PSD) is
-generated by combining the methods into a single set of values, which PoreXpert
-inversely models to capture. 
+PoreXpert is a void network simulation package developed at the University of
+Plymouth, and now marketed worldwide by the University's spin-out company,
+PoreXpert Ltd. A primary input for its modelling is the percolation
+characteristic of the sample, usually measured by Hg porosimetry.  In the case
+of nuclear graphite, mercury porosimeters cannot reach sufficient applied
+pressure to probe the smallest voids of interest, and therefore, the percolation
+characteristic is extended to smaller void sizes by Grand-Canonical Monte-Carlo
+interpretation of N$_2$ adsorption.  PoreXpert is a quasi-Bayesian model which
+proceeds inversely from effect (the percolation) to cause (the void network).
+PoreXpert constructs an 8 dimensional parameter space,  composed of 5 numerical
+parameters which represent the physical characteristics of the pore network,
+such as the skew of the void (pore) size distribution, and 3 constraining
+Boolean parameters, for example, to avoid structures where features overlap each
+other. A Boltzmann-annealed amoeboid simplex searches over this parameter space
+to find the set of parameters that produces a percolation curve minimally
+different from the intrusion curve derived from Hg porosimetry and N$_2$/Kr
+adsorption. The final result is a simulated pore network with the correct
+porosity and percolation properties, on which many simulations, such as
+pore-fluid permeability and tortuousity, and sample ageing under radiation, can
+be performed \citep{MatthewsPoreXpert2025}.
 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{./Media/Modelling Pipeline.jpg.jpg}
+    \caption{Full modelling pipeline, within the PoreXpert software package, integrating intrusion and SEM-derived datasets}
+    \label{fig:modelling pipeline}
+\end{figure}
+
+    Modelling, conducted in PoreXpert v.3, was processed according to the
+    illustrated workflow (Figure ~\ref{fig:modelling pipeline}). The user
+    selects the approximation types that best reflects their interpretation of
+    the depth of imaging into the porous structure (Figure
+    \ref{fig:pxapproxtypes}, \citep{MatthewsPoreXpert2025}), Approximation Type
+    1 \textit{Surface connected throats only} is likely to be a more accurate
+    approximation for the channel porosity dataset constructed in this work, as
+    a consequence of the stringent intensity threshold applied. However, due to
+    stability challenges in this early compilation, approximation Type 2
+    \textit{Surface connected throats and the visible volumes of connected
+    pores} was applied instead (Figure ~\ref{fig:pxapproxtypes}).
+    
+    \todo{Without being able to run it, you could not verify, so I think it
+    would be better to just specify the approximation type.}
+
+    \begin{figure}
+	    \centering
+	    \includegraphics[width=0.45\textwidth]{./Media/PX Approximation Types.png}
+	    \caption{DRAFT: Does it belong? //Approximation types available for user selection in PoreXpert v.3, selected by the user through validation based on the thresholds applied and the extent of the insight into the given media }
+	    \label{fig:pxapproxtypes}
+	\end{figure}
+
+  Following the selection of parameters, the channel porosity data were entered
+  into the PoreXpert v.3 interface including a minimum and maximum pore diameter
+  as per (Figure ~\ref{fig:Final Workflow}),  the model was able to adjust the
+  extent of the PSD which the channel porosity estimates, optimising effectively
+  to a minimal distance distance of 1.91\% deviation from the experimental curve
+  (Figure ~\ref{fig:PXfittinggraph})
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.45\textwidth]{./Media/Fit to percolation curve.png}
+        \caption{PX Fitting process as per (Figure ~\ref{fig:modelling pipeline}). Orange dots denote experimental datapoints, the blue line is the simulated percolation curve resulting from a pore network of physically plausible parameters.}
+        \label{fig:PXfittinggraph}
+    \end{figure}
+
+  The result is a pore network, upon which many simulations can be performed.
+  \ref{fig:PX3dnetwork} shows a 3D rendering of the pore network generated by
+  PoreXpert.
+
+      \begin{figure}
+        \centering
+        \includegraphics[width=0.45\textwidth]{./Media/unit cell no bg.png}
+        \caption{PoreXpert visualisation of the pore network resulting from the
+        integration of channel porosity and experimental data by the workflows
+        above. 1.91\% distance between simulated and experimental curves,
+        following the application of Approximation Type 2 (Figure
+        ~\ref{fig:pxapproxtypes}). Channel Porosity estimation was averaged over
+        the top 9 layers of a unit cell 20x20x20. The result of one generation
+        of stochastic number generation. Run in Direct Mode as Batch mode
+        remained unstable in this early compilation}
+        \label{fig:PX3dnetwork}
+    \end{figure}
+
+    Initial testing of PoreXpert modelling demonstrate excellent congruence
+    with manufacturer datasets, as exemplified below on IG-110 Sample B.
+    Crucially, the linear trend line shows only a weak correlation between open
+    porosity estimate and distance between simulated and experimental
+    percolation characteristic (r\(^2\) = 0.32) (Figure
+    \ref{fig:validationgraph}). Thus, taking the average over all stochastic
+    generations of PoreXpert is a valid measure of this method's estimate of
+    open porosity. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{./Media/ValidationGraph.png}
+    \caption{DRAFT: Needs to be reformatted for publicatiom, if we choose to keep it.Validation of modelled open porosity by comparison of modelled open porosities generated by PoreXpert with manufacturer data for IG-110, which estimates a 19.62\% open porosity \cite{Jones2018}}
+    \label{fig:validationgraph}
+\end{figure}
+
+  Initial modelling generated plausible data...
+
+\section{Results}
+
+\begin{table}
+  \centering
+  \caption{Pore Size Distribution (PSD) and summary characteristics for IG-110 and IG-430 samples, tabulating number of pores, total pore area, and channel porosity.}
+  \label{tab:PSDtable}
+  \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{c c c c}
+      \hline
+      Sample & n / pores & Total Area / $\mu$m$^2$ & Channel Porosity / \% \\
+      \hline
+      IG110 B & 8,684  & 41,091 & 3.14 \\
+      IG110 C & 7,075  & 49,755 & 3.27 \\
+      IG110 F & 8,296  & 50,735 & 3.38 \\
+      IG430 B & 6,848  & 32,983 & 2.30 \\
+      IG430 C & 13,026 & 49,534 & 2.94 \\
+      IG430 F & 6,819  & 56,794 & 3.66 \\
+      \hline
+    \end{tabular}%
+  }
+\end{table}
+
+The completed workflow of SEM imaging and computational composite analysis
+yielded estimates of channel porosity for both graphite grades (Table
+~\ref{tab:PSDtable}). IG-110 samples exhibited channel porosity values ranging
+from 3.14-3.38\%, while IG-430 samples showed greater variability, ranging from
+2.30-3.66\%
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{./Media/IG110 ds LogD .png}
+    \caption{DRAFT: I want to recheck my code on these distributions}
+    \label{fig:IG110LogPSDs}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.45\textwidth]{./Media/IG430 ds LogD .png}
+    \caption{DRAFT: I want to recheck my code on these distributions}
+    \label{fig:IG430LogPSDs}
+\end{figure}
+
+Area contribution distribution is represented graphically for both graphite
+grades (Figure ~\ref{fig:IG110LogPSDs}, ~\ref{fig:IG430LogPSDs}). The area of
+each logarithmic bin (spanning 0.1-100 µm on the x-axis) was summed then divided
+by the bin width in \(\log_{10}(D)\) to derive \(dS/d(\log_{10}D)\), with the
+x-axis then linearised.  y-axis values represent area density in µm\(^2\) per
+\(\log_{10}(D)\).
+
+IG-110 and IG-430 both exhibit a peak in the sub-10 µm range. This is the
+inverse of trends observed in previous OM-based analyses, where the majority of
+the porosity is contributed by pores above this range \citep{Huang2019}.
+\citep{huang2021statistical} found that porosity as by classified SEM, albeit 
+with a different distribution, was 3\% for IG-110, which is highly
+congruent with the 3.14-3.38\% range derived in this work.
+
+Interpolation increases confidence in the basic functionality of this method.
+Adjustment of the intensity threshold to match previous OM works (i.e., pore
+contours and pore throats are no longer distinguished, via a reduction in
+intensity threshold) produces highly similar channel porosity values.
+Specifically, \citep{Kane2011a} estimated a channel porosity of 14.73\% for
+IG-110, with \citep{Huang2019} deriving 14\% for the same grade, highly
+congruent with the approximately 13-14\% figure this method derives with an
+adjusted intensity threshold, but also illustrating the scale of the impact in
+intensity threshold selection on the final channel porosity estimate.
 \clearpage
 
 \bibliography{bibliography}
