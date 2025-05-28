@@ -49,11 +49,6 @@ J.~Kane, et~al., Microstructural characterization and pore structure analysis of
 J.~Taylor, G.~Hall, P.~Mummery, Investigating the effects of stress on the pore structures of nuclear grade graphites, Journal of Nuclear Materials 470 (2016) 216--228.
 \newblock \href {https://doi.org/10.1016/j.jnucmat.2015.12.031} {\path{doi:10.1016/j.jnucmat.2015.12.031}}.
 
-\bibitem{ARREGUIMENA2022112047}
-J.~D. Arregui-Mena, R.~N. Worth, W.~Bodel, B.~März, W.~Li, A.~A. Campbell, E.~Cakmak, N.~Gallego, C.~Contescu, P.~D. Edmondson, \href{https://www.sciencedirect.com/science/article/pii/S1044580322003291}{Multiscale characterization and comparison of historical and modern nuclear graphite grades}, Materials Characterization 190 (2022) 112047.
-\newblock \href {https://doi.org/https://doi.org/10.1016/j.matchar.2022.112047} {\path{doi:https://doi.org/10.1016/j.matchar.2022.112047}}.
-\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S1044580322003291}
-
 \bibitem{VANBRAKEL19811}
 J.~{Van Brakel}, S.~Modrý, M.~Svatá, \href{https://www.sciencedirect.com/science/article/pii/0032591081850012}{Mercury porosimetry: state of the art}, Powder Technology 29~(1) (1981) 1--12.
 \newblock \href {https://doi.org/https://doi.org/10.1016/0032-5910(81)85001-2} {\path{doi:https://doi.org/10.1016/0032-5910(81)85001-2}}.
@@ -65,5 +60,10 @@ G.~P. Matthews, \href{https://www.porexpert.com/}{PoreXpert User Manual: A compr
 
 \bibitem{huang2021statistical}
 Q.~Huang, H.~Tang, A statistical analysis of pores and microcracks in nuclear graphite, Shanghai Institute of Applied Physics, Chinese Academy of SciencesCorrespondence to Qing Huang, Email: huangqing2012@sinap.ac.cn (2021).
+
+\bibitem{ARREGUIMENA2022112047}
+J.~D. Arregui-Mena, R.~N. Worth, W.~Bodel, B.~März, W.~Li, A.~A. Campbell, E.~Cakmak, N.~Gallego, C.~Contescu, P.~D. Edmondson, \href{https://www.sciencedirect.com/science/article/pii/S1044580322003291}{Multiscale characterization and comparison of historical and modern nuclear graphite grades}, Materials Characterization 190 (2022) 112047.
+\newblock \href {https://doi.org/https://doi.org/10.1016/j.matchar.2022.112047} {\path{doi:https://doi.org/10.1016/j.matchar.2022.112047}}.
+\newline\urlprefix\url{https://www.sciencedirect.com/science/article/pii/S1044580322003291}
 
 \end{thebibliography}

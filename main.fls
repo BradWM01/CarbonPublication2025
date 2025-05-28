@@ -244,11 +244,20 @@ INPUT ./Media/Newprocessmodel.png
 INPUT ./Media/Newprocessmodel.png
 INPUT ./Media/Newprocessmodel.png
 INPUT ./Media/Newprocessmodel.png
+INPUT ./Media/intensitythresholdexampleig430fdual.png
+INPUT ./Media/intensitythresholdexampleig430fdual.png
+INPUT ./Media/intensitythresholdexampleig430fdual.png
+INPUT ./Media/intensitythresholdexampleig430fdual.png
+INPUT ./Media/intensitythresholdexampleig430fdual.png
 INPUT ./Media/ImprovedPoreDiaDemo.png
 INPUT ./Media/ImprovedPoreDiaDemo.png
 INPUT ./Media/ImprovedPoreDiaDemo.png
 INPUT ./Media/ImprovedPoreDiaDemo.png
 INPUT ./Media/ImprovedPoreDiaDemo.png
+INPUT ./Media/C1-ig430f fused cropped 8 bit one color threshed subsample 2um areathresh.jpg
+INPUT ./Media/C1-ig430f fused cropped 8 bit one color threshed subsample 2um areathresh.jpg
+INPUT ./Media/C1-ig430f fused cropped 8 bit one color threshed subsample 2um areathresh.jpg
+INPUT ./Media/C1-ig430f fused cropped 8 bit one color threshed subsample 2um areathresh.jpg
 INPUT ./Media/modelling pipeline.jpg.jpg
 INPUT ./Media/modelling pipeline.jpg.jpg
 INPUT ./Media/modelling pipeline.jpg.jpg

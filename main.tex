@@ -39,7 +39,7 @@ Nuclear grade graphite
 
 \subsection{Materials}
 
-Virgin graphite samples of two grades, IG110 and IG430, were supplied by Toyo
+Virgin graphite samples of two grades, IG-110 and IG-430, were supplied by Toyo
 Tanso Ltd\texttrademark{}, Osaka, Japan. The properties of both grades are
 tabulated (Table ~\ref{tab:materialstable}).IG‑110 is currently employed in the
 three existing HTGRs worldwide, while IG‑430 is designed to deliver increased
@@ -72,7 +72,7 @@ approximately 10mm x 10mm x 100mm. The sub-samples were further subsampled into
 cuboids of side lengths ~7mm, providing 3 cuboids per grade. Samples were
 polished via SiC polishing pads up to a grit size of P5000, to minimise
 topographical variations induced by sample preparation that may cause artefacts
-during SEM imaging or low pressure gas adsorption \citep{Fang2022,Jones2018}.
+during either SEM imaging or low pressure gas adsorption \citep{Fang2022,Jones2018}.
 Samples were sonicated in 2-propanol for 24h to remove any contaminants,
 including the lubricant used in the machining process or silica particles
 introduced during polishing. Samples were then dried under vacuum for 12 h at
@@ -80,12 +80,11 @@ $305 \pm 5\,^\circ\mathrm{C}$ using the BELPREP-vac (MicrotracBEL, Japan) in
 order to remove any residual moisture introduced during the sonication process.
 
 \todo{Could talk here about how we wanted to do resin impeg like Kane et al, but
-  did not have the chance, and explain this might introduce issues, also 
-  we could talk about how this is quite rough, and that this kind of sample
-  preparation (i.e. no vibratory polishing, no resin impregnation) is 
-  not ideal and may have introduced both artefacts and noise.
-  Additionally, sonication may have damaged the pore structure}
-
+  did not have the chance, and explain this might introduce issues, also we
+  could talk about how this is quite rough, and that this kind of sample
+  preparation (i.e. no vibratory polishing, no resin impregnation) is not ideal
+  and may have introduced both artefacts and noise. Additionally, sonication may
+  have damaged the pore structure}
 
 \subsection{Scanning Electron Microscopy (SEM)}
 
@@ -155,7 +154,7 @@ The complete set of selected parameters is tabulated in Table
   \end{tabular}%
 \end{table}
 
-In this work, a magnification of 1000 was selected as an optimal compromise
+In this work, a magnification of 1000X was selected as an optimal compromise
 between the resolution necessary for capturing the pore structure at the
 required scale and the total area covered by each micrograph. The scale of this
 study is significant, with each micrograph covering 12,288 µm² and each sample
@@ -292,7 +291,8 @@ be separated (Figure ~\ref{fig:histogramnobimodal}).
 	\begin{figure}[!htbp]
 		\centering
 		\includegraphics[width=0.45\textwidth]{./Media/MontageIG430C Methods.jpg}
-		\caption{Thresholded Micrograph of IG-430 Sample C at $1000\times$ Magnification. Methods are labelled sequentially from right to left, row by row. (a) Default
+		\caption{Thresholded Micrograph of IG-430 Sample C at $1000\times$ Magnification. Methods are placed sequentially from right to left, row by row. 
+    (a) Default
 			(b) Huang
 			(c) Huang2
 			(d) Intermodes
@@ -329,9 +329,19 @@ be separated (Figure ~\ref{fig:histogramnobimodal}).
     \label{fig:Final Workflow}
 \end{figure}
 
+An output from this process is exemplified, selected at random, which demonstrates excellent delinieation 
+of pores, according to an inevitably subjective operator evaluation (Figure ~\ref{fig:dualintensitythreshig430f}).
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{./Media/intensitythresholdexampleig430fdual.png}
+    \caption{DRAFT: IG430F raw (a) and following intensiy thresholding (b)}
+    \label{fig:dualintensitythreshig430f}
+\end{figure}
+
 	\subsubsection{Pore Diameter Thresholding}
     
-  Pore size thresholds were imposed in this work, following previous studies
+  Pore size thresholds were imposed in this work, as in previous studies
   \citep{Taylor2016, Huang2019, Kane2011a}, to restrict the automated
   recognition of pores to a range (i.e., only counting pores > 12.5µm\(^2\))
   where classification is deemed reliable. However, this approach is inherently
@@ -408,7 +418,6 @@ neighbors:
 (x,y+1),\; (x+1,y-1),\; (x+1,y),\; (x+1,y+1)
 \end{multline*}
 
-
 Thus, any two pixels that exceed the intensity threshold and are either directly
 adjacent or diagonally connected are classified as belonging to the same region
 (pore). The function then computes the area of each pore by converting the pixel
@@ -416,15 +425,17 @@ count into physical area (i.e., 10 pixels per micrometre). Regions that do not
 meet the area threshold are omitted. The final results are a pore size
 distribution (PSD) and the channel porosity (\%).
 
-This algorithm is likely to yield at least a  slight overestimation of the
-channel porosity. This is because such an inclusive definition measn that two or
-more pores, connected by a narrow neck, may be classified as a single pore.
-Notably, this would not change the final channel porosity (\%) but would result
-in a rightward shift in the PSD. Skeleton segmentation is for fine-grade nuclear
-graphite likely to be a more accurate approach than a simple connectivity
-algorithm as used here would be a key improvement if implemented
-\cite{ARREGUIMENA2022112047}
+For the same subsample of IG430F as above, the result of intensity thresholding
+followed by pore diameter thresholding at 1.12um diameter is exemplified, demonstrating
+a high degree of accuracy as evaluated by the operator, especially given the particular
+focus at this stage in excluding Type I rather Type II errors (Figure ~\ref{fig:C1-ig430f fused cropped 8 bit one color threshed subsample 2um areathresh})
 
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.45\textwidth]{./Media/C1-ig430f fused cropped 8 bit one color threshed subsample 2um areathresh}
+    \caption{Draft: IG-43F subsample a. Raw and b. After intensity and pore diameter thresholding}
+    \label{fig:C1-ig430f fused cropped 8 bit one color threshed subsample 2um areathresh}
+\end{figure}
 
 \subsection{Helium (He) Pycnometry}
 	
@@ -474,7 +485,7 @@ between diameter and applied pressure is governed by the Laplace Equation (Eq.
 
 Values of 140$^{\circ}$ and 130$^{\circ}$ were used for advancing and receding
 contact angles respectively, while a value of 0.480 N m$^{-1}$ was assumed for the
-surface tension of mercury \citep{VANBRAKEL19811}. 
+surface tension of mercury \citep{VANBRAKEL19811}.  
 
 In this work, the dataset generated by Jones et al. \citep{Jones2018} was used,
 representing measurements performed not only on the same grades of graphite, but
@@ -547,6 +558,7 @@ be performed \citep{MatthewsPoreXpert2025}.
   as per (Figure ~\ref{fig:Final Workflow}),  the model was able to adjust the
   extent of the PSD which the channel porosity estimates, optimising effectively
   to a minimal distance distance of 1.91\% deviation from the experimental curve
+
   (Figure ~\ref{fig:PXfittinggraph})
     \begin{figure}
         \centering
@@ -656,6 +668,63 @@ IG-110, with \citep{Huang2019} deriving 14\% for the same grade, highly
 congruent with the approximately 13-14\% figure this method derives with an
 adjusted intensity threshold, but also illustrating the scale of the impact in
 intensity threshold selection on the final channel porosity estimate.
+
+\section{Discussion}
+
+  \subsection{Channel Porosity Overestimation due to connecitivity algo}
+  This algorithm is likely to yield at least a  slight overestimation of the
+channel porosity. This is because such an inclusive definition means that two or
+more pores, connected by a narrow neck or even simply with adjacent pixels,
+would be classified as a single pore. Notably, this would not change the final
+channel porosity (\%), at least in isolation, but would result in a rightward
+shift in the PSD. Skeleton segmentation is for fine-grade nuclear graphite
+likely to be a more accurate approach than a simple connectivity algorithm as
+used here would be a key improvement if implemented
+\cite{ARREGUIMENA2022112047}
+
+\subsection{Pore Fragmentation and Implications for Modelling}
+The application of a maximum pore diameter is a key part of the modelling as
+  initial modelling where this was not implemented failed to yield reliable
+  results. It is believed that this is due to the impossiblity of the model
+  fitting an plausible network on the premise that pores from 1.12 um diameter
+  upwards represent only 3 \% of the sample surface. Imposing an upper threshold
+  as the simple max of the pore diameters identified by SEM is an uncomplicated
+  initial solution which has more logical implications (i.e., to state that
+  between 1.12 and 20um diameter, 3\% of the sample surface is represented by
+  porosity). This threshold varied between 13-26 um in this work, which should
+  cover the vast majority of the porosity, particularly given the pore fragmentation
+  issue described below.
+
+  Specifically, the use of a simple Moore neighbourhood connectivity, when
+  combined with the fact that Erosion and Dilation binary operations were not
+  applied, means that pores which the operator identifies as a single pore are
+  in more than one case instead defined as two or more pores. Not only this but
+  these split pores may not then surpass the pore diameter threshold of 1.12um.
+  (e.g., a pore of 10um diameter might be split into 2 pores, 1 of 9um diameter
+  and another of 1um diameter, which would be discarded due to the pore diameter
+  threshold, reducing the channel porosity \% and shifting rightward the pore
+  size distribution).
+
+  The end result is that it is difficult to describe the pore size distribution
+  derived from SEM as it currently stands, as completely impenetrable.
+  Crucially, the production of reasonable results from the modelling as above
+  depends on an accurate constraint of the pore diameter interval (i.e., the
+  channnel porosity figure of 3\% refers only to porosity between 1.12 and 25um
+  diameter) and so not only the SEM-derived pore size distribution but the PX
+  modelling which uses it, has at least some reduction in reliability due to the
+  pore fragmentation issue. However, this is likely a soluble problem, as follows.
+
+  \subsection{Proposed Future Workflow}
+
+  -Just my idea of an improved workflow:
+  1. Resin Impregnation
+  2. SEM (see if we can go to 2kV)
+  3. Otsu Thresholding (We have clear bimodality thanks to Resin impregnation)
+  4. Skeleton segmentation (Avizo software needed?)
+  5. Apply improved pore diameter thresholds, or maybe do not do any at all as no longer needed? At least lowered.
+  6. Modelling
+
+
 \clearpage
 
 \bibliography{bibliography}
