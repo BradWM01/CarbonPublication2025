@@ -1,14 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1748361031.08131 "main.aux" "main.bbl" "main" 1748361040.67631 0
+["bibtex main"] 1748432487.65386 "main.aux" "main.bbl" "main" 1748432496.96835 0
   "./bibliography.bib" 1748359091 25011 fa1679673747d2c833b0e89c55d95880 ""
   "./elsarticle-num.bst" 1736444234 29462 3b2a1af2ce1e224a3b46ee048ffd4b98 ""
-  "main.aux" 1748361039 12485 2d3c3b006a465730602105d67b4f646c "pdflatex"
+  "main.aux" 1748432495 13535 33f90967c09631e215bdc19a9eef7675 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1748361031.53046 "c:/Users/bradm/Newfolder/CarbonPublication2025/CarbonPublication2025/main.tex" "main.pdf" "main" 1748361040.67715 0
+["pdflatex"] 1748432488.0834 "c:/Users/bradm/Newfolder/CarbonPublication2025/CarbonPublication2025/main.tex" "main.pdf" "main" 1748432496.96907 0
   "Media/C1-IG430c fusion cropped split scaled.jpg" 1747837457 41980639 55d3e3574844526026d006e648c09c37 ""
+  "Media/C1-ig430f fused cropped 8 bit one color threshed subsample 2um areathresh.jpg" 1748432171 474323 2c73dc952a69569192c24115c25dbb9a ""
   "Media/Fit to percolation curve.png" 1747837457 20893 457d385b33fe4728a5feda6e217e085d ""
   "Media/IG110 ds LogD .png" 1747837457 46040 1813ea3682a1e3b3d6042704cc1dda35 ""
   "Media/IG430 ds LogD .png" 1747837457 40397 e55264c56a880786b5246c72cc1c5118 ""
@@ -18,9 +19,10 @@
   "Media/Newprocessmodel.png" 1747837457 12115203 298a9ced86c1e28aabb27aa3031a4758 ""
   "Media/PX Approximation Types.png" 1747837457 30843 0dfaba0f1e9de97da58a23e8df98623b ""
   "Media/ValidationGraph.png" 1747837457 55226 1365e214320c60e374f44d5291d6c54e ""
+  "Media/intensitythresholdexampleig430fdual.png" 1748426046 441689 3fba80f6f6ab2c82fc3ef17ba39f4317 ""
   "Media/modelling pipeline.jpg.jpg" 1747837457 172983 ad7179319137b55b92033193a9fbc312 ""
   "Media/unit cell no bg.png" 1747837457 1517132 cbdf2adec7630db90ac7fe8a27b165a9 ""
-  "c:/Users/bradm/Newfolder/CarbonPublication2025/CarbonPublication2025/main.tex" 1748361009 34882 af068461e01f581f0cd75e869a8e2b3e ""
+  "c:/Users/bradm/Newfolder/CarbonPublication2025/CarbonPublication2025/main.tex" 1748432478 38943 a1950bc8ea39f351a9b10a01f8f8abe4 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1747742735 2971 def0b6c1f0b107b3b936def894055589 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1747742735 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1747743949 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -176,10 +178,10 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1747749774 5569470 f263a82cf6bb394f5bc87b63f38b78df ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1747750106 3568612 1d95f43178712d3ab42fd684e31035d8 ""
   "c:/texlive/2025/texmf.cnf" 1747749736 713 614551405fc44b98efbf516466e3c909 ""
-  "main.aux" 1748361039 12485 2d3c3b006a465730602105d67b4f646c "pdflatex"
-  "main.bbl" 1748361031 5377 2093492bb812620b613fb9d6d518f826 "bibtex main"
-  "main.spl" 1748361032 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "main.tex" 1748361009 34882 af068461e01f581f0cd75e869a8e2b3e ""
+  "main.aux" 1748432495 13535 33f90967c09631e215bdc19a9eef7675 "pdflatex"
+  "main.bbl" 1748432488 5377 300a3274d1346a09b3a15daeaf1ef3a5 "bibtex main"
+  "main.spl" 1748432488 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main.tex" 1748432478 38943 a1950bc8ea39f351a9b10a01f8f8abe4 ""
   (generated)
   "main.aux"
   "main.log"
