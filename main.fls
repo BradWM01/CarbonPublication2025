@@ -46,15 +46,6 @@ INPUT main.spl
 INPUT c:/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/natbib/natbib.sty
 OUTPUT main.spl
-INPUT c:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT c:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
-INPUT c:/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT c:/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
-INPUT c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
-INPUT c:/texlive/2025/texmf-dist/tex/latex/base/fleqn.clo
-INPUT c:/texlive/2025/texmf-dist/tex/latex/base/fleqn.clo
-INPUT c:/texlive/2025/texmf-dist/tex/latex/base/fleqn.clo
 INPUT c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
 INPUT c:/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
@@ -194,13 +185,10 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti1000.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm0800.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti0800.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
@@ -209,13 +197,20 @@ INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti0600.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm0600.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti0800.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ectt0800.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ecti0600.tfm
 OUTPUT main.pdf
 INPUT c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT ./Media/C1-IG430c fusion cropped split scaled.jpg
 INPUT ./Media/C1-IG430c fusion cropped split scaled.jpg
@@ -258,16 +253,11 @@ INPUT ./Media/C1-ig430f fused cropped 8 bit one color threshed subsample 2um are
 INPUT ./Media/C1-ig430f fused cropped 8 bit one color threshed subsample 2um areathresh.jpg
 INPUT ./Media/C1-ig430f fused cropped 8 bit one color threshed subsample 2um areathresh.jpg
 INPUT ./Media/C1-ig430f fused cropped 8 bit one color threshed subsample 2um areathresh.jpg
-INPUT ./Media/modelling pipeline.jpg.jpg
-INPUT ./Media/modelling pipeline.jpg.jpg
-INPUT ./Media/modelling pipeline.jpg.jpg
-INPUT ./Media/modelling pipeline.jpg.jpg
-INPUT ./Media/modelling pipeline.jpg.jpg
-INPUT ./Media/PX Approximation Types.png
-INPUT ./Media/PX Approximation Types.png
-INPUT ./Media/PX Approximation Types.png
-INPUT ./Media/PX Approximation Types.png
-INPUT ./Media/PX Approximation Types.png
+INPUT ./Media/bradapproximationtypesv2.png
+INPUT ./Media/bradapproximationtypesv2.png
+INPUT ./Media/bradapproximationtypesv2.png
+INPUT ./Media/bradapproximationtypesv2.png
+INPUT ./Media/bradapproximationtypesv2.png
 INPUT ./Media/Fit to percolation curve.png
 INPUT ./Media/Fit to percolation curve.png
 INPUT ./Media/Fit to percolation curve.png
@@ -278,11 +268,6 @@ INPUT ./Media/unit cell no bg.png
 INPUT ./Media/unit cell no bg.png
 INPUT ./Media/unit cell no bg.png
 INPUT ./Media/unit cell no bg.png
-INPUT ./Media/ValidationGraph.png
-INPUT ./Media/ValidationGraph.png
-INPUT ./Media/ValidationGraph.png
-INPUT ./Media/ValidationGraph.png
-INPUT ./Media/ValidationGraph.png
 INPUT ./Media/IG110 ds LogD .png
 INPUT ./Media/IG110 ds LogD .png
 INPUT ./Media/IG110 ds LogD .png
