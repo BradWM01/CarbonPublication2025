@@ -51,20 +51,14 @@ nuclear reactors.
 \end{abstract}
 \begin{keyword}keyword\sep keyword\sep keyword\end{keyword}
 \end{frontmatter}
+
 \section{Introduction}
 Graphite, a carbon allotrope, is employed as a moderator, neutron reflector and
-structural component in Generation IV reactors \citep{MARSDENgeniv}.Nuclear
+structural component in Generation IV reactors \citep{MARSDENgeniv}. Nuclear
 grade graphite is engineered for this specific use case, characterised by
 exceptionally low boron content, high structural strength, thermal stability,
 and a high scattering and low absorbent neutron cross-section
-\citep{Marsden2016}.
-
-Sufficiently high-volume and fidelity image analysis may enable the constraint
-of the range of outputs from inverse modelling by adding an extra layer of
-structural information about a given sample. The dataset resulting from this
-were used in the validation of PoreXpert\texttrademark{} v.3, where the
-constraint of the range of possible outputs from inverse modelling via channel
-porosity is a flagship feature. 
+\citep{Marsden2016}. 
 
 The internal microstructure of nuclear grade graphite plays a key role in its
 mechanical and thermo-physical properties, as well the evolution of these
@@ -72,7 +66,7 @@ properties under irradiation \citep{MARSDENgeniv}. Porosity, the proportion of
 total volume represented by void space,  is the defining feature of the
 microstructure of nuclear-grade graphite.  Porosity differs between grades of
 nuclear grade graphite, as a consequence of varying manufacturing processes and
-input \citep{ARREGUIMENA2022112047}. Key performance and safety-related
+inputs\citep{ARREGUIMENA2022112047}. Key performance and safety-related
 phenomena, such as oxidation, gas release and thermal degradation, are modulated
 by porosity. Oxidation rates are typically higher where open porosity is
 distributed uniformly, as the ease with which closed pore surface area can be
@@ -83,89 +77,102 @@ estimation of the effective diffusion coefficient from total porosity alone
 determining whether the behaviour under oxidative conditions will be
 diffusion-controlled or kinetic-controlled \citep{MATTHEWS2021111245}. 
 
-Several experimental techniques exist for the characterisation of porosity,
-including X-ray Computed Tomography (CT), Mercury (Hg) intrusion
-porosimetry, Helium (He) pycnometry, and Nitrogen (N$_2$) adsorption
-\citep{ARREGUIMENA2022112047, JONES2020256HgHe, CONTESCU2019663}. The
-fundamental physical limitations of the instruments associated with these
-techniques mean no individual experimental procedure is capable of
-characterising the full channel or open pore size distribution. These
-limitations increase the attractiveness of direct characterisation methods,
-where the pores themselves are imaged, although these methods too have
-significant limitations.
+\subsection{Indirect and Direct Characterisation of Porosity}
 
-\todo{For the following, perhaps just a summarisation will do as this is
-expounded upon in modelling section}
+Among the primary experimental techniques for the indirect characterisation of
+porosity are Mercury (Hg) intrusion porosimetry, Helium (He) pycnometry, and
+Nitrogen (N$_2$) adsorption \citep{ARREGUIMENA2022112047, JONES2020256HgHe,
+CONTESCU2019663}. No individual experimental technique is capable of
+characterising the pore size distribution. 
 
-PoreXpert is a void network simulation package edeveloped at the University of
-Plymouth. A primary input for its modelling is the percolation characteristic of
-the sample, usually measured by Hg porosimetry.  In the case of nuclear
-graphite, mercury porosimeters cannot reach sufficient applied pressure to probe
-the smallest voids of interest, and therefore, the percolation characteristic is
-extended to smaller void sizes by Grand-Canonical Monte-Carlo interpretation of
-N$_2$ adsorption.  PoreXpert is a quasi-Bayesian model which proceeds inversely
-from effect (the percolation) to cause (the void network). PoreXpert constructs
-an 8 dimensional parameter space,  composed of 5 numerical parameters which
-represent the physical characteristics of the pore network, such as the skew of
-the void size distribution, and 3 constraining Boolean parameters, for example,
-to avoid structures where features overlap each other. A Boltzmann-annealed
-amoeboid simplex searches over this parameter space to find the set of
-parameters that produces a percolation curve minimally different from the
-intrusion curve derived from Hg porosimetry and N$_2$/Kr adsorption. The final
-result is a simulated pore network with the correct porosity and percolation
-properties, on which many simulations, such as pore-fluid permeability and
-tortuousity, and sample ageing under radiation, can be performed
-\citep{MatthewsPoreXpert2025}.
+The limitations  of these techniques increase the attractiveness of direct
+characterisation methods, where the pores themselves are characterised. Previous
+studies involved quantifying channel porosity  by optical or electron microscopy
+\citep{Huang2014, Huang2019, Kane2011a, Kim2010,
+Taylor2016,huang2021statistical, ARREGUIMENA2022112047}. Most of these works
+have employed optical microscopy, generating datasets based on thousands of
+pores, but operating at a low resolution and objective relative to SEM analysis
+\citep{Huang2019, Kane2011a, Taylor2016}. In addition, the low objective
+required to image large areas via optical microscopy necessitates pore diameter
+thresholds which reach in some cases 50 µm², excluding a significant proportion
+of the PSD indicated by experimental methods \citep{Huang2019, Kane2011a,
+Taylor2016}. 
 
-\subsection{Literature Review DRAFT PLACEHOLDER TITLE}
-\todo{For this I think we need more specififity, and maybe here is the 
-place to talk about sample prep?}
+An erroneous assumption in some previous studies is the equivalence of channel
+porosity and open porosity, leading to significant discrepancies when compared
+with manufacturer-supplied open porosity values \cite{Kane2011a}. 
+
+This assumption may be predicated on the rationale that during resin
+impregnation, surface analysis techniques will exclusively identify the pore
+network through which the resin has percolated, as opposed to the closed pore
+volume incidentally exposed by sample preparation. Thus, it is reasoned, surface
+porosity is a reliable estimate of total porosity where resin impregnation is
+implemented. However, channel porosity is invariably a subset of the total open
+porosity. This is a consequence of the fact that pores are larger than the
+throats connecting them to the surface, which is the feature classified in
+microscopy methods. The result is that where surface analysis is employed, the
+full volume of each pore is not represented fully by a micrograph of the
+surface.
+
+\todo{For them to disagree with the above they also have to give up on
+pore shielding, which would then invalidate their use of Hg porosimetry
+to derive a PSD, as it requires pore shielding to cancel out their other
+assumption. Nice}
+
+\subsection{Objectives of the Present Study}
 
 The primary objective of this work is to develop and validate a method of
-quantifying the channel porosity of nuclear-grade graphites via computational
-image analysis of Scanning Electron Microscopy (SEM) micrographs. The apparent
-porosity of the surface, which usually includes channels and voids very near the
-surface, provides an entirely new experimental input for modelling.  Since the
-porosity is derived not only from surface pores but also from pores adjacent to
-them just below the surface, we refer to the apparent surface porosity as
-channel porosity rather than surface porosity. The channel porosity estimate
-replaces or complements porosity estimates from Hg porosimetry and/or
-pycnometry, which are often difficult to measure or are inaccurate. 
+quantifying the surface visible porosity of nuclear-grade graphites via Scanning
+Electron Microscopy (SEM) micrographs, to then be integrated into the
+multi-technique inverse modelling method of PoreXpert. This method inversely
+models to determine the set of parameters that produces a percolation curve
+minimally different from the intrusion curve derived from Hg porosimetry and
+N$_2$/Kr adsorption, and now also SEM-derived channel porosity. The software
+therefore produces a simulated pore network on which calculations can be
+performed \citep{MatthewsPoreXpert2025}.
 
-\todo{The fallacy that channel porosity = open porosity is key to cover here 
-too}
 
-Previous investigations have been made into quantifying channel porosity, a form
-of direct characterisation, either as the primary focus or as part of broader
-characterisation \citep{Huang2014, Huang2019, Kane2011a, Kim2010,
-Taylor2016,huang2021statistical, ARREGUIMENA2022112047}. Most researchers have
-employed optical microscopy generating datasets based on thousands of pores, but
-characterise pore contours rather than pore throats, owing to a low resolution
-and objective relative to SEM analysis \citep{Huang2019, Kane2011a, Taylor2016}.
-In addition, the low objective required to image large areas necessitates pore
-diameter thresholds which reach in some cases 50 µm², excluding a significant
-proportion of the PSD indicated by experimental methods \citep{Huang2019,
-Kane2011a, Taylor2016}.
+The apparent porosity of the surface, which typically includes channels and
+voids very near the surface, provides an entirely new experimental input for The
+modelling process outlined above. As porosity is derived not only from surface
+pores but also from pores adjacent to them just below the surface, apparent
+surface porosity is here referred to as channel porosity rather than surface
+porosity. The pores identified by the electron micrograph of the surface  are
+approximated as channels running through the sample from each visible
+pore-throat \cite{MatthewsPoreXpert2025}. The channel porosity estimate replaces
+or complements porosity estimates from Hg porosimetry and/or pycnometry, in
+effect replacing indirect characterisation with direct characterisation.
+
 
 The SEM-derived channel porosity characterisation of this work utilises
-composite micrographs, composed of 225 individual micrographs, fused into a
-single composite micrograph per sample, as with SEM-based characterisation of
-IG-110 \citep{huang2021statistical}. This affords a comparable area, but
-resolution and magnification multiple times that of previous OM-based works. The
-resulting analysis is based on tens of thousands of individual pores forming a
-channel porosity pore size distribution and percentage, per sample. The
-comparatively higher resolution of SEM also enables a significantly lower pore
-diameter threshold, and thus a channel porosity and PSD of significantly
-improved representativeness. 
+composite micrographs, composed of 225 individual micrographs per sample, fused
+into a single composite. The general form of this stage is the same as the with
+SEM-based characterisation of IG-110  by other workers
+\citep{huang2021statistical}. While this approach provides a comparable
+analytical area to previous optical microscopy (OM) based studies, it offers a
+substantial increase in both resolution and magnification. The subsequent
+analysis and following modelling is founded upon tens of thousands of individual
+pores per sample, resolved at high definition, from which a channel porosity
+percentage and a detailed pore size distribution (PSD) are derived for each
+sample. The intrinsically higher resolution afforded by Scanning Electron
+Microscopy (SEM) facilitates the significantly lower pore diameter thresholds,
+yielding a channel porosity and PSD of enhanced statistical representativeness.
 
-This method therefore constructs more representative pore network models,
-leading to network characteristic calculations, such as permeability or
+This method therefore intends to construct more representative pore network
+models, leading to network characteristic calculations, such as permeability or
 diffusivity,  which better represent the physical nature of the samples being
-modelled. The key test of this method is whether modelling a full percolation
-curve, based on SEM-derived channel porosity, Hg porosimetry, and GCMC modelled
-N$_2$ adsorption, generates an open porosity value similar to that measured by
-pycnometry. If successful, this would indicate that this novel multi-technique
-method is sound.
+modelled.
+
+The validation of this integrated approach is contingent upon its ability to
+generate a full percolation curve—derived from the combination of SEM-derived
+channel porosity, mercury (Hg) porosimetry data, and Grand Canonical Monte Carlo
+(GCMC) modelled N$_2$ adsorption—that yields an open porosity value in close
+agreement with that determined experimentally by Helium (He) pycnometry.
+
+\todo{I say here surface analysis identify throats not pores, then
+the distinction I make between this work and others, where the high intensity
+threshold leads to the identification of pore throats not pore contours, I think
+may need to be thought through.}
 
 \section{Methodology}
 
