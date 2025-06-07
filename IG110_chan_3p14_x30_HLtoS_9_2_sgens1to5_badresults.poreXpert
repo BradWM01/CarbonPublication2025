@@ -1,0 +1,807 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<OperationsList Version="3.0.747">
+  <Sampling FileName="C:\Users\matth\Documents\PoreXpert Ltd\PoreXpert tests and development\beta testing v3 Autumn 2024\Percolation data for IG110 and IG430\IG110_edit_v3PM thinned.csv" FileType="PorosimetryWithHeaderXY">
+    <TimeStamp Started="0001-01-01T00:00:00" Completed="0001-01-01T00:00:00" Duration="PT0S" />
+    <Sample Name="IG110" Description="Hg porosimetry " Porosity="3.14" PorosityType="channel" DminChannel="1.128" DmaxChannel="15.476" PorosityAvLayers="0" ChannelApproxType="0" SampleWeight="0" SampleDensity="0" PenetrometerAndAssemblyMass="0" SamplePenetrometerandHgMass="0" BlankPenetrometerandHgMass="0" BlankPenetrometerVolume="0">
+      <IntrusionCurve>
+        <DataPoint X="0.016672" Y="0" />
+        <DataPoint X="0.020511" Y="0.763" />
+        <DataPoint X="0.02526" Y="2.029" />
+        <DataPoint X="0.030919" Y="2.59" />
+        <DataPoint X="0.040316" Y="3.856" />
+        <DataPoint X="0.055977" Y="4.805" />
+        <DataPoint X="0.067799" Y="5.366" />
+        <DataPoint X="0.084269" Y="5.841" />
+        <DataPoint X="0.119835" Y="7.006" />
+        <DataPoint X="0.152472" Y="8.201" />
+        <DataPoint X="0.184199" Y="8.201" />
+        <DataPoint X="0.234518" Y="9.308" />
+        <DataPoint X="0.29878" Y="10.905" />
+        <DataPoint X="0.370217" Y="12.056" />
+        <DataPoint X="0.45782" Y="14.114" />
+        <DataPoint X="0.498032" Y="20.271" />
+        <DataPoint X="0.508341" Y="23.882" />
+        <DataPoint X="0.52301" Y="30.889" />
+        <DataPoint X="0.538552" Y="37.895" />
+        <DataPoint X="0.553246" Y="46.182" />
+        <DataPoint X="0.568764" Y="54.469" />
+        <DataPoint X="0.578643" Y="63.389" />
+        <DataPoint X="0.588871" Y="72.309" />
+        <DataPoint X="0.603647" Y="78.251" />
+        <DataPoint X="0.619183" Y="84.193" />
+        <DataPoint X="2.631896" Y="98.957" />
+        <DataPoint X="3.499567" Y="99.24" />
+        <DataPoint X="4.577485" Y="99.486" />
+        <DataPoint X="7.26144" Y="99.803" />
+      </IntrusionCurve>
+      <IntrusionFluid>
+        <liquid Name="PX Mercury" Colour="255,128,128,128" Density="13545" HeatCapacity="1888" ThermalConductivity="8.3" SurfaceTension="0.485" AdvContactAngle="140" RecContactAngle="130" Viscosity="0.001526" MeanFreePath="0" DiffusionCoefficient="0" MoleculeRadius="0" />
+      </IntrusionFluid>
+    </Sample>
+  </Sampling>
+  <Simplex xPores="30" yPores="30" zPores="30" Iterations="20" OptimalDistance="1" Temperature="10" Tolerance="0.01" ThroatSizes="500" StochGenNumber="1" PoreThroatRatio="1" StructureType="HorBandedLargeToSmall" MaxDisconnectedVolumePercentage="1" PoreSkewSuppression="1" Learning="true" Porosity="3.14" PorosityType="channel">
+    <liquid Name="PX Mercury" Colour="255,128,128,128" Density="13545" HeatCapacity="1888" ThermalConductivity="8.3" SurfaceTension="0.485" AdvContactAngle="140" RecContactAngle="130" Viscosity="0.001526" MeanFreePath="0" DiffusionCoefficient="0" MoleculeRadius="0" />
+    <SimplexLimits>
+      <ThroatSpread Low="0" High="1" />
+      <ThroatSkew Low="-50" High="50" />
+      <PoreSkew Low="1" High="10000" />
+      <Connectivity Low="2.1" High="6" />
+      <CorrelationLevel Low="0" High="1" />
+    </SimplexLimits>
+    <Input>
+      <Sample Name="IG110" Description="Hg porosimetry " Porosity="3.14" PorosityType="channel" DminChannel="1.128" DmaxChannel="15.476" PorosityAvLayers="0" ChannelApproxType="0" SampleWeight="0" SampleDensity="0" PenetrometerAndAssemblyMass="0" SamplePenetrometerandHgMass="0" BlankPenetrometerandHgMass="0" BlankPenetrometerVolume="0">
+        <IntrusionCurve>
+          <DataPoint X="0.016672" Y="0" />
+          <DataPoint X="0.020511" Y="0.763" />
+          <DataPoint X="0.02526" Y="2.029" />
+          <DataPoint X="0.030919" Y="2.59" />
+          <DataPoint X="0.040316" Y="3.856" />
+          <DataPoint X="0.055977" Y="4.805" />
+          <DataPoint X="0.067799" Y="5.366" />
+          <DataPoint X="0.084269" Y="5.841" />
+          <DataPoint X="0.119835" Y="7.006" />
+          <DataPoint X="0.152472" Y="8.201" />
+          <DataPoint X="0.184199" Y="8.201" />
+          <DataPoint X="0.234518" Y="9.308" />
+          <DataPoint X="0.29878" Y="10.905" />
+          <DataPoint X="0.370217" Y="12.056" />
+          <DataPoint X="0.45782" Y="14.114" />
+          <DataPoint X="0.498032" Y="20.271" />
+          <DataPoint X="0.508341" Y="23.882" />
+          <DataPoint X="0.52301" Y="30.889" />
+          <DataPoint X="0.538552" Y="37.895" />
+          <DataPoint X="0.553246" Y="46.182" />
+          <DataPoint X="0.568764" Y="54.469" />
+          <DataPoint X="0.578643" Y="63.389" />
+          <DataPoint X="0.588871" Y="72.309" />
+          <DataPoint X="0.603647" Y="78.251" />
+          <DataPoint X="0.619183" Y="84.193" />
+          <DataPoint X="2.631896" Y="98.957" />
+          <DataPoint X="3.499567" Y="99.24" />
+          <DataPoint X="4.577485" Y="99.486" />
+          <DataPoint X="7.26144" Y="99.803" />
+        </IntrusionCurve>
+        <IntrusionFluid>
+          <liquid Name="PX Mercury" Colour="255,128,128,128" Density="13545" HeatCapacity="1888" ThermalConductivity="8.3" SurfaceTension="0.485" AdvContactAngle="140" RecContactAngle="130" Viscosity="0.001526" MeanFreePath="0" DiffusionCoefficient="0" MoleculeRadius="0" />
+        </IntrusionFluid>
+      </Sample>
+    </Input>
+    <TimeStamp Started="2025-04-29T18:03:08.8306369+01:00" Completed="2025-04-29T18:21:40.452993+01:00" Duration="PT18M31.6223561S" />
+    <Results Distance="60.2483932190885" PoreSkew="1" ThroatSkew="-10.000002" ThroatSpread="0.4" Connectivity="3.5" CorrelationLevel="0.01" OpenPorosity="NaN" ChannelPorosity="NaN" DminChannel="1.128" DmaxChannel="15.476" PorosityAvLayers="0" ChannelApproxType="0">
+      <IntrusionCurve>
+        <DataPoint X="0.016672" Y="NaN" />
+        <DataPoint X="0.017727" Y="NaN" />
+        <DataPoint X="0.018849" Y="NaN" />
+        <DataPoint X="0.020042" Y="NaN" />
+        <DataPoint X="0.021311" Y="NaN" />
+        <DataPoint X="0.02266" Y="NaN" />
+        <DataPoint X="0.024094" Y="NaN" />
+        <DataPoint X="0.025619" Y="NaN" />
+        <DataPoint X="0.027241" Y="NaN" />
+        <DataPoint X="0.028965" Y="NaN" />
+        <DataPoint X="0.030799" Y="NaN" />
+        <DataPoint X="0.032749" Y="NaN" />
+        <DataPoint X="0.034822" Y="NaN" />
+        <DataPoint X="0.037026" Y="NaN" />
+        <DataPoint X="0.03937" Y="NaN" />
+        <DataPoint X="0.041862" Y="NaN" />
+        <DataPoint X="0.044512" Y="NaN" />
+        <DataPoint X="0.04733" Y="NaN" />
+        <DataPoint X="0.050326" Y="NaN" />
+        <DataPoint X="0.053512" Y="NaN" />
+        <DataPoint X="0.056899" Y="NaN" />
+        <DataPoint X="0.060501" Y="NaN" />
+        <DataPoint X="0.064331" Y="NaN" />
+        <DataPoint X="0.068403" Y="NaN" />
+        <DataPoint X="0.072733" Y="NaN" />
+        <DataPoint X="0.077337" Y="NaN" />
+        <DataPoint X="0.082233" Y="NaN" />
+        <DataPoint X="0.087439" Y="NaN" />
+        <DataPoint X="0.092974" Y="NaN" />
+        <DataPoint X="0.09886" Y="NaN" />
+        <DataPoint X="0.105118" Y="NaN" />
+        <DataPoint X="0.111772" Y="NaN" />
+        <DataPoint X="0.118847" Y="NaN" />
+        <DataPoint X="0.12637" Y="NaN" />
+        <DataPoint X="0.13437" Y="NaN" />
+        <DataPoint X="0.142876" Y="NaN" />
+        <DataPoint X="0.15192" Y="NaN" />
+        <DataPoint X="0.161537" Y="NaN" />
+        <DataPoint X="0.171763" Y="NaN" />
+        <DataPoint X="0.182636" Y="NaN" />
+        <DataPoint X="0.194197" Y="NaN" />
+        <DataPoint X="0.20649" Y="NaN" />
+        <DataPoint X="0.219561" Y="NaN" />
+        <DataPoint X="0.23346" Y="NaN" />
+        <DataPoint X="0.248239" Y="NaN" />
+        <DataPoint X="0.263953" Y="NaN" />
+        <DataPoint X="0.280662" Y="NaN" />
+        <DataPoint X="0.298429" Y="NaN" />
+        <DataPoint X="0.31732" Y="NaN" />
+        <DataPoint X="0.337407" Y="NaN" />
+        <DataPoint X="0.358766" Y="NaN" />
+        <DataPoint X="0.381477" Y="NaN" />
+        <DataPoint X="0.405626" Y="NaN" />
+        <DataPoint X="0.431303" Y="NaN" />
+        <DataPoint X="0.458606" Y="NaN" />
+        <DataPoint X="0.487637" Y="NaN" />
+        <DataPoint X="0.518506" Y="NaN" />
+        <DataPoint X="0.551329" Y="NaN" />
+        <DataPoint X="0.58623" Y="NaN" />
+        <DataPoint X="0.62334" Y="NaN" />
+        <DataPoint X="0.662799" Y="NaN" />
+        <DataPoint X="0.704756" Y="NaN" />
+        <DataPoint X="0.749369" Y="NaN" />
+        <DataPoint X="0.796806" Y="NaN" />
+        <DataPoint X="0.847246" Y="NaN" />
+        <DataPoint X="0.900879" Y="NaN" />
+        <DataPoint X="0.957907" Y="NaN" />
+        <DataPoint X="1.018545" Y="NaN" />
+        <DataPoint X="1.083022" Y="NaN" />
+        <DataPoint X="1.15158" Y="NaN" />
+        <DataPoint X="1.224478" Y="NaN" />
+        <DataPoint X="1.301991" Y="NaN" />
+        <DataPoint X="1.384411" Y="NaN" />
+        <DataPoint X="1.472048" Y="NaN" />
+        <DataPoint X="1.565233" Y="NaN" />
+        <DataPoint X="1.664316" Y="NaN" />
+        <DataPoint X="1.769672" Y="NaN" />
+        <DataPoint X="1.881697" Y="NaN" />
+        <DataPoint X="2.000814" Y="NaN" />
+        <DataPoint X="2.127471" Y="NaN" />
+        <DataPoint X="2.262146" Y="NaN" />
+        <DataPoint X="2.405346" Y="NaN" />
+        <DataPoint X="2.557611" Y="NaN" />
+        <DataPoint X="2.719515" Y="NaN" />
+        <DataPoint X="2.891668" Y="NaN" />
+        <DataPoint X="3.074718" Y="NaN" />
+        <DataPoint X="3.269356" Y="NaN" />
+        <DataPoint X="3.476315" Y="NaN" />
+        <DataPoint X="3.696375" Y="NaN" />
+        <DataPoint X="3.930366" Y="NaN" />
+        <DataPoint X="4.179169" Y="NaN" />
+        <DataPoint X="4.443722" Y="NaN" />
+        <DataPoint X="4.725022" Y="NaN" />
+        <DataPoint X="5.024129" Y="NaN" />
+        <DataPoint X="5.34217" Y="NaN" />
+        <DataPoint X="5.680344" Y="NaN" />
+        <DataPoint X="6.039925" Y="NaN" />
+        <DataPoint X="6.422269" Y="NaN" />
+        <DataPoint X="6.828816" Y="NaN" />
+        <DataPoint X="7.261099" Y="NaN" />
+      </IntrusionCurve>
+    </Results>
+  </Simplex>
+  <Simplex xPores="30" yPores="30" zPores="30" Iterations="20" OptimalDistance="1" Temperature="10" Tolerance="0.01" ThroatSizes="500" StochGenNumber="2" PoreThroatRatio="1" StructureType="HorBandedLargeToSmall" MaxDisconnectedVolumePercentage="1" PoreSkewSuppression="1" Learning="true" Porosity="3.14" PorosityType="channel">
+    <liquid Name="PX Mercury" Colour="255,128,128,128" Density="13545" HeatCapacity="1888" ThermalConductivity="8.3" SurfaceTension="0.485" AdvContactAngle="140" RecContactAngle="130" Viscosity="0.001526" MeanFreePath="0" DiffusionCoefficient="0" MoleculeRadius="0" />
+    <SimplexLimits>
+      <ThroatSpread Low="0" High="1" />
+      <ThroatSkew Low="-50" High="50" />
+      <PoreSkew Low="1" High="10000" />
+      <Connectivity Low="2.1" High="6" />
+      <CorrelationLevel Low="0" High="1" />
+    </SimplexLimits>
+    <Input>
+      <Sample Name="IG110" Description="Hg porosimetry " Porosity="3.14" PorosityType="channel" DminChannel="1.128" DmaxChannel="15.476" PorosityAvLayers="0" ChannelApproxType="0" SampleWeight="0" SampleDensity="0" PenetrometerAndAssemblyMass="0" SamplePenetrometerandHgMass="0" BlankPenetrometerandHgMass="0" BlankPenetrometerVolume="0">
+        <IntrusionCurve>
+          <DataPoint X="0.016672" Y="0" />
+          <DataPoint X="0.020511" Y="0.763" />
+          <DataPoint X="0.02526" Y="2.029" />
+          <DataPoint X="0.030919" Y="2.59" />
+          <DataPoint X="0.040316" Y="3.856" />
+          <DataPoint X="0.055977" Y="4.805" />
+          <DataPoint X="0.067799" Y="5.366" />
+          <DataPoint X="0.084269" Y="5.841" />
+          <DataPoint X="0.119835" Y="7.006" />
+          <DataPoint X="0.152472" Y="8.201" />
+          <DataPoint X="0.184199" Y="8.201" />
+          <DataPoint X="0.234518" Y="9.308" />
+          <DataPoint X="0.29878" Y="10.905" />
+          <DataPoint X="0.370217" Y="12.056" />
+          <DataPoint X="0.45782" Y="14.114" />
+          <DataPoint X="0.498032" Y="20.271" />
+          <DataPoint X="0.508341" Y="23.882" />
+          <DataPoint X="0.52301" Y="30.889" />
+          <DataPoint X="0.538552" Y="37.895" />
+          <DataPoint X="0.553246" Y="46.182" />
+          <DataPoint X="0.568764" Y="54.469" />
+          <DataPoint X="0.578643" Y="63.389" />
+          <DataPoint X="0.588871" Y="72.309" />
+          <DataPoint X="0.603647" Y="78.251" />
+          <DataPoint X="0.619183" Y="84.193" />
+          <DataPoint X="2.631896" Y="98.957" />
+          <DataPoint X="3.499567" Y="99.24" />
+          <DataPoint X="4.577485" Y="99.486" />
+          <DataPoint X="7.26144" Y="99.803" />
+        </IntrusionCurve>
+        <IntrusionFluid>
+          <liquid Name="PX Mercury" Colour="255,128,128,128" Density="13545" HeatCapacity="1888" ThermalConductivity="8.3" SurfaceTension="0.485" AdvContactAngle="140" RecContactAngle="130" Viscosity="0.001526" MeanFreePath="0" DiffusionCoefficient="0" MoleculeRadius="0" />
+        </IntrusionFluid>
+      </Sample>
+    </Input>
+    <TimeStamp Started="2025-04-29T18:03:08.8306369+01:00" Completed="2025-04-29T18:20:10.6777969+01:00" Duration="PT17M1.84716S" />
+    <Results Distance="60.2483932190885" PoreSkew="1" ThroatSkew="-10.000002" ThroatSpread="0.4" Connectivity="3.5" CorrelationLevel="0.01" OpenPorosity="NaN" ChannelPorosity="NaN" DminChannel="1.128" DmaxChannel="15.476" PorosityAvLayers="0" ChannelApproxType="0">
+      <IntrusionCurve>
+        <DataPoint X="0.016672" Y="NaN" />
+        <DataPoint X="0.017727" Y="NaN" />
+        <DataPoint X="0.018849" Y="NaN" />
+        <DataPoint X="0.020042" Y="NaN" />
+        <DataPoint X="0.021311" Y="NaN" />
+        <DataPoint X="0.02266" Y="NaN" />
+        <DataPoint X="0.024094" Y="NaN" />
+        <DataPoint X="0.025619" Y="NaN" />
+        <DataPoint X="0.027241" Y="NaN" />
+        <DataPoint X="0.028965" Y="NaN" />
+        <DataPoint X="0.030799" Y="NaN" />
+        <DataPoint X="0.032749" Y="NaN" />
+        <DataPoint X="0.034822" Y="NaN" />
+        <DataPoint X="0.037026" Y="NaN" />
+        <DataPoint X="0.03937" Y="NaN" />
+        <DataPoint X="0.041862" Y="NaN" />
+        <DataPoint X="0.044512" Y="NaN" />
+        <DataPoint X="0.04733" Y="NaN" />
+        <DataPoint X="0.050326" Y="NaN" />
+        <DataPoint X="0.053512" Y="NaN" />
+        <DataPoint X="0.056899" Y="NaN" />
+        <DataPoint X="0.060501" Y="NaN" />
+        <DataPoint X="0.064331" Y="NaN" />
+        <DataPoint X="0.068403" Y="NaN" />
+        <DataPoint X="0.072733" Y="NaN" />
+        <DataPoint X="0.077337" Y="NaN" />
+        <DataPoint X="0.082233" Y="NaN" />
+        <DataPoint X="0.087439" Y="NaN" />
+        <DataPoint X="0.092974" Y="NaN" />
+        <DataPoint X="0.09886" Y="NaN" />
+        <DataPoint X="0.105118" Y="NaN" />
+        <DataPoint X="0.111772" Y="NaN" />
+        <DataPoint X="0.118847" Y="NaN" />
+        <DataPoint X="0.12637" Y="NaN" />
+        <DataPoint X="0.13437" Y="NaN" />
+        <DataPoint X="0.142876" Y="NaN" />
+        <DataPoint X="0.15192" Y="NaN" />
+        <DataPoint X="0.161537" Y="NaN" />
+        <DataPoint X="0.171763" Y="NaN" />
+        <DataPoint X="0.182636" Y="NaN" />
+        <DataPoint X="0.194197" Y="NaN" />
+        <DataPoint X="0.20649" Y="NaN" />
+        <DataPoint X="0.219561" Y="NaN" />
+        <DataPoint X="0.23346" Y="NaN" />
+        <DataPoint X="0.248239" Y="NaN" />
+        <DataPoint X="0.263953" Y="NaN" />
+        <DataPoint X="0.280662" Y="NaN" />
+        <DataPoint X="0.298429" Y="NaN" />
+        <DataPoint X="0.31732" Y="NaN" />
+        <DataPoint X="0.337407" Y="NaN" />
+        <DataPoint X="0.358766" Y="NaN" />
+        <DataPoint X="0.381477" Y="NaN" />
+        <DataPoint X="0.405626" Y="NaN" />
+        <DataPoint X="0.431303" Y="NaN" />
+        <DataPoint X="0.458606" Y="NaN" />
+        <DataPoint X="0.487637" Y="NaN" />
+        <DataPoint X="0.518506" Y="NaN" />
+        <DataPoint X="0.551329" Y="NaN" />
+        <DataPoint X="0.58623" Y="NaN" />
+        <DataPoint X="0.62334" Y="NaN" />
+        <DataPoint X="0.662799" Y="NaN" />
+        <DataPoint X="0.704756" Y="NaN" />
+        <DataPoint X="0.749369" Y="NaN" />
+        <DataPoint X="0.796806" Y="NaN" />
+        <DataPoint X="0.847246" Y="NaN" />
+        <DataPoint X="0.900879" Y="NaN" />
+        <DataPoint X="0.957907" Y="NaN" />
+        <DataPoint X="1.018545" Y="NaN" />
+        <DataPoint X="1.083022" Y="NaN" />
+        <DataPoint X="1.15158" Y="NaN" />
+        <DataPoint X="1.224478" Y="NaN" />
+        <DataPoint X="1.301991" Y="NaN" />
+        <DataPoint X="1.384411" Y="NaN" />
+        <DataPoint X="1.472048" Y="NaN" />
+        <DataPoint X="1.565233" Y="NaN" />
+        <DataPoint X="1.664316" Y="NaN" />
+        <DataPoint X="1.769672" Y="NaN" />
+        <DataPoint X="1.881697" Y="NaN" />
+        <DataPoint X="2.000814" Y="NaN" />
+        <DataPoint X="2.127471" Y="NaN" />
+        <DataPoint X="2.262146" Y="NaN" />
+        <DataPoint X="2.405346" Y="NaN" />
+        <DataPoint X="2.557611" Y="NaN" />
+        <DataPoint X="2.719515" Y="NaN" />
+        <DataPoint X="2.891668" Y="NaN" />
+        <DataPoint X="3.074718" Y="NaN" />
+        <DataPoint X="3.269356" Y="NaN" />
+        <DataPoint X="3.476315" Y="NaN" />
+        <DataPoint X="3.696375" Y="NaN" />
+        <DataPoint X="3.930366" Y="NaN" />
+        <DataPoint X="4.179169" Y="NaN" />
+        <DataPoint X="4.443722" Y="NaN" />
+        <DataPoint X="4.725022" Y="NaN" />
+        <DataPoint X="5.024129" Y="NaN" />
+        <DataPoint X="5.34217" Y="NaN" />
+        <DataPoint X="5.680344" Y="NaN" />
+        <DataPoint X="6.039925" Y="NaN" />
+        <DataPoint X="6.422269" Y="NaN" />
+        <DataPoint X="6.828816" Y="NaN" />
+        <DataPoint X="7.261099" Y="NaN" />
+      </IntrusionCurve>
+    </Results>
+  </Simplex>
+  <Simplex xPores="30" yPores="30" zPores="30" Iterations="20" OptimalDistance="1" Temperature="10" Tolerance="0.01" ThroatSizes="500" StochGenNumber="3" PoreThroatRatio="1" StructureType="HorBandedLargeToSmall" MaxDisconnectedVolumePercentage="1" PoreSkewSuppression="1" Learning="true" Porosity="3.14" PorosityType="channel">
+    <liquid Name="PX Mercury" Colour="255,128,128,128" Density="13545" HeatCapacity="1888" ThermalConductivity="8.3" SurfaceTension="0.485" AdvContactAngle="140" RecContactAngle="130" Viscosity="0.001526" MeanFreePath="0" DiffusionCoefficient="0" MoleculeRadius="0" />
+    <SimplexLimits>
+      <ThroatSpread Low="0" High="1" />
+      <ThroatSkew Low="-50" High="50" />
+      <PoreSkew Low="1" High="10000" />
+      <Connectivity Low="2.1" High="6" />
+      <CorrelationLevel Low="0" High="1" />
+    </SimplexLimits>
+    <Input>
+      <Sample Name="IG110" Description="Hg porosimetry " Porosity="3.14" PorosityType="channel" DminChannel="1.128" DmaxChannel="15.476" PorosityAvLayers="0" ChannelApproxType="0" SampleWeight="0" SampleDensity="0" PenetrometerAndAssemblyMass="0" SamplePenetrometerandHgMass="0" BlankPenetrometerandHgMass="0" BlankPenetrometerVolume="0">
+        <IntrusionCurve>
+          <DataPoint X="0.016672" Y="0" />
+          <DataPoint X="0.020511" Y="0.763" />
+          <DataPoint X="0.02526" Y="2.029" />
+          <DataPoint X="0.030919" Y="2.59" />
+          <DataPoint X="0.040316" Y="3.856" />
+          <DataPoint X="0.055977" Y="4.805" />
+          <DataPoint X="0.067799" Y="5.366" />
+          <DataPoint X="0.084269" Y="5.841" />
+          <DataPoint X="0.119835" Y="7.006" />
+          <DataPoint X="0.152472" Y="8.201" />
+          <DataPoint X="0.184199" Y="8.201" />
+          <DataPoint X="0.234518" Y="9.308" />
+          <DataPoint X="0.29878" Y="10.905" />
+          <DataPoint X="0.370217" Y="12.056" />
+          <DataPoint X="0.45782" Y="14.114" />
+          <DataPoint X="0.498032" Y="20.271" />
+          <DataPoint X="0.508341" Y="23.882" />
+          <DataPoint X="0.52301" Y="30.889" />
+          <DataPoint X="0.538552" Y="37.895" />
+          <DataPoint X="0.553246" Y="46.182" />
+          <DataPoint X="0.568764" Y="54.469" />
+          <DataPoint X="0.578643" Y="63.389" />
+          <DataPoint X="0.588871" Y="72.309" />
+          <DataPoint X="0.603647" Y="78.251" />
+          <DataPoint X="0.619183" Y="84.193" />
+          <DataPoint X="2.631896" Y="98.957" />
+          <DataPoint X="3.499567" Y="99.24" />
+          <DataPoint X="4.577485" Y="99.486" />
+          <DataPoint X="7.26144" Y="99.803" />
+        </IntrusionCurve>
+        <IntrusionFluid>
+          <liquid Name="PX Mercury" Colour="255,128,128,128" Density="13545" HeatCapacity="1888" ThermalConductivity="8.3" SurfaceTension="0.485" AdvContactAngle="140" RecContactAngle="130" Viscosity="0.001526" MeanFreePath="0" DiffusionCoefficient="0" MoleculeRadius="0" />
+        </IntrusionFluid>
+      </Sample>
+    </Input>
+    <TimeStamp Started="2025-04-29T18:03:08.8330703+01:00" Completed="2025-04-29T18:21:36.7339086+01:00" Duration="PT18M27.9008383S" />
+    <Results Distance="60.2483932190885" PoreSkew="1" ThroatSkew="-10.000002" ThroatSpread="0.4" Connectivity="3.5" CorrelationLevel="0.01" OpenPorosity="NaN" ChannelPorosity="NaN" DminChannel="1.128" DmaxChannel="15.476" PorosityAvLayers="0" ChannelApproxType="0">
+      <IntrusionCurve>
+        <DataPoint X="0.016672" Y="NaN" />
+        <DataPoint X="0.017727" Y="NaN" />
+        <DataPoint X="0.018849" Y="NaN" />
+        <DataPoint X="0.020042" Y="NaN" />
+        <DataPoint X="0.021311" Y="NaN" />
+        <DataPoint X="0.02266" Y="NaN" />
+        <DataPoint X="0.024094" Y="NaN" />
+        <DataPoint X="0.025619" Y="NaN" />
+        <DataPoint X="0.027241" Y="NaN" />
+        <DataPoint X="0.028965" Y="NaN" />
+        <DataPoint X="0.030799" Y="NaN" />
+        <DataPoint X="0.032749" Y="NaN" />
+        <DataPoint X="0.034822" Y="NaN" />
+        <DataPoint X="0.037026" Y="NaN" />
+        <DataPoint X="0.03937" Y="NaN" />
+        <DataPoint X="0.041862" Y="NaN" />
+        <DataPoint X="0.044512" Y="NaN" />
+        <DataPoint X="0.04733" Y="NaN" />
+        <DataPoint X="0.050326" Y="NaN" />
+        <DataPoint X="0.053512" Y="NaN" />
+        <DataPoint X="0.056899" Y="NaN" />
+        <DataPoint X="0.060501" Y="NaN" />
+        <DataPoint X="0.064331" Y="NaN" />
+        <DataPoint X="0.068403" Y="NaN" />
+        <DataPoint X="0.072733" Y="NaN" />
+        <DataPoint X="0.077337" Y="NaN" />
+        <DataPoint X="0.082233" Y="NaN" />
+        <DataPoint X="0.087439" Y="NaN" />
+        <DataPoint X="0.092974" Y="NaN" />
+        <DataPoint X="0.09886" Y="NaN" />
+        <DataPoint X="0.105118" Y="NaN" />
+        <DataPoint X="0.111772" Y="NaN" />
+        <DataPoint X="0.118847" Y="NaN" />
+        <DataPoint X="0.12637" Y="NaN" />
+        <DataPoint X="0.13437" Y="NaN" />
+        <DataPoint X="0.142876" Y="NaN" />
+        <DataPoint X="0.15192" Y="NaN" />
+        <DataPoint X="0.161537" Y="NaN" />
+        <DataPoint X="0.171763" Y="NaN" />
+        <DataPoint X="0.182636" Y="NaN" />
+        <DataPoint X="0.194197" Y="NaN" />
+        <DataPoint X="0.20649" Y="NaN" />
+        <DataPoint X="0.219561" Y="NaN" />
+        <DataPoint X="0.23346" Y="NaN" />
+        <DataPoint X="0.248239" Y="NaN" />
+        <DataPoint X="0.263953" Y="NaN" />
+        <DataPoint X="0.280662" Y="NaN" />
+        <DataPoint X="0.298429" Y="NaN" />
+        <DataPoint X="0.31732" Y="NaN" />
+        <DataPoint X="0.337407" Y="NaN" />
+        <DataPoint X="0.358766" Y="NaN" />
+        <DataPoint X="0.381477" Y="NaN" />
+        <DataPoint X="0.405626" Y="NaN" />
+        <DataPoint X="0.431303" Y="NaN" />
+        <DataPoint X="0.458606" Y="NaN" />
+        <DataPoint X="0.487637" Y="NaN" />
+        <DataPoint X="0.518506" Y="NaN" />
+        <DataPoint X="0.551329" Y="NaN" />
+        <DataPoint X="0.58623" Y="NaN" />
+        <DataPoint X="0.62334" Y="NaN" />
+        <DataPoint X="0.662799" Y="NaN" />
+        <DataPoint X="0.704756" Y="NaN" />
+        <DataPoint X="0.749369" Y="NaN" />
+        <DataPoint X="0.796806" Y="NaN" />
+        <DataPoint X="0.847246" Y="NaN" />
+        <DataPoint X="0.900879" Y="NaN" />
+        <DataPoint X="0.957907" Y="NaN" />
+        <DataPoint X="1.018545" Y="NaN" />
+        <DataPoint X="1.083022" Y="NaN" />
+        <DataPoint X="1.15158" Y="NaN" />
+        <DataPoint X="1.224478" Y="NaN" />
+        <DataPoint X="1.301991" Y="NaN" />
+        <DataPoint X="1.384411" Y="NaN" />
+        <DataPoint X="1.472048" Y="NaN" />
+        <DataPoint X="1.565233" Y="NaN" />
+        <DataPoint X="1.664316" Y="NaN" />
+        <DataPoint X="1.769672" Y="NaN" />
+        <DataPoint X="1.881697" Y="NaN" />
+        <DataPoint X="2.000814" Y="NaN" />
+        <DataPoint X="2.127471" Y="NaN" />
+        <DataPoint X="2.262146" Y="NaN" />
+        <DataPoint X="2.405346" Y="NaN" />
+        <DataPoint X="2.557611" Y="NaN" />
+        <DataPoint X="2.719515" Y="NaN" />
+        <DataPoint X="2.891668" Y="NaN" />
+        <DataPoint X="3.074718" Y="NaN" />
+        <DataPoint X="3.269356" Y="NaN" />
+        <DataPoint X="3.476315" Y="NaN" />
+        <DataPoint X="3.696375" Y="NaN" />
+        <DataPoint X="3.930366" Y="NaN" />
+        <DataPoint X="4.179169" Y="NaN" />
+        <DataPoint X="4.443722" Y="NaN" />
+        <DataPoint X="4.725022" Y="NaN" />
+        <DataPoint X="5.024129" Y="NaN" />
+        <DataPoint X="5.34217" Y="NaN" />
+        <DataPoint X="5.680344" Y="NaN" />
+        <DataPoint X="6.039925" Y="NaN" />
+        <DataPoint X="6.422269" Y="NaN" />
+        <DataPoint X="6.828816" Y="NaN" />
+        <DataPoint X="7.261099" Y="NaN" />
+      </IntrusionCurve>
+    </Results>
+  </Simplex>
+  <Simplex xPores="30" yPores="30" zPores="30" Iterations="20" OptimalDistance="1" Temperature="10" Tolerance="0.01" ThroatSizes="500" StochGenNumber="4" PoreThroatRatio="1" StructureType="HorBandedLargeToSmall" MaxDisconnectedVolumePercentage="1" PoreSkewSuppression="1" Learning="true" Porosity="3.14" PorosityType="channel">
+    <liquid Name="PX Mercury" Colour="255,128,128,128" Density="13545" HeatCapacity="1888" ThermalConductivity="8.3" SurfaceTension="0.485" AdvContactAngle="140" RecContactAngle="130" Viscosity="0.001526" MeanFreePath="0" DiffusionCoefficient="0" MoleculeRadius="0" />
+    <SimplexLimits>
+      <ThroatSpread Low="0" High="1" />
+      <ThroatSkew Low="-50" High="50" />
+      <PoreSkew Low="1" High="10000" />
+      <Connectivity Low="2.1" High="6" />
+      <CorrelationLevel Low="0" High="1" />
+    </SimplexLimits>
+    <Input>
+      <Sample Name="IG110" Description="Hg porosimetry " Porosity="3.14" PorosityType="channel" DminChannel="1.128" DmaxChannel="15.476" PorosityAvLayers="0" ChannelApproxType="0" SampleWeight="0" SampleDensity="0" PenetrometerAndAssemblyMass="0" SamplePenetrometerandHgMass="0" BlankPenetrometerandHgMass="0" BlankPenetrometerVolume="0">
+        <IntrusionCurve>
+          <DataPoint X="0.016672" Y="0" />
+          <DataPoint X="0.020511" Y="0.763" />
+          <DataPoint X="0.02526" Y="2.029" />
+          <DataPoint X="0.030919" Y="2.59" />
+          <DataPoint X="0.040316" Y="3.856" />
+          <DataPoint X="0.055977" Y="4.805" />
+          <DataPoint X="0.067799" Y="5.366" />
+          <DataPoint X="0.084269" Y="5.841" />
+          <DataPoint X="0.119835" Y="7.006" />
+          <DataPoint X="0.152472" Y="8.201" />
+          <DataPoint X="0.184199" Y="8.201" />
+          <DataPoint X="0.234518" Y="9.308" />
+          <DataPoint X="0.29878" Y="10.905" />
+          <DataPoint X="0.370217" Y="12.056" />
+          <DataPoint X="0.45782" Y="14.114" />
+          <DataPoint X="0.498032" Y="20.271" />
+          <DataPoint X="0.508341" Y="23.882" />
+          <DataPoint X="0.52301" Y="30.889" />
+          <DataPoint X="0.538552" Y="37.895" />
+          <DataPoint X="0.553246" Y="46.182" />
+          <DataPoint X="0.568764" Y="54.469" />
+          <DataPoint X="0.578643" Y="63.389" />
+          <DataPoint X="0.588871" Y="72.309" />
+          <DataPoint X="0.603647" Y="78.251" />
+          <DataPoint X="0.619183" Y="84.193" />
+          <DataPoint X="2.631896" Y="98.957" />
+          <DataPoint X="3.499567" Y="99.24" />
+          <DataPoint X="4.577485" Y="99.486" />
+          <DataPoint X="7.26144" Y="99.803" />
+        </IntrusionCurve>
+        <IntrusionFluid>
+          <liquid Name="PX Mercury" Colour="255,128,128,128" Density="13545" HeatCapacity="1888" ThermalConductivity="8.3" SurfaceTension="0.485" AdvContactAngle="140" RecContactAngle="130" Viscosity="0.001526" MeanFreePath="0" DiffusionCoefficient="0" MoleculeRadius="0" />
+        </IntrusionFluid>
+      </Sample>
+    </Input>
+    <TimeStamp Started="2025-04-29T18:03:08.835243+01:00" Completed="2025-04-29T18:20:44.1430688+01:00" Duration="PT17M35.3078258S" />
+    <Results Distance="60.2483932190885" PoreSkew="1" ThroatSkew="-10.000002" ThroatSpread="0.4" Connectivity="3.5" CorrelationLevel="0.01" OpenPorosity="NaN" ChannelPorosity="NaN" DminChannel="1.128" DmaxChannel="15.476" PorosityAvLayers="0" ChannelApproxType="0">
+      <IntrusionCurve>
+        <DataPoint X="0.016672" Y="NaN" />
+        <DataPoint X="0.017727" Y="NaN" />
+        <DataPoint X="0.018849" Y="NaN" />
+        <DataPoint X="0.020042" Y="NaN" />
+        <DataPoint X="0.021311" Y="NaN" />
+        <DataPoint X="0.02266" Y="NaN" />
+        <DataPoint X="0.024094" Y="NaN" />
+        <DataPoint X="0.025619" Y="NaN" />
+        <DataPoint X="0.027241" Y="NaN" />
+        <DataPoint X="0.028965" Y="NaN" />
+        <DataPoint X="0.030799" Y="NaN" />
+        <DataPoint X="0.032749" Y="NaN" />
+        <DataPoint X="0.034822" Y="NaN" />
+        <DataPoint X="0.037026" Y="NaN" />
+        <DataPoint X="0.03937" Y="NaN" />
+        <DataPoint X="0.041862" Y="NaN" />
+        <DataPoint X="0.044512" Y="NaN" />
+        <DataPoint X="0.04733" Y="NaN" />
+        <DataPoint X="0.050326" Y="NaN" />
+        <DataPoint X="0.053512" Y="NaN" />
+        <DataPoint X="0.056899" Y="NaN" />
+        <DataPoint X="0.060501" Y="NaN" />
+        <DataPoint X="0.064331" Y="NaN" />
+        <DataPoint X="0.068403" Y="NaN" />
+        <DataPoint X="0.072733" Y="NaN" />
+        <DataPoint X="0.077337" Y="NaN" />
+        <DataPoint X="0.082233" Y="NaN" />
+        <DataPoint X="0.087439" Y="NaN" />
+        <DataPoint X="0.092974" Y="NaN" />
+        <DataPoint X="0.09886" Y="NaN" />
+        <DataPoint X="0.105118" Y="NaN" />
+        <DataPoint X="0.111772" Y="NaN" />
+        <DataPoint X="0.118847" Y="NaN" />
+        <DataPoint X="0.12637" Y="NaN" />
+        <DataPoint X="0.13437" Y="NaN" />
+        <DataPoint X="0.142876" Y="NaN" />
+        <DataPoint X="0.15192" Y="NaN" />
+        <DataPoint X="0.161537" Y="NaN" />
+        <DataPoint X="0.171763" Y="NaN" />
+        <DataPoint X="0.182636" Y="NaN" />
+        <DataPoint X="0.194197" Y="NaN" />
+        <DataPoint X="0.20649" Y="NaN" />
+        <DataPoint X="0.219561" Y="NaN" />
+        <DataPoint X="0.23346" Y="NaN" />
+        <DataPoint X="0.248239" Y="NaN" />
+        <DataPoint X="0.263953" Y="NaN" />
+        <DataPoint X="0.280662" Y="NaN" />
+        <DataPoint X="0.298429" Y="NaN" />
+        <DataPoint X="0.31732" Y="NaN" />
+        <DataPoint X="0.337407" Y="NaN" />
+        <DataPoint X="0.358766" Y="NaN" />
+        <DataPoint X="0.381477" Y="NaN" />
+        <DataPoint X="0.405626" Y="NaN" />
+        <DataPoint X="0.431303" Y="NaN" />
+        <DataPoint X="0.458606" Y="NaN" />
+        <DataPoint X="0.487637" Y="NaN" />
+        <DataPoint X="0.518506" Y="NaN" />
+        <DataPoint X="0.551329" Y="NaN" />
+        <DataPoint X="0.58623" Y="NaN" />
+        <DataPoint X="0.62334" Y="NaN" />
+        <DataPoint X="0.662799" Y="NaN" />
+        <DataPoint X="0.704756" Y="NaN" />
+        <DataPoint X="0.749369" Y="NaN" />
+        <DataPoint X="0.796806" Y="NaN" />
+        <DataPoint X="0.847246" Y="NaN" />
+        <DataPoint X="0.900879" Y="NaN" />
+        <DataPoint X="0.957907" Y="NaN" />
+        <DataPoint X="1.018545" Y="NaN" />
+        <DataPoint X="1.083022" Y="NaN" />
+        <DataPoint X="1.15158" Y="NaN" />
+        <DataPoint X="1.224478" Y="NaN" />
+        <DataPoint X="1.301991" Y="NaN" />
+        <DataPoint X="1.384411" Y="NaN" />
+        <DataPoint X="1.472048" Y="NaN" />
+        <DataPoint X="1.565233" Y="NaN" />
+        <DataPoint X="1.664316" Y="NaN" />
+        <DataPoint X="1.769672" Y="NaN" />
+        <DataPoint X="1.881697" Y="NaN" />
+        <DataPoint X="2.000814" Y="NaN" />
+        <DataPoint X="2.127471" Y="NaN" />
+        <DataPoint X="2.262146" Y="NaN" />
+        <DataPoint X="2.405346" Y="NaN" />
+        <DataPoint X="2.557611" Y="NaN" />
+        <DataPoint X="2.719515" Y="NaN" />
+        <DataPoint X="2.891668" Y="NaN" />
+        <DataPoint X="3.074718" Y="NaN" />
+        <DataPoint X="3.269356" Y="NaN" />
+        <DataPoint X="3.476315" Y="NaN" />
+        <DataPoint X="3.696375" Y="NaN" />
+        <DataPoint X="3.930366" Y="NaN" />
+        <DataPoint X="4.179169" Y="NaN" />
+        <DataPoint X="4.443722" Y="NaN" />
+        <DataPoint X="4.725022" Y="NaN" />
+        <DataPoint X="5.024129" Y="NaN" />
+        <DataPoint X="5.34217" Y="NaN" />
+        <DataPoint X="5.680344" Y="NaN" />
+        <DataPoint X="6.039925" Y="NaN" />
+        <DataPoint X="6.422269" Y="NaN" />
+        <DataPoint X="6.828816" Y="NaN" />
+        <DataPoint X="7.261099" Y="NaN" />
+      </IntrusionCurve>
+    </Results>
+  </Simplex>
+  <Simplex xPores="30" yPores="30" zPores="30" Iterations="20" OptimalDistance="1" Temperature="10" Tolerance="0.01" ThroatSizes="500" StochGenNumber="5" PoreThroatRatio="1" StructureType="HorBandedLargeToSmall" MaxDisconnectedVolumePercentage="1" PoreSkewSuppression="1" Learning="true" Porosity="3.14" PorosityType="channel">
+    <liquid Name="PX Mercury" Colour="255,128,128,128" Density="13545" HeatCapacity="1888" ThermalConductivity="8.3" SurfaceTension="0.485" AdvContactAngle="140" RecContactAngle="130" Viscosity="0.001526" MeanFreePath="0" DiffusionCoefficient="0" MoleculeRadius="0" />
+    <SimplexLimits>
+      <ThroatSpread Low="0" High="1" />
+      <ThroatSkew Low="-50" High="50" />
+      <PoreSkew Low="1" High="10000" />
+      <Connectivity Low="2.1" High="6" />
+      <CorrelationLevel Low="0" High="1" />
+    </SimplexLimits>
+    <Input>
+      <Sample Name="IG110" Description="Hg porosimetry " Porosity="3.14" PorosityType="channel" DminChannel="1.128" DmaxChannel="15.476" PorosityAvLayers="0" ChannelApproxType="0" SampleWeight="0" SampleDensity="0" PenetrometerAndAssemblyMass="0" SamplePenetrometerandHgMass="0" BlankPenetrometerandHgMass="0" BlankPenetrometerVolume="0">
+        <IntrusionCurve>
+          <DataPoint X="0.016672" Y="0" />
+          <DataPoint X="0.020511" Y="0.763" />
+          <DataPoint X="0.02526" Y="2.029" />
+          <DataPoint X="0.030919" Y="2.59" />
+          <DataPoint X="0.040316" Y="3.856" />
+          <DataPoint X="0.055977" Y="4.805" />
+          <DataPoint X="0.067799" Y="5.366" />
+          <DataPoint X="0.084269" Y="5.841" />
+          <DataPoint X="0.119835" Y="7.006" />
+          <DataPoint X="0.152472" Y="8.201" />
+          <DataPoint X="0.184199" Y="8.201" />
+          <DataPoint X="0.234518" Y="9.308" />
+          <DataPoint X="0.29878" Y="10.905" />
+          <DataPoint X="0.370217" Y="12.056" />
+          <DataPoint X="0.45782" Y="14.114" />
+          <DataPoint X="0.498032" Y="20.271" />
+          <DataPoint X="0.508341" Y="23.882" />
+          <DataPoint X="0.52301" Y="30.889" />
+          <DataPoint X="0.538552" Y="37.895" />
+          <DataPoint X="0.553246" Y="46.182" />
+          <DataPoint X="0.568764" Y="54.469" />
+          <DataPoint X="0.578643" Y="63.389" />
+          <DataPoint X="0.588871" Y="72.309" />
+          <DataPoint X="0.603647" Y="78.251" />
+          <DataPoint X="0.619183" Y="84.193" />
+          <DataPoint X="2.631896" Y="98.957" />
+          <DataPoint X="3.499567" Y="99.24" />
+          <DataPoint X="4.577485" Y="99.486" />
+          <DataPoint X="7.26144" Y="99.803" />
+        </IntrusionCurve>
+        <IntrusionFluid>
+          <liquid Name="PX Mercury" Colour="255,128,128,128" Density="13545" HeatCapacity="1888" ThermalConductivity="8.3" SurfaceTension="0.485" AdvContactAngle="140" RecContactAngle="130" Viscosity="0.001526" MeanFreePath="0" DiffusionCoefficient="0" MoleculeRadius="0" />
+        </IntrusionFluid>
+      </Sample>
+    </Input>
+    <TimeStamp Started="2025-04-29T18:03:08.8386996+01:00" Completed="2025-04-29T18:20:05.8842896+01:00" Duration="PT16M57.04559S" />
+    <Results Distance="60.2483932190885" PoreSkew="1" ThroatSkew="-10.000002" ThroatSpread="0.4" Connectivity="3.5" CorrelationLevel="0.01" OpenPorosity="NaN" ChannelPorosity="NaN" DminChannel="1.128" DmaxChannel="15.476" PorosityAvLayers="0" ChannelApproxType="0">
+      <IntrusionCurve>
+        <DataPoint X="0.016672" Y="NaN" />
+        <DataPoint X="0.017727" Y="NaN" />
+        <DataPoint X="0.018849" Y="NaN" />
+        <DataPoint X="0.020042" Y="NaN" />
+        <DataPoint X="0.021311" Y="NaN" />
+        <DataPoint X="0.02266" Y="NaN" />
+        <DataPoint X="0.024094" Y="NaN" />
+        <DataPoint X="0.025619" Y="NaN" />
+        <DataPoint X="0.027241" Y="NaN" />
+        <DataPoint X="0.028965" Y="NaN" />
+        <DataPoint X="0.030799" Y="NaN" />
+        <DataPoint X="0.032749" Y="NaN" />
+        <DataPoint X="0.034822" Y="NaN" />
+        <DataPoint X="0.037026" Y="NaN" />
+        <DataPoint X="0.03937" Y="NaN" />
+        <DataPoint X="0.041862" Y="NaN" />
+        <DataPoint X="0.044512" Y="NaN" />
+        <DataPoint X="0.04733" Y="NaN" />
+        <DataPoint X="0.050326" Y="NaN" />
+        <DataPoint X="0.053512" Y="NaN" />
+        <DataPoint X="0.056899" Y="NaN" />
+        <DataPoint X="0.060501" Y="NaN" />
+        <DataPoint X="0.064331" Y="NaN" />
+        <DataPoint X="0.068403" Y="NaN" />
+        <DataPoint X="0.072733" Y="NaN" />
+        <DataPoint X="0.077337" Y="NaN" />
+        <DataPoint X="0.082233" Y="NaN" />
+        <DataPoint X="0.087439" Y="NaN" />
+        <DataPoint X="0.092974" Y="NaN" />
+        <DataPoint X="0.09886" Y="NaN" />
+        <DataPoint X="0.105118" Y="NaN" />
+        <DataPoint X="0.111772" Y="NaN" />
+        <DataPoint X="0.118847" Y="NaN" />
+        <DataPoint X="0.12637" Y="NaN" />
+        <DataPoint X="0.13437" Y="NaN" />
+        <DataPoint X="0.142876" Y="NaN" />
+        <DataPoint X="0.15192" Y="NaN" />
+        <DataPoint X="0.161537" Y="NaN" />
+        <DataPoint X="0.171763" Y="NaN" />
+        <DataPoint X="0.182636" Y="NaN" />
+        <DataPoint X="0.194197" Y="NaN" />
+        <DataPoint X="0.20649" Y="NaN" />
+        <DataPoint X="0.219561" Y="NaN" />
+        <DataPoint X="0.23346" Y="NaN" />
+        <DataPoint X="0.248239" Y="NaN" />
+        <DataPoint X="0.263953" Y="NaN" />
+        <DataPoint X="0.280662" Y="NaN" />
+        <DataPoint X="0.298429" Y="NaN" />
+        <DataPoint X="0.31732" Y="NaN" />
+        <DataPoint X="0.337407" Y="NaN" />
+        <DataPoint X="0.358766" Y="NaN" />
+        <DataPoint X="0.381477" Y="NaN" />
+        <DataPoint X="0.405626" Y="NaN" />
+        <DataPoint X="0.431303" Y="NaN" />
+        <DataPoint X="0.458606" Y="NaN" />
+        <DataPoint X="0.487637" Y="NaN" />
+        <DataPoint X="0.518506" Y="NaN" />
+        <DataPoint X="0.551329" Y="NaN" />
+        <DataPoint X="0.58623" Y="NaN" />
+        <DataPoint X="0.62334" Y="NaN" />
+        <DataPoint X="0.662799" Y="NaN" />
+        <DataPoint X="0.704756" Y="NaN" />
+        <DataPoint X="0.749369" Y="NaN" />
+        <DataPoint X="0.796806" Y="NaN" />
+        <DataPoint X="0.847246" Y="NaN" />
+        <DataPoint X="0.900879" Y="NaN" />
+        <DataPoint X="0.957907" Y="NaN" />
+        <DataPoint X="1.018545" Y="NaN" />
+        <DataPoint X="1.083022" Y="NaN" />
+        <DataPoint X="1.15158" Y="NaN" />
+        <DataPoint X="1.224478" Y="NaN" />
+        <DataPoint X="1.301991" Y="NaN" />
+        <DataPoint X="1.384411" Y="NaN" />
+        <DataPoint X="1.472048" Y="NaN" />
+        <DataPoint X="1.565233" Y="NaN" />
+        <DataPoint X="1.664316" Y="NaN" />
+        <DataPoint X="1.769672" Y="NaN" />
+        <DataPoint X="1.881697" Y="NaN" />
+        <DataPoint X="2.000814" Y="NaN" />
+        <DataPoint X="2.127471" Y="NaN" />
+        <DataPoint X="2.262146" Y="NaN" />
+        <DataPoint X="2.405346" Y="NaN" />
+        <DataPoint X="2.557611" Y="NaN" />
+        <DataPoint X="2.719515" Y="NaN" />
+        <DataPoint X="2.891668" Y="NaN" />
+        <DataPoint X="3.074718" Y="NaN" />
+        <DataPoint X="3.269356" Y="NaN" />
+        <DataPoint X="3.476315" Y="NaN" />
+        <DataPoint X="3.696375" Y="NaN" />
+        <DataPoint X="3.930366" Y="NaN" />
+        <DataPoint X="4.179169" Y="NaN" />
+        <DataPoint X="4.443722" Y="NaN" />
+        <DataPoint X="4.725022" Y="NaN" />
+        <DataPoint X="5.024129" Y="NaN" />
+        <DataPoint X="5.34217" Y="NaN" />
+        <DataPoint X="5.680344" Y="NaN" />
+        <DataPoint X="6.039925" Y="NaN" />
+        <DataPoint X="6.422269" Y="NaN" />
+        <DataPoint X="6.828816" Y="NaN" />
+        <DataPoint X="7.261099" Y="NaN" />
+      </IntrusionCurve>
+    </Results>
+  </Simplex>
+</OperationsList>
