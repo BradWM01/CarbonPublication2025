@@ -552,35 +552,48 @@ approach here developed (Table ~\ref{tab:materialstable}, Table
 
 Huang \textit{et al.} ~\citep{huang2021statistical} found that channel porosity
 as classified by SEM was 3\% for IG-110, which is in close agreement with the
-range derived in this work. In order to compare with previous works, a
-comparative analysis was performed by reduction of the intensity threshold to
-segment the full pore contours, consistent with the segmentation of those works.
-This produced channel porosity values between 13\% and 14\% for both grades,
-which is consistent with the 14.73\% for IG-110 derived by Kane \textit{et al.},
-and the 14\% figure determined by Huang and Tang \citep{Kane2011a, Huang2019}.
+range derived in this work. Interpolation via the adjustment of the
+intensity threshold to match previous OM works (i.e., pore contours are
+classified, as opposed to pore throats) produces results consistent with
+those works. Kane \textit{et al.} derive a channel porosity of 14.73\% for
+IG-110, with Huang and Tang deriving 14\% for the same grade, congruent with the
+13-14\% channel porosity derived by this work following interpolation
+\citep{Kane2011a, Huang2019}.
+
 
 Nevertheless, artefacts exist in the segmentation process which limit the
-representativeness of the pore size distribution.
+  representativeness of the pore size distribution.
 
   The use of the Moore neighbourhood connectivity criterion, defining two or
   more pores connected by even a single adjacent pixel as one pore, agglomerates
-  some proportion of the porosity. Notably, this would not alter the channel
-  porosity, nor the modelling for which it is the key input. However, this would
-  result in a rightward shift in the pore size distribution relative to the
-  distribution which would be derived from an unagglomerated dataset.
+  some proportion of the porosity. This would result in a rightward shift in the
+  pore size distribution relative to the distribution which would be derived
+  from an unagglomerated dataset. The use of a simple connectivity algorithm
+  means that a single pore with an intersecting feature beneath the intensity
+  threshold is fragmented into multiple pores, as some of these fragments fall
+  below the pore diameter threshold and are discarded. This leads to an leftward
+  shift of the pore size distribution. The extent to which pore fragmentation
+  cancels out the effect of pore agglomeration was not here determined. 
+  
+  In future works, the use of a more sophisticated connectivity algorithm such
+  as the watershed algorithm, may be able to reduce of agglomeration and
+  fragmentation artefacts. A more complete solution would be to resin-impregnate
+  the samples, as this would remove the need for the intensity thresholding
+  stage altogether, although this was not here attempted as the intention of
+  this work was to demonstrate the effectiveness of the multi-technique
+  characterisation approach as it would be applied to heterogeneous samples,
+  where the same sample must be characterised by all techniques, which resin
+  impregnation would have precluded.
 
-  In addition, the use of a simple connectivity algorithm means that a single
-  pore with an intersecting feature beneath the intensity threshold, is
-  fragmented into multiple pores. Provided that one or more of these fragments
-  falls below the pore diameter threshold, they are erroneously discarded from
-  the dataset. This leads to an underestimation of the channel porosity and a
-  leftward shift of the pore size distribution. The extent to which pore
-  fragmentation cancels out the effect of pore agglomeration was not here determined.
+  \section{Conclusion}
 
-  \todo{Talk about how successful this method has been?}
-
-
-
+This work has met the original objective in successfully demonstrating a
+multi-technique characterisation approach the full pore size
+distribution of nuclear grade graphite, from 0.4 nm to 115 µm. This approach
+successfully generated a percolation curve that yields an open porosity value in
+close agreement with the value determined experimentally by He pycnometry,  with
+the modelled open porosity values for both IG-110 and IG-430 being within 0.56\%
+and 0.71\% of the experimentally derived values respectively. 
 
 
 \section{Supplementary Information}
