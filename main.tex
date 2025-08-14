@@ -35,10 +35,27 @@
 \address[plym]{Faculty of Science and Engineering, University of Plymouth, Plymouth, UK}
 \begin{abstract}
 
-Nuclear grade graphite acts as a structural component and moderator in the remaining advanced gas-cooled nuclear reactors (AGRs) in the UK, and in several next generation (Generation IV) reactor designs.  Its microstructure, in particular porosity, dictates material properties and their
-evolution under operational conditions. We present a novel approach to characterising such microstructure, by inverse modelling of channel (surface visible) porosity estimated from the image analysis of electron micrographs, coupled with previously measured mercury intrusion porosimetry and surface adsorption converted to void size by grand canonical Monte Carlo simulations. The result is a void network comprising pores over the range 0.4 nm to 115 µm, a much larger range than can be obtained from X-Ray computed tomographic (CT) scanning. The method was validated by comparing the simulated open porosities of the void network for nuclear graphite grades IG-110 and IG-430 to the open porosities quoted by their manufacturer Toyo Tanso.  The estimates are 
-within 0.56\% and 0.71\% of the manufacturer's measurements.
-Once the void network has been generated, a range of further simulations of pore fluid behaviour can be carried out.  We illustrate this by displaying the extent of intrusion of molten salt into IG-110 that would occur at high temperature in a Molten Salt Reactor.  The new method has very wide applicability, as it can be used for any rigid porous material which has been studied by microscopy and porosimetry, but for which pycnometry is unavailable or inappropriate.  
+Nuclear grade graphite acts as a structural component and moderator in the
+remaining advanced gas-cooled nuclear reactors (AGRs) in the UK, and in several
+next generation (Generation IV) reactor designs.  Its microstructure, in
+particular porosity, dictates material properties and their evolution under
+operational conditions. We present a novel approach to characterising such
+microstructure, by inverse modelling of channel (surface visible) porosity
+estimated from the image analysis of electron micrographs, coupled with
+previously measured mercury intrusion porosimetry and surface adsorption
+converted to void size by grand canonical Monte Carlo simulations. The result is
+a void network comprising pores over the range 0.4 nm to 115 µm, a much larger
+range than can be obtained from X-Ray computed tomographic (CT) scanning. The
+method was validated by comparing the simulated open porosities of the void
+network for nuclear graphite grades IG-110 and IG-430 to the open porosities
+quoted by their manufacturer Toyo Tanso.  The estimates are within 0.56\% and
+0.71\% of the manufacturer's measurements. Once the void network has been
+generated, a range of further simulations of pore fluid behaviour can be carried
+out.  We illustrate this by displaying the extent of intrusion of molten salt
+into IG-110 that would occur at high temperature in a Molten Salt Reactor.  The
+new method has very wide applicability, as it can be used for any rigid porous
+material which has been studied by microscopy and porosimetry, but for which
+pycnometry is unavailable or inappropriate.  
 \begin{draftversion}
 	\newline
 	\textit{\textbf{Abstract 250 words max.  Currently 233 words}}
@@ -49,103 +66,147 @@ Once the void network has been generated, a range of further simulations of pore
 \end{draftversion}
 
 \end{abstract}
-\begin{keyword} nuclear reactor\sep graphite\sep porosity \sep electron microscopy \sep image analysis \sep porosimetry \end{keyword}
+\begin{keyword} nuclear reactor\sep graphite\sep porosity \sep electron
+microscopy \sep image analysis \sep porosimetry \end{keyword}
 \end{frontmatter}
 
 
 
 \section{Introduction}
 Graphite is employed as a moderator, neutron reflector and structural component
-in the remaining advanced gas-cooled nuclear reactors (AGRs) in the UK, and in several Generation IV reactor designs, including the High Temperature Gas
+in the remaining advanced gas-cooled nuclear reactors (AGRs) in the UK, and in
+several Generation IV reactor designs, including the High Temperature Gas
 Reactor (HTGR) and Molten Salt Reactor (MSR) \citep{international2025iaea,
 international2023iaeaMSRs, MARSDENgeniv}. Nuclear grade graphite  is
 characterised by exceptionally low boron content, high structural strength,
 thermal stability, and a high scattering and low absorbent neutron cross-section
 \citep{Marsden2016}. 
 
-The internal microstructure of nuclear grade graphite plays
-a key role in its mechanical and thermo-physical properties, and the evolution under irradiation of these properties and thermo-chemical properties such as oxidation, gas release and thermal degradation 
-\citep{MARSDENgeniv, ARREGUIMENA2022112047}. 
-For HTGRs, oxidation rates are relevant in fault conditions involving air
-ingress, and are typically higher where open porosity is distributed uniformly
+The internal microstructure of nuclear grade graphite plays a key role in its
+mechanical and thermo-physical properties, and the evolution under irradiation
+of these properties and thermo-chemical properties such as oxidation, gas
+release and thermal degradation \citep{MARSDENgeniv, ARREGUIMENA2022112047}. For
+HTGRs, oxidation rates are relevant in fault conditions involving air ingress,
+and are typically higher where open porosity is distributed uniformly
 \citep{PAUL2022132,GraphitePIRT}. Additionally, porosity strongly affects
 gaseous diffusion, in turn influencing degradation rate, determining whether the
 behaviour under oxidative conditions will be diffusion-controlled or
-kinetic-controlled \citep{KANE2018369, MATTHEWS2021111245, PAUL2022132}. 
-Impedance of
-diffusion of gaseous fission products into the graphite bulk requires a He
-permeability of less than $1 \times 10^{-8}~\text{cm}^2\text{s}^{-1}~\text{cm}$,
-corresponding to pore diameters of 100 nm or less\citep{McCoy1970MoltenSalt,
-	SONG201436}.
-In
-MSRs, unwanted salt intrusion can occur into surface pores greater than 1 µm in diameter \citep{McCoy1970MoltenSalt}. 
+kinetic-controlled \citep{KANE2018369, MATTHEWS2021111245, PAUL2022132}.
+Impedance of diffusion of gaseous fission products into the graphite bulk
+requires a He permeability of less than $1 \times
+10^{-8}~\text{cm}^2\text{s}^{-1}~\text{cm}$, corresponding to pore diameters of
+100 nm or less\citep{McCoy1970MoltenSalt, SONG201436}. In MSRs, unwanted salt
+intrusion can occur into surface pores greater than 1 µm in diameter
+\citep{McCoy1970MoltenSalt}. 
 
 
 
 \subsection{Experimental techniques}
 \label{subsec:Experimental techniques}
 The primary experimental techniques for microstructural characterisation are
-mercury intrusion porosimetry, helium pycnometry, gas adsorption, X-ray computed tomography (X-ray CT), and microscopy.
-Mercury intrusion porosimetry is an established technique for characterising
-the pore size distribution of nuclear grade graphite
-\citep{ARREGUIMENA2022112047, JONES2020256HgHe, CONTESCU2019663, Jones2020}.
-However, the technique destroys the voids structure at the highest applied pressures of mercury necessary to probe voids below 100 nm in size, is destructive, and unable to characterise the very
-smallest pores as the pressure required induces damage in the microstructure.
-Helium pycnometry by contrast is a non-destructive technique that measures the
-total open porosity of a sample, but does not provide information on the pore
-size distribution. Gas adsorption techniques, such as nitrogen or
-krypton adsorption, are also non-destructive and provide detailed
-characterisation of the pore size distribution in the nanometre range.
+mercury intrusion porosimetry, helium pycnometry, gas adsorption, X-ray computed
+tomography (X-ray CT), and microscopy. Mercury intrusion porosimetry is an
+established technique for characterising the pore size distribution of nuclear
+grade graphite \citep{ARREGUIMENA2022112047, JONES2020256HgHe, CONTESCU2019663,
+Jones2020}. However, the technique destroys the voids structure at the highest
+applied pressures of mercury necessary to probe voids below 100 nm in size, is
+destructive, and unable to characterise the very smallest pores as the pressure
+required induces damage in the microstructure. Helium pycnometry by contrast is
+a non-destructive technique that measures the total open porosity of a sample,
+but does not provide information on the pore size distribution. Gas adsorption
+techniques, such as nitrogen or krypton adsorption, are also non-destructive and
+provide detailed characterisation of the pore size distribution in the nanometre
+range.
 
-X-ray CT is a non-destructive technique that has also been used to 
-characterise the microstructure of nuclear grade graphite 
+X-ray CT is a non-destructive technique that has also been used to characterise
+the microstructure of nuclear grade graphite
 \citep{ARREGUIMENA2022112047,KANE2020291,Liu2017, MOSTAFAVI2013410,
-BARHLI2017357}. Recent X-ray CT characterisation efforts relevant to MSR and HTGR
-operation include real-time tracking of salt infiltration and modelling of the
-relation between microstructure and oxidation rate \citep{ZHANG2024102016,
-PAUL2022132}. However, X-ray CT has limited spatial resolution, being typically unable to resolves pores with volumes smaller than 10 µm³
+BARHLI2017357}. Recent X-ray CT characterisation efforts relevant to MSR and
+HTGR operation include real-time tracking of salt infiltration and modelling of
+the relation between microstructure and oxidation rate \citep{ZHANG2024102016,
+PAUL2022132}. However, X-ray CT has limited spatial resolution, being typically
+unable to resolves pores with volumes smaller than 10 µm³
 \citep{ARREGUIMENA2022112047}.  
 
-Most microscopy studies of nuclear graphite have been optical  \citep{ARREGUIMENA2022112047, Huang2014, Huang2019,
-Kane2011a, Taylor2016, huang2021statistical}.
-\todo{Brad - only cite the optical studies in this first list.  Then cite the SEM studies in the paragraph below.} Optical microscopy generates datasets based on thousands of
-pores, but operate at a low resolution and magnification relative to scanning
-electron microscopy (SEM) analysis \citep{Huang2019, Kane2011a, Taylor2016}.
-Additionally, the low magnification required to image large areas via optical microscopy
-can identify pores below a pore area in some cases as large as 50 µm², thus
-excluding a significant proportion of the pore size distribution indicated by
-the experimental methods mentioned above \citep{Huang2019, Kane2011a, Taylor2016}. 
+Those studies which have attempted to characterise the surface porosotity of
+nuclear graphite have largely utilised OM  \citep{Huang2019, Kane2011a,
+Taylor2016}.  Optical microscopy generates datasets based on thousands of pores,
+but operate at a low resolution and magnification relative to scanning electron
+microscopy (SEM) analysis \citep{Huang2014,
+huang2021statistical,ARREGUIMENA2022112047}.
+ Additionally, the low magnification
+required to image large areas via optical microscopy can identify pores below a
+pore area in some cases as large as 50 µm², thus excluding a significant
+proportion of the pore size distribution indicated by the experimental methods
+mentioned above \citep{Taylor2016}. 
 
-SEM characterises very much smaller pores.  Once the fundamental instrumental and sample preparation challenges have been overcome, its main drawback is that the area of each micrograph is very small compared to the representative sample size, i.e. relative to the smallest sample volume which includes all the sample heterogeneity (the Representative Elementary Volume, REV), such that when replicated up to the sample volume the REV gives rise to the macroscopic properties of the sample. It also has has the obvious drawback that only the surface of the sample is observed, not its interior network of voids. We overcome both limitations in this work - the first by stitching together multiple micrographs, and the second by inverse modelling, as described below. 
+SEM characterises very much smaller pores.  Once the fundamental instrumental
+and sample preparation challenges have been overcome, its main drawback is that
+the area of each micrograph is very small compared to the representative sample
+size, i.e. relative to the smallest sample volume which includes all the sample
+heterogeneity (the Representative Elementary Volume, REV), such that when
+replicated up to the sample volume the REV gives rise to the macroscopic
+properties of the sample. It also has has the obvious drawback that only the
+surface of the sample is observed, not its interior network of voids. We
+overcome both limitations in this work - the first by stitching together
+multiple micrographs, and the second by inverse modelling, as described below. 
 
-Samples for both optical and electron microscopy are often resin impregnated, with a dye to contrast the resin against the sample bulk.  However, resin
-impregnation makes it more difficult to distinguish surface irregularities from depth-penetrating pores, and precludes the application of a series of experimental techniques to the same sample. So no impregnation was carried out in this work.
+Samples for both optical and electron microscopy are often resin impregnated,
+with a dye to contrast the resin against the sample bulk.  However, resin
+impregnation makes it more difficult to distinguish surface irregularities from
+depth-penetrating pores, and precludes the application of a series of
+experimental techniques to the same sample. So no impregnation was carried out
+in this work.
 
 
 
 \subsection{Principles of this study}
 
-Porosity differs
-between grades of nuclear graphite due to varying constituents and manufacturing processes. In this work we consider only surface-accessible or `open' porosity, and exclude any closed pore volume which is inaccessible from the surface, such as that found within or between the onion-skin-like layers of `gilsos' within the gilsocarbon in UK AGRs. 
-We define `channel porosity' as the total area of voids observed at the surface of a porous sample within the area of a particular micrograph as a percentage of the total surface area of the micrograph. This would equate  to the total accessible porosity of the sample if every surface void was the entrance to a channel, approximately normal to the observed surface, of constant cross-sectional area, extending from the observed side of the sample to the opposite side - hence our designation `channel' porosity.  It is evidently not the same as open porosity, which includes hidden connections between the channels, and pores or variations in channel size that cannot be seen from the surface.    
-Nevertheless channel and open porosity are often equated during image analysis. \todo{Brad - cite the works in which they have made this error - just by citation which will appear as a number - no need to mention names - i.e. never tread on too many other people's toes in case they are chosen as a referee !}
+Porosity differs between grades of nuclear graphite due to varying constituents
+and manufacturing processes. In this work we consider only surface-accessible or
+`open' porosity, and exclude any closed pore volume which is inaccessible from
+the surface, such as that found within or between the onion-skin-like layers of
+`gilsos' within the gilsocarbon in UK AGRs. We define `channel porosity' as the
+total area of voids observed at the surface of a porous sample within the area
+of a particular micrograph as a percentage of the total surface area of the
+micrograph. This would equate  to the total accessible porosity of the sample if
+every surface void was the entrance to a channel, approximately normal to the
+observed surface, of constant cross-sectional area, extending from the observed
+side of the sample to the opposite side - hence our designation `channel'
+porosity.  It is evidently not the same as open porosity, which includes hidden
+connections between the channels, and pores or variations in channel size that
+cannot be seen from the surface.    
+Nevertheless channel and open porosity are often implicitly equated during image
+analysis \citep{Kane2011a,Huang2019,huang2021statistical}.
 
-As evident from Section \ref{subsec:Experimental techniques}, there is no individual experimental technique that is capable of characterising the full pore
-size distribution observable in nuclear grade graphite.  So we adopt a multi-technique approach.  The experimental inputs are combined using the PoreXpert inverse modelling package.  We use mercury intrusion porosimetry characteristics and GCMC interpreted gas adsorption that we have published previously \citep{Jones2018}. That previous work used porosimetry, surface adsorption and pycnometry as input.  In this work, we calculate channel porosity from imaged-analysed SEMs instead of measuring open porosity by pycnometry. The characterisation is more complete than previous
-works, including pores too large to be characterised by gas
-adsorption and too small for mercury porosimetry \citep{Jones2018}.\todo{not sure I understand that - what has been provided that was not given by Jones et al ?}
+As evident from Section \ref{subsec:Experimental techniques}, there is no
+individual experimental technique that is capable of characterising the full
+pore size distribution observable in nuclear grade graphite.  So we adopt a
+multi-technique approach.  The experimental inputs are combined using the
+PoreXpert inverse modelling package.  We use mercury intrusion porosimetry
+characteristics and GCMC interpreted gas adsorption that we have published
+previously \citep{Jones2018}. That previous work used porosimetry, surface
+adsorption and pycnometry as input.  In this work, we calculate channel porosity
+via computational analysis of composite micrographs, instead of measuring open
+porosity by pycnometry. 
 
-Inverse modelling never produces a single answer, instead, in this case, it generates a range of possible void structures all of which would have experimental characteristics closely matching the input data. Therefore we choose the most statistically representative structure amongst many stochastic generations.  We rigorously validate the method by comparing the open porosities calculated from the channel porosity by the inverse modeller, with the open porosities measured by the manufacturers of the samples. 
+Inverse modelling never produces a single answer, instead, in this case, it
+generates a range of possible void structures all of which would have
+experimental characteristics closely matching the input data. Therefore we
+choose the most statistically representative structure amongst many stochastic
+generations.  We rigorously validate the method by comparing the open porosities
+calculated from the channel porosity by the inverse modeller, with the open
+porosities measured by the manufacturers of the samples. 
 
 
 \section{Methodology}
 
 \subsection{Materials}
 
-Virgin (i.e. unirradiated) graphite samples of two grades, IG-110 and IG-430, were supplied by Toyo
-Tanso Ltd, Osaka, Japan. The properties of both grades are shown in Table
-~\ref{tab:materialstable}. IG‑110 is employed in the three existing HTGRs
-worldwide, while IG‑430 is designed for future applications
+Virgin (i.e. unirradiated) graphite samples of two grades, IG-110 and IG-430,
+were supplied by Toyo Tanso Ltd, Osaka, Japan. The properties of both grades are
+shown in Table ~\ref{tab:materialstable}. IG‑110 is employed in the three
+existing HTGRs worldwide, while IG‑430 is designed for future applications
 \citep{toyotanso_atomic_nuclear}. The grades, while identical in filler particle
 size, differ in coke source, density, tensile strength, elastic modulus, and
 thermal conductivity (Table ~\ref{tab:materialstable}).
@@ -165,32 +226,27 @@ thermal conductivity (Table ~\ref{tab:materialstable}).
 \end{table}
 
 \subsection{Sample preparation}
-Cuboids were subsampled from virgin graphite blocks, with dimensions of
-approximately 10 mm $\times$ 10 mm $\times$ 100 mm. The subsamples were further subsampled
-into cuboids of side lengths 7 mm, providing 3 cuboids per grade. Samples were
-polished with SiC polishing pads up to a grit size of P5000, to minimise
-topographical variations induced by sample preparation that may cause artefacts
-during SEM imaging or low pressure gas adsorption \citep{Fang2022,Jones2018}.
-Samples were sonicated in 2-propanol for 24 h to remove silica particles
-introduced during polishing, then dried under vacuum for 12 h at $305 \pm 5
-\,^\circ\mathrm{C}$ using the BELPREP-vac (MicrotracBEL, Japan) to remove
-residual 2-propanol.
+Cuboids were subsampled from into cuboids of side lengths 7 mm, providing 3
+cuboids per grade. Samples were polished with SiC polishing pads up to a grit
+size of P5000, to minimise topographical variations induced by sample
+preparation that may cause artefacts during SEM imaging or low pressure gas
+adsorption \citep{Fang2022,Jones2018}. Samples were sonicated in 2-propanol for
+24 h to remove silica particles introduced during polishing, then dried under
+vacuum for 12 h at $305 \pm 5 \,^\circ\mathrm{C}$ using the BELPREP-vac
+(MicrotracBEL, Japan) to remove residual 2-propanol.
 
 
 \subsection{Scanning Electron Microscopy (SEM)}
-\begin{draftversion}
-	\textit{\textbf{Check supp\_info Table number. Table 2  starts 'Summary of the contrast and brightness' }}
-	\newline
-\end{draftversion}
-Micrographs were acquired using a JEOL JSM-IT510 Scanning Electron Microscope
-operating at an accelerating voltage of 5 kV in Secondary Electron mode. To minimise the REV problem described above, a contiguous set of 225 micrographs was captured for each sample using the Image
-Montage function within the JEOL InScope software, operating a motorised stage, with the settings \todo{are these all setting, or are some output parameters?} shown in Table ~\ref{tab:microscopy_parameters}.
-During acquisition, the stigmation, contrast, and brightness were automatically
-adjusted. A subsequent metadata analysis is detailed in the Supplementary
-Information Table 2, and confirmed that
-variations in contrast and brightness were negligible.
 
-\todo{Surface area per micrograph value missing from Table 2} 
+Micrographs were acquired using a JEOL JSM-IT510 Scanning Electron Microscope
+operating at an accelerating voltage of 5 kV in Secondary Electron mode. To
+minimise the REV problem described above, a contiguous set of 225 micrographs
+was captured for each sample using the Image Montage function within the JEOL
+InScope software, operating a motorised stage, with the settings and output
+parameter in Table ~\ref{tab:microscopy_parameters}. During acquisition, the
+stigmation, contrast, and brightness were automatically adjusted. A subsequent
+metadata analysis is detailed in the Supplementary Information Table 2, and
+confirmed that variations in contrast and brightness were negligible.
 
 \begin{table}
   \centering
@@ -202,8 +258,8 @@ variations in contrast and brightness were negligible.
     \hline
     Magnification ($\times$)                    & 1000 \\
     Accelerating voltage (kV) & 5\\
-    Resolution (µm/px)               & 0.1 \\
-    Surface area per micrograph (µm²) &  \\
+    Resolution (nm/px)               & 100 \\
+    Surface area per micrograph (µm²) & 12,288 \\
     Overlap (\%)                          & 10 \\
     Micrographs per sample (n)            & 225 \\
     \hline
@@ -217,62 +273,51 @@ enhanced phase correlation method, operated as a plugin of the Fiji software
 package \citep{schindelin2012fiji, Preibisch2009}. The approach optimises
 micrograph positions globally to sub-pixel accuracy and smooths the transitions
 between micrographs by a non-linear intensity blending function.  The resulting
-composite images exhibit no visible delineation between individual micrographs. This
-produces a total area comparable with previous optical microscopy studies of nuclear graphite, but with the crucial difference that on zooming in, fin detail can be observed down to ?? nm \todo{fill in smallest size}, as indicated in Figure \ref{fig:histogramandcomposite}. \todo{previous version cited refs 24,25,and 27 here, but I don't know what they refer to} Hence channel porosity can be clearly resolved over a wide area. 
-All composite images were cropped
-to a size of 1,350 µm $\times$ 950 µm. 
+composite images exhibit no visible delineation between individual micrographs.
+This produces a total area comparable with previous optical microscopy studies
+of nuclear graphite, but with the crucial difference that on zooming in, fine
+detail can be observed down to 100 nanometres \ref{tab:microscopy_parameters}.
+Hence channel porosity can be clearly resolved over a wide area. All composite
+images were cropped to a size of 1,350 µm $\times$ 950 µm. 
 
 \subsection{Computation of Channel Porosity}
 
 \subsubsection{Intensity/Greyscale Thresholding}
 
-\todo{Brad - Adela says next sentence not clear}
-
-For the construction of the histogram of intensity, where porosity is to be 
-distinguished, per 8-bit micrograph with pixel values \(0 \le E(x,y) \le 255\) 
-the intensity histogram \(H(i)\) is computed for \(i=0,1,\dots,255\) (Figure 
-~\ref{fig:histogramandcomposite}).\todo{In equation (i), does the second equals sign imply a conditional requirement ? - i.e. is the mathematical notation correct?  If you got it from another publication, then I guess it is.}
-\begin{equation}\tag{i}
-H(i) = \sum_{x=1}^{M}\sum_{y=1}^{N} I\{E(x,y)=i\},
-\end{equation}
-where \(M\) and \(N\) are the micrograph width and height (in pixels), and
-\begin{equation}\tag{ii}
-I\{E(x,y)\} =
-\begin{cases}
-I, & \text{if the pixel at }(x,y)\text{ has intensity }i,\\
-0, & \text{otherwise.}
-\end{cases}
-\end{equation}
-
-The indicator function \(I\{E(x,y)\}\) increments the bin
-corresponding to that greyscale value. The double sum
-\(\sum_{x=1}^M\sum_{y=1}^N\) performs  across each pixel in the micrograph
-resulting in a histogram \(H(i)\) of 256 bins, each bin representing number of
-pixels in the micrograph at each greyscale value \(i\). 
+For an 8-bit micrograph with pixel values \(0 \le E(x,y) \le 255\), the
+intensity histogram \(H(i)\) for \(i=0,1,\dots,255\) is \begin{equation}\tag{i}
+H(i) = \sum_{x=1}^{M}\sum_{y=1}^{N} \mathbf{1}\{\,E(x,y)=i\,\}, \end{equation}
+where \(M\) and \(N\) are the image width and height (in pixels), and
+\begin{equation}\tag{ii} \mathbf{1}\{\,E(x,y)=i\,\} = \begin{cases} 1, &
+\text{if } E(x,y)=i,\\ 0, & \text{otherwise.} \end{cases} \end{equation} The
+double sum ranges over all pixels, producing a 256-bin histogram \(H(i)\), with
+each bin equal to the number of pixels whose greyscale value is \(i\).
 
   \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{./Media/final_combined_vertical_sans-serif.jpg}
-  \caption{(a). Fully assembled SEM composite: IG-430 Sample C, $1000 \times$
-     magnification. The very high resolution is illustrated by a zoomed section.  (b). Intensity histogram for IG-430 Sample F
-     exhibiting skewness and unimodality}
+  \includegraphics[width=\columnwidth]{./Media/verticaloutputig430assembledandhisto.png}
+\caption{(a) Composite SEM micrograph of IG-430 Sample C at 1000 ×
+magnification, with a high-resolution inset highlighting the resolution with
+which microstructural features are being captured. (b) 8-bit intensity histogram
+for IG-430 Sample F.}
   \label{fig:histogramandcomposite}
 	\end{figure} 
-\todo{Brad - change Fig 1(a) and letters a. and b. to black and white, not colours- colours are expensive for journals (and hence possibly for us if they charge).  In figure (a), choose a very small area, and magnify it - and show it as a zoomed out section with splaying lines connecting the small rectangle to the enlarged rectangular image}
-A global intensity threshold was applied to each composite micrograph to
-generate a binary image, segmenting porosity and bulk.  Automatic global
-thresholding algorithms available in Fiji were attempted but found to be
-unsuitable for this dataset (see Supplementary Information). As with previous works, an appropriate
-threshold was determined manually from the resultant intensity histograms by visual inspection of the micrographs \todo{is additional phrasing correct?}
+ A global intensity threshold was applied to each
+composite micrograph to generate a binary image, segmenting porosity and bulk.
+Automatic global thresholding algorithms available in Fiji were attempted but
+found to be unsuitable for this dataset (see Supplementary Information). As with
+previous works, an appropriate threshold was determined manually from the
+resultant intensity histograms by visual inspection of the micrographs
 \citep{Huang2019, Kane2011a, Taylor2016,huang2021statistical}.
 
-Threshold selection was guided by two physical criteria. Firstly, for consistency
-with the mercury porosimetry data by capturing the pore throats rather than the
-contours of the pore bodies. Secondly, the exclusion of closed pore volume incidentally exposed by sample preparation, which appear as brighter grey
-regions. Both criteria were met by the application of a threshold which captures
-the darkest regions in SEM micrographs, excluding closed pore volume and capturing pore
-throats. Nominally, this translated to an intensity threshold of $0.95 \pm 0.075$,
-normalized between 0-1 over an 8-bit range.
+Threshold selection was guided by two physical criteria. Firstly, for
+consistency with the mercury porosimetry data by capturing the pore throats
+rather than the contours of the pore bodies. Secondly, the exclusion of closed
+pore volume incidentally exposed by sample preparation, which appear as brighter
+grey regions. Both criteria were met by the application of a threshold which
+captures the darkest regions in SEM micrographs, excluding closed pore volume
+and capturing pore throats. Nominally, this translated to an intensity threshold
+of $0.95 \pm 0.075$, normalized between 0-1 over an 8-bit range.
 
 \begin{figure}[!htbp]
     \centering
@@ -332,8 +377,9 @@ porosity size distribution which are presented in the Results section.
 \subsection{Experimentally-Derived Dataset}
 
 In conjunction with the SEM-based inputs to this multi-technique
-characterisation, this study utilised existing experimental data for helium
-pycnometry, \todo{surely we don't use the previous pycnometry measurements?} mercury intrusion porosimetry, and gas adsorption, previously measured by Jones et al. \citep{Jones2018}, who also provide full experimental details.
+characterisation, this study utilised mercury intrusion porosimetry and gas
+adsorption isotherms, previously measured by Jones et al. \citep{Jones2018}, who
+also provide full experimental details.
 
 The samples analysed in that work were taken from the same parent blocks of
 IG-110 and IG-430 as those prepared for the SEM analysis in this study to ensure
@@ -514,38 +560,38 @@ approach here developed (Table ~\ref{tab:materialstable}, Table
 
 Huang \textit{et al.} ~\citep{huang2021statistical} found that channel porosity
 as classified by SEM was 3\% for IG-110, which is in close agreement with the
-range derived in this work. Interpolation via the adjustment of the
-intensity threshold to match previous optical microscopy works (i.e., pore contours are
-classified, as opposed to pore throats) produces results consistent with
-those works. Kane \textit{et al.} derive a channel porosity of 14.73\% for
-IG-110, with Huang and Tang deriving 14\% for the same grade, congruent with the
-13-14\% channel porosity derived by this work following interpolation
-\citep{Kane2011a, Huang2019}.
+range derived in this work. Interpolation via the adjustment of the intensity
+threshold to match previous optical microscopy works (i.e., pore contours are
+classified, as opposed to pore throats) produces results consistent with those
+works. Kane \textit{et al.} derive a channel porosity of 14.73\% for IG-110,
+with Huang and Tang deriving 14\% for the same grade, congruent with the 13-14\%
+channel porosity derived by this work following interpolation \citep{Kane2011a,
+Huang2019}.
 
 
 Nevertheless, artefacts exist in the segmentation process which limit the
-  representativeness of the pore size distribution.
+representativeness of the pore size distribution.
 
-  The use of the Moore neighbourhood connectivity criterion, defining two or
-  more pores connected by even a single adjacent pixel as one pore, agglomerates
-  some proportion of the porosity. This would result in a rightward shift in the
-  pore size distribution relative to the distribution which would be derived
-  from an unagglomerated dataset. The use of a simple connectivity algorithm
-  means that a single pore with an intersecting feature beneath the intensity
-  threshold is fragmented into multiple pores, as some of these fragments fall
-  below the pore diameter threshold and are discarded. This leads to an leftward
-  shift of the pore size distribution. The extent to which pore fragmentation
-  cancels out the effect of pore agglomeration was not here determined. 
-  
-  In future works, the use of a more sophisticated connectivity algorithm such
-  as the watershed algorithm, may be able to reduce of agglomeration and
-  fragmentation artefacts. A more complete solution would be to resin-impregnate
-  the samples, as this would remove the need for the intensity thresholding
-  stage altogether, although this was not here attempted as the intention of
-  this work was to demonstrate the effectiveness of the multi-technique
-  characterisation approach as it would be applied to heterogeneous samples,
-  where the same sample must be characterised by all techniques, which resin
-  impregnation would have precluded.
+The use of the Moore neighbourhood connectivity criterion, defining two or
+more pores connected by even a single adjacent pixel as one pore, agglomerates
+some proportion of the porosity. This would result in a rightward shift in the
+pore size distribution relative to the distribution which would be derived
+from an unagglomerated dataset. The use of a simple connectivity algorithm
+means that a single pore with an intersecting feature beneath the intensity
+threshold is fragmented into multiple pores, as some of these fragments fall
+below the pore diameter threshold and are discarded. This leads to an leftward
+shift of the pore size distribution. The extent to which pore fragmentation
+cancels out the effect of pore agglomeration was not here determined. 
+
+In future works, the use of a more sophisticated connectivity algorithm such
+as the watershed algorithm, may be able to reduce of agglomeration and
+fragmentation artefacts. A more complete solution would be to resin-impregnate
+the samples, as this would remove the need for the intensity thresholding
+stage altogether, although this was not here attempted as the intention of
+this work was to demonstrate the effectiveness of the multi-technique
+characterisation approach as it would be applied to heterogeneous samples,
+where the same sample must be characterised by all techniques, which resin
+impregnation would have precluded.
 
   \section{Conclusion}
 
