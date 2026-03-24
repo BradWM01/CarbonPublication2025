@@ -128,27 +128,23 @@ PAUL2022132}. However, X-ray CT has limited spatial resolution, being typically
 unable to resolves pores with volumes smaller than 10 µm³
 \citep{ARREGUIMENA2022112047}.  
 
-Those studies which have attempted to characterise the surface porosotity of
-nuclear graphite have largely utilised OM  \citep{Huang2019, Kane2011a,
+Those studies which have attempted to characterise the surface porosity of
+nuclear graphite have largely utilised optical microscopy \citep{Huang2019, Kane2011a,
 Taylor2016}.  Optical microscopy generates datasets based on thousands of pores,
-but operate at a low resolution and magnification relative to scanning electron
+but operates at a low resolution and magnification relative to scanning electron
 microscopy (SEM) analysis \citep{Huang2014,
 huang2021statistical,ARREGUIMENA2022112047}.
  Additionally, the low magnification
-required to image large areas via optical microscopy can identify pores below a
+required to image large areas via optical microscopy cannot identify pores below a
 pore area in some cases as large as 50 µm², thus excluding a significant
 proportion of the pore size distribution indicated by the experimental methods
 mentioned above \citep{Taylor2016}. 
 
 SEM characterises very much smaller pores.  Once the fundamental instrumental
 and sample preparation challenges have been overcome, its main drawback is that
-the area of each micrograph is very small compared to the representative sample
-size, i.e. relative to the smallest sample volume which includes all the sample
-heterogeneity (the Representative Elementary Volume, REV), such that when
-replicated up to the sample volume the REV gives rise to the macroscopic
-properties of the sample. It also has has the obvious drawback that only the
-surface of the sample is observed, not its interior network of voids. We
-overcome both limitations in this work - the first by stitching together
+the area of each micrograph is very small compared to the surface of one face of the  representative elementary volume (REV). (The REV is that volume of sample which, when replicated up to the sample volume, gives an agglomeration of replicates which has the same macroscopic properties as the sample itself.) 
+It also has has the obvious drawback that only the
+surface of the sample is observed, not its interior network of voids. In this work,  we overcome both of these limitations - the first by stitching together
 multiple micrographs, and the second by inverse modelling, as described below. 
 
 Samples for both optical and electron microscopy are often resin impregnated,
@@ -182,7 +178,7 @@ analysis \citep{Kane2011a,Huang2019,huang2021statistical}.
 As evident from Section \ref{subsec:Experimental techniques}, there is no
 individual experimental technique that is capable of characterising the full
 pore size distribution observable in nuclear grade graphite.  So we adopt a
-multi-technique approach.  The experimental inputs are combined using the
+multi-technique approach.  The experimental inputs are combined using the new version 3 of the 
 PoreXpert inverse modelling package.  We use mercury intrusion porosimetry
 characteristics and GCMC interpreted gas adsorption that we have published
 previously \citep{Jones2018}. That previous work used porosimetry, surface
@@ -195,9 +191,9 @@ generates a range of possible void structures all of which would have
 experimental characteristics closely matching the input data. Therefore we
 choose the most statistically representative structure amongst many stochastic
 generations.  We rigorously validate the method by comparing the open porosities
-calculated from the channel porosity by the inverse modeller, with the open
+calculated from the channel porosity by the inverse modelling packages with the open
 porosities measured by the manufacturers of the samples. 
-
+\todo{Edited by Peter to here, 24Mar26}
 
 \section{Methodology}
 
@@ -244,7 +240,7 @@ minimise the REV problem described above, a contiguous set of 225 micrographs
 was captured for each sample using the Image Montage function within the JEOL
 InScope software, operating a motorised stage, with the settings and output
 parameter in Table ~\ref{tab:microscopy_parameters}. During acquisition, the
-stigmation, contrast, and brightness were automatically adjusted. A subsequent
+stigmation,\todo{stigmatization ?} contrast, and brightness were automatically adjusted. A subsequent
 metadata analysis is detailed in the Supplementary Information Table 2, and
 confirmed that variations in contrast and brightness were negligible.
 
@@ -389,8 +385,6 @@ receding contact angles of 140$^{\circ}$ and 130$^{\circ}$ and a
 surface tension of 0.480 N m$^{-1}$, and graphite density of
 2.26 g cm$^{-3}$. 
 
-\todo{Edited by Peter to here, 14Aug25}
-
 \section{Modelling}
 
 The modelling software PoreXpert proceeds inversely from effect, the
@@ -444,7 +438,7 @@ segmentation.
   applied, while the upper pore diameter threshold represents the maximum pore
   diameter successfully captured by this method (Figure \ref{fig:IG110LogPSDs},
   \ref{fig:IG430LogPSDs}). These pore diameter bounds enable the  model to adjust
-  the extent of the PSD which the channel porosity provides the input for, with
+  the extent of the pore size distribution which the channel porosity provides the input for, with
   porosity smaller and larger these bounds modelled via the experimentally
   derived data.
 
@@ -537,7 +531,7 @@ previous works (Figure \ref{fig:PX3dnetworkXZ}, \ref{fig:PX3dnetworkXY} \cite{Jo
   \resizebox{\columnwidth}{!}{%
     \begin{tabular}{c c c}
       \hline
-      Sample & Modelled Open Porosity \% & Open Porosity Residuals (Modeled - Experimental) \%  \\
+      Sample & Modelled Open Porosity \% & Open Porosity Residuals (Modelled - Experimental) \%  \\
       \hline
       IG-110 B & 19.60  &  0.76  \\
       IG-110 C & 19.86  & 0.50\\
