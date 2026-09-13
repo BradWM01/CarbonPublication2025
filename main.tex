@@ -36,29 +36,19 @@
 \begin{abstract}
 
 Nuclear grade graphite acts as a structural component and moderator in the
-remaining advanced gas-cooled nuclear reactors (AGRs) in the UK, and in several
-next generation (Generation IV) reactor designs.  Its microstructure, in
-particular porosity, dictates material properties and their evolution under
-operational conditions. We present a novel approach to characterising such
-microstructure, by inverse modelling of channel (surface visible) porosity
-estimated from the image analysis of electron micrographs, coupled with
-previously measured mercury intrusion porosimetry and surface adsorption
-converted to void size by grand canonical Monte Carlo simulations. The result is
-a void network comprising pores over the range 0.4 nm to 115 µm, a much larger
-range than can be obtained from X-Ray computed tomographic (CT) scanning. The
-method was validated by comparing the simulated open porosities of the void
-network for nuclear graphite grades IG-110 and IG-430 to the open porosities
-quoted by their manufacturer Toyo Tanso.  The estimates are within 0.56\% and
-0.71\% of the manufacturer's measurements. Once the void network has been
-generated, a range of further simulations of pore fluid behaviour can be carried
-out.  We illustrate this by displaying the extent of intrusion of molten salt
-into IG-110 that would occur at high temperature in a Molten Salt Reactor.  The
-new method has very wide applicability, as it can be used for any rigid porous
-material which has been studied by microscopy and porosimetry, but for which
-pycnometry is unavailable or inappropriate.  
+advanced gas-cooled nuclear reactors (AGRs) and in several
+Generation IV reactor designs. Porosity dictates many of the properties of nuclear graphite, and their evolution.
+We present a novel approach to microstructural characterisation, by inverse modelling of channel
+(surface visible) porosity estimated from the image analysis of electron micrographs, coupled with mercury intrusion porosimetry and surface adsorption converted to void size by grand canonical Monte Carlo simulations. The result is a void network comprising pores over the range 0.4 nm to 115 µm. The selected stochastic generations from which the final modelled structures were derived, were those where the Boltzmann-annealed
+amoeboid simplex search over the 8-dimensional parameter space produced a percolation
+curve minimally different from the intrusion curve derived from the monte-carlo interpreted
+experimental data.  The modelled open porosities, 14.16\% and 14.72\% for IG-110 and IG-430 respectively,
+were in close agreement with the manufacturer values of 12.61\% and 13.31\%. 
+With the modelled void network, a range of further simulations of pore fluid behaviour can be carried
+out. We illustrate this by modelling the extent of intrusion of molten salt into IG-110 that would occur at high temperature in a Molten Salt Reactor.  The new method has very wide applicability, as it can be used for any rigid porous material which has been studied by microscopy and porosimetry, but for which pycnometry is impracticable.
 \begin{draftversion}
 	\newline
-	\textit{\textbf{Abstract 250 words max.  Currently 233 words}}
+	\textit{\textbf{Abstract 250 words max.  Currently 234 words}}
 \end{draftversion}
 \begin{draftversion}
 	\newline
@@ -79,10 +69,10 @@ several Generation IV reactor designs, including the High Temperature Gas
 Reactor (HTGR) and Molten Salt Reactor (MSR) \citep{international2025iaea,
 international2023iaeaMSRs, MARSDENgeniv}. Nuclear grade graphite  is
 characterised by exceptionally low boron content, high structural strength,
-thermal stability, and a high scattering and low absorbent neutron cross-section
+thermal stability, and a high scattering and low neutron absorption cross-section
 \citep{Marsden2016}. 
 
-The internal microstructure of nuclear grade graphite plays a key role in its
+The internal microstructure of nuclear grade graphite plays a key role in graphite's
 mechanical and thermo-physical properties, and the evolution under irradiation
 of these properties and thermo-chemical properties such as oxidation, gas
 release and thermal degradation \citep{MARSDENgeniv, ARREGUIMENA2022112047}. For
@@ -95,7 +85,7 @@ kinetic-controlled \citep{KANE2018369, MATTHEWS2021111245, PAUL2022132}.
 Impedance of diffusion of gaseous fission products into the graphite bulk
 requires a He permeability of less than $1 \times
 10^{-8}~\text{cm}^2\text{s}^{-1}~\text{cm}$, corresponding to pore diameters of
-100 nm or less\citep{McCoy1970MoltenSalt, SONG201436}. In MSRs, unwanted salt
+100 nm or less\citep{McCoy1970MoltenSalt, SONG201436}. In MSRs, salt
 intrusion can occur into surface pores greater than 1 µm in diameter
 \citep{McCoy1970MoltenSalt}. 
 
@@ -108,7 +98,7 @@ mercury intrusion porosimetry, helium pycnometry, gas adsorption, X-ray computed
 tomography (X-ray CT), and microscopy. Mercury intrusion porosimetry is an
 established technique for characterising the pore size distribution of nuclear
 grade graphite \citep{ARREGUIMENA2022112047, JONES2020256HgHe, CONTESCU2019663,
-Jones2020}. However, the technique destroys the voids structure at the highest
+Jones2020}. However, the technique damages the void structure at the highest
 applied pressures of mercury necessary to probe voids below 100 nm in size, is
 destructive, and unable to characterise the very smallest pores as the pressure
 required induces damage in the microstructure. Helium pycnometry by contrast is
@@ -124,9 +114,8 @@ the microstructure of nuclear grade graphite
 BARHLI2017357}. Recent X-ray CT characterisation efforts relevant to MSR and
 HTGR operation include real-time tracking of salt infiltration and modelling of
 the relation between microstructure and oxidation rate \citep{ZHANG2024102016,
-PAUL2022132}. However, X-ray CT has limited spatial resolution, being typically
-unable to resolves pores with volumes smaller than 10 µm³
-\citep{ARREGUIMENA2022112047}.  
+PAUL2022132}. However XCT is not capable of resolving the smallest pores 
+when performed at the field of view required to represent the full microstructure, particularly of coarser graphite grades. \citep{ARREGUIMENA2022112047}. 
 
 Those studies which have attempted to characterise the surface porosotity of
 nuclear graphite have largely utilised OM  \citep{Huang2019, Kane2011a,
@@ -134,50 +123,40 @@ Taylor2016}.  Optical microscopy generates datasets based on thousands of pores,
 but operate at a low resolution and magnification relative to scanning electron
 microscopy (SEM) analysis \citep{Huang2014,
 huang2021statistical,ARREGUIMENA2022112047}.
- Additionally, the low magnification
-required to image large areas via optical microscopy can identify pores below a
-pore area in some cases as large as 50 µm², thus excluding a significant
-proportion of the pore size distribution indicated by the experimental methods
-mentioned above \citep{Taylor2016}. 
+ Additionally, the comparatively low magnification
+of optical microscopy can make identification of porosity challenging, with a minimum resolvable
+pore area in some cases as large as 50 µm².\citep{Taylor2016}.  This excludes a significant
+proportion of the pore size distribution indicated by the experimental methods.
 
-SEM characterises very much smaller pores.  Once the fundamental instrumental
-and sample preparation challenges have been overcome, its main drawback is that
-the area of each micrograph is very small compared to the representative sample
-size, i.e. relative to the smallest sample volume which includes all the sample
-heterogeneity (the Representative Elementary Volume, REV), such that when
-replicated up to the sample volume the REV gives rise to the macroscopic
-properties of the sample. It also has has the obvious drawback that only the
-surface of the sample is observed, not its interior network of voids. We
-overcome both limitations in this work - the first by stitching together
-multiple micrographs, and the second by inverse modelling, as described below. 
+SEM is capable of resolving much smaller pores than the above methods, however 
+the area of each micrograph is small compared to the
+representative sample size. Additionally, SEM as generally applied is understood
+as a surface analysis technique, rather than a method for characterising the
+interior structure of the sample. We overcome both limitations in this work, the first by stitching
+together hundreds of micrographs, and before integrateing the resulting data into a multi-technique approach using inverse modelling.
 
 Samples for both optical and electron microscopy are often resin impregnated,
-with a dye to contrast the resin against the sample bulk.  However, resin
-impregnation makes it more difficult to distinguish surface irregularities from
-depth-penetrating pores, and precludes the application of a series of
-experimental techniques to the same sample. So no impregnation was carried out
-in this work.
-
-
+with a dye to contrast the resin against the sample bulk.\todo{this needs to be cited, just some resin impreg papers}  However, resinimpregnation can increase the challenge in distinguishing surface irregularities from depth-penetrating pores, and precludes the application of a series of
+experimental techniques to the same sample.
 
 \subsection{Principles of this study}
 
 Porosity differs between grades of nuclear graphite due to varying constituents
 and manufacturing processes. In this work we consider only surface-accessible or
-`open' porosity, and exclude any closed pore volume which is inaccessible from
-the surface, such as that found within or between the onion-skin-like layers of
-`gilsos' within the gilsocarbon in UK AGRs. We define `channel porosity' as the
-total area of voids observed at the surface of a porous sample within the area
-of a particular micrograph as a percentage of the total surface area of the
-micrograph. This would equate  to the total accessible porosity of the sample if
-every surface void was the entrance to a channel, approximately normal to the
-observed surface, of constant cross-sectional area, extending from the observed
-side of the sample to the opposite side - hence our designation `channel'
-porosity.  It is evidently not the same as open porosity, which includes hidden
-connections between the channels, and pores or variations in channel size that
-cannot be seen from the surface.    
-Nevertheless channel and open porosity are often implicitly equated during image
-analysis \citep{Kane2011a,Huang2019,huang2021statistical}.
+'open' porosity, i.e. the percolation-relevant porosity, and exclude any closed
+pore volume which is inaccessible from the surface, such as that found within or
+between the onion-skin-like layers of the Gilsocarbon graphite in UK AGRs. We
+define 'channel porosity' as the total area of the throats of the voids observed
+at the surface of a porous sample within the area of a particular micrograph, as
+a percentage of the total surface area of the micrograph. This would equate  to
+the total accessible porosity of the sample if every surface void was the
+entrance to a channel, approximately normal to the observed surface, of constant
+cross-sectional area, extending from the observed side of the sample to the
+opposite side - hence our designation 'channel' porosity.  It is distinct from
+open porosity, which includes  connections between the channels, and pores
+or variations in channel size that cannot be seen from the surface.    
+Nevertheless, channel and open porosity are often implicitly equated during image
+analysis \citep{Kane2011a,Huang2019,huang2021statistical}.\todo{is this necessary? Why kick the hornets nest? If its implicit then by nature this is going to be a contentious statement}
 
 As evident from Section \ref{subsec:Experimental techniques}, there is no
 individual experimental technique that is capable of characterising the full
@@ -194,9 +173,15 @@ Inverse modelling never produces a single answer, instead, in this case, it
 generates a range of possible void structures all of which would have
 experimental characteristics closely matching the input data. Therefore we
 choose the most statistically representative structure amongst many stochastic
-generations.  We rigorously validate the method by comparing the open porosities
+generations.  We validate the method by comparing the open porosities
 calculated from the channel porosity by the inverse modeller, with the open
 porosities measured by the manufacturers of the samples. 
+
+\todo[inline]{I want us to be careful here in what we are indicating as to how we select the model,
+because for the particular sample, all the SGs within 1 sigma were pretty close to the
+general manufacturer value, and we did not select the one that was closest to the
+manufacturer value but rather that which produced the best fit to the experimental percolation curve.
+In other words, we were very honest statistically, and I want that to be conveyed}
 
 
 \section{Methodology}
@@ -226,7 +211,7 @@ thermal conductivity (Table ~\ref{tab:materialstable}).
 \end{table}
 
 \subsection{Sample preparation}
-Cuboids were subsampled from into cuboids of side lengths 7 mm, providing 3
+Larger cuboids were subsampled into cuboids of side lengths 7 mm, providing 3
 cuboids per grade. Samples were polished with SiC polishing pads up to a grit
 size of P5000, to minimise topographical variations induced by sample
 preparation that may cause artefacts during SEM imaging or low pressure gas
@@ -239,14 +224,14 @@ vacuum for 12 h at $305 \pm 5 \,^\circ\mathrm{C}$ using the BELPREP-vac
 \subsection{Scanning Electron Microscopy (SEM)}
 
 Micrographs were acquired using a JEOL JSM-IT510 Scanning Electron Microscope
-operating at an accelerating voltage of 5 kV in Secondary Electron mode. To
-minimise the REV problem described above, a contiguous set of 225 micrographs
-was captured for each sample using the Image Montage function within the JEOL
-InScope software, operating a motorised stage, with the settings and output
-parameter in Table ~\ref{tab:microscopy_parameters}. During acquisition, the
-stigmation, contrast, and brightness were automatically adjusted. A subsequent
-metadata analysis is detailed in the Supplementary Information Table 2, and
-confirmed that variations in contrast and brightness were negligible.
+operating at an accelerating voltage of 5 kV in Secondary Electron mode.  A
+contiguous set of 225 micrographs was captured for each sample using the Image
+Montage function within the JEOL InScope software, operating a motorised stage,
+with the settings and output parameter in Table
+~\ref{tab:microscopy_parameters}. During acquisition, the stigmation, contrast,
+and brightness were automatically adjusted. A subsequent metadata analysis is
+detailed in the Supplementary Information Table 2, and confirmed that variations
+in contrast and brightness were negligible.
 
 \begin{table}
   \centering
@@ -268,17 +253,14 @@ confirmed that variations in contrast and brightness were negligible.
 
 \subsection{Composite assembly}
 
-The individual micrographs were assembled into a single composite image, via an
+Individual micrographs were assembled into a single composite image, via an
 enhanced phase correlation method, operated as a plugin of the Fiji software
 package \citep{schindelin2012fiji, Preibisch2009}. The approach optimises
 micrograph positions globally to sub-pixel accuracy and smooths the transitions
 between micrographs by a non-linear intensity blending function.  The resulting
 composite images exhibit no visible delineation between individual micrographs.
-This produces a total area comparable with previous optical microscopy studies
-of nuclear graphite, but with the crucial difference that on zooming in, fine
-detail can be observed down to 100 nanometres \ref{tab:microscopy_parameters}.
-Hence channel porosity can be clearly resolved over a wide area. All composite
-images were cropped to a size of 1,350 µm $\times$ 950 µm. 
+This produces a total area after cropping of 1,350 µm $\times$ 950 µm, comparable
+with previous optical microscopy studies of nuclear graphite, but at greater resolution \ref{tab:microscopy_parameters}.
 
 \subsection{Computation of Channel Porosity}
 
@@ -306,18 +288,14 @@ for IG-430 Sample F.}
 composite micrograph to generate a binary image, segmenting porosity and bulk.
 Automatic global thresholding algorithms available in Fiji were attempted but
 found to be unsuitable for this dataset (see Supplementary Information). As with
-previous works, an appropriate threshold was determined manually from the
+previous works, an appropriate threshold for segmentation was determined manually from the
 resultant intensity histograms by visual inspection of the micrographs
-\citep{Huang2019, Kane2011a, Taylor2016,huang2021statistical}.
+\citep{Huang2019, Kane2011a, Taylor2016,huang2021statistical}. 
 
-Threshold selection was guided by two physical criteria. Firstly, for
-consistency with the mercury porosimetry data by capturing the pore throats
-rather than the contours of the pore bodies. Secondly, the exclusion of closed
-pore volume incidentally exposed by sample preparation, which appear as brighter
-grey regions. Both criteria were met by the application of a threshold which
-captures the darkest regions in SEM micrographs, excluding closed pore volume
-and capturing pore throats. Nominally, this translated to an intensity threshold
-of $0.95 \pm 0.075$, normalized between 0-1 over an 8-bit range.
+Segmentation in this work meant specifically the selection of a threshold to capturing the pore throats
+rather than the contours of the pore bodies, ensuring consistency with the features captured by the
+experimental data. \ref{fig:dualintensitythreshig430f}. Adjusting the segmentation of the data generated
+by the characterisation technique to capture the same features as the experimental technique was likewise the approach taken by \citep{ARREGUIMENA2022112047}. This criterion was met by the application of a threshold which captures the darkest regions in SEM micrographs. Nominally, this translated to an intensity threshold of $0.95 \pm 0.075$, normalized between 0-1 over an 8-bit range.
 
 \begin{figure}[!htbp]
     \centering
@@ -331,16 +309,15 @@ of $0.95 \pm 0.075$, normalized between 0-1 over an 8-bit range.
   Following binarisation, a minimum pore size threshold was applied to
   distinguish genuine porosity from surface rugosity and imaging artefacts, as
   in previous optical microscopy based studies of nuclear graphite
-  \citep{KANE2018369,Taylor2016} Threshold selection was informed by a
-  sensitivity analysis (see Supplementary Information).
+  \citep{KANE2018369,Taylor2016} 
+
+  The selection of a pore area threshold aims to minimise both Type I errors, the incorrect classification of other
+  features, as porosity and Type II errors, the
+  exclusion of genuine pores. This threshold was applied across all samples.
 
   Based on the sensitivity analysis and inspection of the resulting
   segmentations (Figure \ref{fig:improvedporediademo})  a pore area threshold of
   2 µm² was determined to be the optimal compromise.
-
-  This threshold minimised Type I errors (the incorrect classification of other
-  features, as porosity) while minimising Type II errors (the erroneous
-  exclusion of genuine pores). This threshold was applied across all samples.
 
 \begin{figure}[!htbp]
     \centering
@@ -350,7 +327,7 @@ of $0.95 \pm 0.075$, normalized between 0-1 over an 8-bit range.
 \end{figure}
 
 \subsubsection{Channel Porosity Analysis and Calculation}
-Following the application of the intensity and diameter thresholds, channel
+Following the application of the intensity and area thresholds, channel
 porosity was quantified using the Analyse Particles function in Fiji. This
 identifies all pixels surpassing the intensity threshold, generating connected
 regions, pores, via an 8-connected (Moore neighbourhood) flood-fill algorithm.
@@ -378,18 +355,15 @@ porosity size distribution which are presented in the Results section.
 
 In conjunction with the SEM-based inputs to this multi-technique
 characterisation, this study utilised mercury intrusion porosimetry and gas
-adsorption isotherms, previously measured by Jones et al. \citep{Jones2018}, who
-also provide full experimental details.
+adsorption isotherms previously measured by Jones et al. \citep{Jones2018}.
 
 The samples analysed in that work were taken from the same parent blocks of
-IG-110 and IG-430 as those prepared for the SEM analysis in this study to ensure
-direct comparability. For the purposes of the modelling performed here, the key
-parameters from the that work were adopted; for porosimetry, advancing and
+IG-110 and IG-430 as those prepared for the SEM analysis in this study to 
+maximise comparability. In modelling, the key
+parameters from that work were adopted; for porosimetry, advancing and
 receding contact angles of 140$^{\circ}$ and 130$^{\circ}$ and a
-surface tension of 0.480 N m$^{-1}$, and graphite density of
+surface tension of 0.480 N m$^{-1}$, and an ideal graphite density of
 2.26 g cm$^{-3}$. 
-
-\todo{Edited by Peter to here, 14Aug25}
 
 \section{Modelling}
 
@@ -416,13 +390,15 @@ experimental measurements (Figure \ref{fig:PX3dnetwork}).
   \caption{Example of a percolation curve generated by the PoreXpert software(WILL IMPROVE CAPTION)}
   \label{fig:percolationcurve}
 \end{figure}
+\todo{Instead put in a PX fitting curve for IG110 SG 7 OR IG430 SG3, whichever is best}
 
 During modelling, the approximation type reflecting the depth of probing into
 the porous structure is selected by the user (Figure \ref{fig:pxapproxtypes}).
-Approximation Type 2 \textit{Surface connected throats and the visible volumes
-of connected pores} was determined to be the optimal approximation for the
-channel porosity dataset following examination of the micrographs indicating
-that significant portions of the underlying pore bodies were captured during
+For the grades and samples here analysed, Approximation Type 2
+ \textit{Surface connected throats and the visible volumes
+of connected pores} was determined to be the optimal approximation 
+following examination of the micrographs, indicating
+that portions of the underlying pore bodies were captured during
 segmentation.
 
 \begin{figure}
@@ -439,7 +415,7 @@ segmentation.
 \end{figure}
 
   Channel porosity (\%) per sample, as well as the minimum, and maximum pore
-  diameters, 1.128 µm and 15 µm respectively, were input into the modelling
+  diameters, 1.6 µm and 15 µm respectively, were input into the modelling
   software. The lower bound represents the minimum pore diameter threshold
   applied, while the upper pore diameter threshold represents the maximum pore
   diameter successfully captured by this method (Figure \ref{fig:IG110LogPSDs},
@@ -449,10 +425,12 @@ segmentation.
   derived data.
 
   Stochastic generations for multiple structure types were performed to identify
-  the most representative structure type. For each sample, 10 stochastic
-  generations were modelled, and the most representative sample identified using
-  via sensitivity analysis (Supplementary Information). The chosen stochastic
-  generation per sample was used to generate the final model outputs.
+  the most representative structure type. For each grade, 10 stochastic
+  generations of the Vertically Banded structure were modelled. The sensitivity
+   analysis of the stochastic generations is presented in the Supplementary Information.
+   In brief, the method was found to be robust, with the stochastic generations within
+  1 standard deviation of the mean across the 5 physical parameters (Pore skew, Throat skew,
+   Throat spread, Connectivity, Correlation level) producing similar percolation curves and open porosities. The selected SG was that with the lowest residual between the modelled and experimental percolation curves, and the open porosity was calculated from the modelled structure. 
 
 \section{Results}
 \subsection{Channel Porosity and Pore Size Distribution}
@@ -468,12 +446,12 @@ yielded estimates of channel porosity for both graphite grades (Table
       \hline
       Sample & n / pores & Average Pore Size / µm² & Channel Porosity / \% \\
       \hline
-      IG-110 B & 4,445   & 7.62 & 2.63 \\
-      IG-110 C & 3,733 & 10.25 & 2.89 \\
-      IG-110 F & 4,285  & 9.14 & 3.04 \\
-      IG-430 B & 3,400  & 8.99 & 2.34 \\
-      IG-430 C & 4,732 & 6.44 & 2.38 \\
-      IG-430 F & 3,505  & 12.34 & 3.37 \\
+      IG-110 B & 4,595   & 7.70 & 2.76 \\
+      IG-110 C & 3,741 & 10.08 & 2.94 \\
+      IG-110 F & 4,322  & 9.22 & 3.10 \\ 
+      IG-430 B & 3,445  & 8.80 & 2.36 \\
+      IG-430 C & 4,814 & 6.51 & 2.44 \\
+      IG-430 F & 3,554  & 12.45 & 3.45 \\
       \hline
     \end{tabular}%
   }
@@ -495,7 +473,7 @@ yielded estimates of channel porosity for both graphite grades (Table
 
 \subsection{Modelling}
 
-An individual unit cell of a pore network model, is shown in
+An individual unit cell of a pore network model is shown in
 Figure~\ref{fig:PX3dnetwork}. The modelled open porosity for each sample is
 summarised in Table~\ref{tab:Openporositytable}. XZ and XY axis plane views of
 the unit cell are further visualised to illustrate the structures generated by
@@ -514,6 +492,7 @@ previous works (Figure \ref{fig:PX3dnetworkXZ}, \ref{fig:PX3dnetworkXY} \cite{Jo
         stochastic number generation.}
         \label{fig:PX3dnetwork}
     \end{figure}
+   
 
     \begin{figure}
     \centering
@@ -530,16 +509,19 @@ previous works (Figure \ref{fig:PX3dnetworkXZ}, \ref{fig:PX3dnetworkXY} \cite{Jo
     porosity and experimental data by the workflows above, exemplified for IG-110B.}
     \label{fig:PX3dnetworkXY}
     \end{figure}
+
+
+    \todo[inline]{I do not want to, but I can do another 40 SGs so that we have again OP per grade, but I think this is more honest. We have 3 specimens where the only input is a minimally different channel porosity, and so treating them as 3 specimens just so that we get 10 bites per sample at the apple to get closer to what is just a general manufacturer value, may unintentionally give better fits than we have.}
 \begin{table}
   \centering
-  \caption{Summary of stochastic generation number, modelled open porosity, and distance between modelled and experimental open porosity for each sample.}
+  \caption{PROBABLY REMOVESummary of stochastic generation number, modelled open porosity, and distance between modelled and experimental open porosity for each sample.}
   \label{tab:Openporositytable}
   \resizebox{\columnwidth}{!}{%
     \begin{tabular}{c c c}
       \hline
       Sample & Modelled Open Porosity \% & Open Porosity Residuals (Modeled - Experimental) \%  \\
       \hline
-      IG-110 B & 19.60  &  0.76  \\
+      IG-110B & 19.60  &  0.76  \\ 
       IG-110 C & 19.86  & 0.50\\
       IG-110 F & 20.77  &  0.41 \\
       IG-430 B &  17.59 &  2.03  \\
@@ -550,58 +532,41 @@ previous works (Figure \ref{fig:PX3dnetworkXZ}, \ref{fig:PX3dnetworkXY} \cite{Jo
   }
 \end{table}
 
-\section{Discussion}
-
-Modelling outputs were highly congruent with experimentally derived open
+Modelling outputs were congruent with experimentally derived open
 porosity figures provided by the manufacturer for both IG-110 and IG-430,
 providing confidence in the full scale multi-technique characterisation
 approach here developed (Table ~\ref{tab:materialstable}, Table
-~\ref{tab:Openporositytable}).
+~\ref{tab:Openporositytable}). 
 
-Huang \textit{et al.} ~\citep{huang2021statistical} found that channel porosity
-as classified by SEM was 3\% for IG-110, which is in close agreement with the
-range derived in this work. Interpolation via the adjustment of the intensity
-threshold to match previous optical microscopy works (i.e., pore contours are
-classified, as opposed to pore throats) produces results consistent with those
-works. Kane \textit{et al.} derive a channel porosity of 14.73\% for IG-110,
-with Huang and Tang deriving 14\% for the same grade, congruent with the 13-14\%
-channel porosity derived by this work following interpolation \citep{Kane2011a,
-Huang2019}.
+Further validation was accomplished via the  adjustment of the intensity threshold to match previous
+optical microscopy works, Kane \textit{et al.} derive a channel
+porosity of 14.73\% for IG-110, while Huang and Tang derive 14\%. This method estimated a 
+channel porosity for IG-110 13-14\% when intensity threshold is adjusted to
+select pore contours as in these works. \citep{Kane2011a, Huang2019}.
+\todo{If I have some time I want to try and check this again}
 
-
-Nevertheless, artefacts exist in the segmentation process which limit the
-representativeness of the pore size distribution.
-
-The use of the Moore neighbourhood connectivity criterion, defining two or
+Nevertheless, artefacts exist in the segmentation process.The use of the Moore neighbourhood connectivity criterion, defining two or
 more pores connected by even a single adjacent pixel as one pore, agglomerates
 some proportion of the porosity. This would result in a rightward shift in the
 pore size distribution relative to the distribution which would be derived
-from an unagglomerated dataset. The use of a simple connectivity algorithm
+from an unagglomerated dataset. Inversely, the use of a simple connectivity
+algorithm in series with the pore diameter thresholding
 means that a single pore with an intersecting feature beneath the intensity
-threshold is fragmented into multiple pores, as some of these fragments fall
-below the pore diameter threshold and are discarded. This leads to an leftward
-shift of the pore size distribution. The extent to which pore fragmentation
+threshold is fragmented into multiple pores. When the pore diameter threshold is then applied,
+some of these fragments fall below the pore diameter threshold and are discarded.
+This leads to an leftward shift of the pore size distribution. The extent to which pore fragmentation
 cancels out the effect of pore agglomeration was not here determined. 
 
-In future works, the use of a more sophisticated connectivity algorithm such
-as the watershed algorithm, may be able to reduce of agglomeration and
-fragmentation artefacts. A more complete solution would be to resin-impregnate
-the samples, as this would remove the need for the intensity thresholding
-stage altogether, although this was not here attempted as the intention of
-this work was to demonstrate the effectiveness of the multi-technique
-characterisation approach as it would be applied to heterogeneous samples,
-where the same sample must be characterised by all techniques, which resin
-impregnation would have precluded.
+In future works, the use of a more sophisticated connectivity algorithm, 
+may be able to reduce of agglomeration and fragmentation artefacts. 
 
   \section{Conclusion}
 
-This work has met the original objective in successfully demonstrating a
-multi-technique characterisation approach the full pore size
+This work has successfully demonstrated a
+multi-technique characterisation approach covering the full pore size
 distribution of nuclear grade graphite, from 0.4 nm to 115 µm. This approach
-successfully generated a percolation curve that yields an open porosity value in
-close agreement with the value determined experimentally by He pycnometry,  with
-the modelled open porosity values for both IG-110 and IG-430 being within 0.56\%
-and 0.71\% of the experimentally derived values respectively. 
+successfully generated a percolation curve that yields an open porosity values of 
+14.16\% and 14.72\% for IG-110 and IG-430 respectively,e in close agreement with the manufacturer values of 12.61\% and 13.31\%. 
 
 
 %\clearpage
